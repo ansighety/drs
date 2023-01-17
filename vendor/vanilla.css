@@ -24,10 +24,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 /* Typography */
 body {
     color: var(--text-color);
-    max-width: 75ch;
-    margin: 0 auto;
-    padding: 0 0.5rem;
-    min-height: 100vh;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
 }
@@ -46,6 +42,7 @@ h5, h6 { text-transform: uppercase; }
 
 header h1 { border-bottom: 1px solid; }
 
+a{text-decoration: none;}
 a,a:visited { color: var(--link-color); }
 a:hover,a:focus { color: var(--link-color-alt); }
 
@@ -145,7 +142,7 @@ sup { font-size: 80%; vertical-align: top; }
     table { table-layout: auto; }
 }
 
-/* Dark mode support */
+/* Dark mode support
 @media (prefers-color-scheme: dark) {
     body {
         background: #191919;
@@ -173,7 +170,7 @@ sup { font-size: 80%; vertical-align: top; }
         --secondary-color: black;
         --tertiary-color: #2d2d2d;
     }
-}
+} */
 
 /* https://piccalil.li/blog/a-modern-css-reset/ */
 /* Box sizing rules */

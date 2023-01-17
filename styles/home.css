@@ -1,0 +1,110 @@
+/*fonts added: Bungee Shade, Gravitas One, Monoton, Prata, Rye, UnifrakturMaguntia*/
+:root {
+    --background: #fff;/*page background*/
+    --text: #242424;/*overall text color*/
+
+    --selection-bg: #000;/*selection background color*/
+    --selection-font: #fff;/*selection font color*/
+    --tooltip-bg: #242424;/*tooltip background color*/
+    --tooltip-font: #fff;/*tooltip font color*/
+
+    --text-font: times;/*text font*/
+    --text-font-size: 15px;/*text font size*/
+
+    --title-size: 1.5em;/*title size*/
+    --title-accent-size: 3em;/*title size*/
+    --title-font: 'UnifrakturMaguntia', times;/*title font*/
+
+    --quote-font: 'Great Vibes',times;/*quote font*/
+    --quote-font-size: 3em;/*quote font size*/
+    --quote-marks-size: 15px;/*quote marks size*/
+    --quote-marks-color: #bdbdbd;/*quote marks color*/
+
+    --links-font: times;/*text font*/
+    --links-border-color: #ccc;/*box border color*/
+    --links-font-size: 1.1em;/*box font size*/
+
+    --border-color: #ccc;/*box border color*/
+    --box-font-size: 15px;/*box font size*/
+    --box-font: times;/*box font*/
+}
+
+::selection {
+  color: var(--background);
+  background-color: var(--text);
+}
+
+::-moz-selection {
+  color: var(--background);
+  background-color: var(--text);
+}
+
+::-webkit-scrollbar {
+  width: 1px;
+  height: 2px;
+}
+
+::-webkit-scrollbar-thumb { background-color: var(--text); }
+
+body{
+  color:var(--text);
+  background-color: var(--background);
+}
+
+#page_home{
+  width:40%;
+  margin:0 auto;
+  padding-top:150px;
+  font-family:var(--text-font);
+  font-size: var(--text-font-size);
+}
+
+#home_title {
+  text-align: center;
+  font-size: var(--title-size);
+  font-style:italic;
+  margin-bottom: 10px;
+  line-height:1;
+}
+
+#home_title .home_title_accent{
+  font-family: var(--title-font);
+  font-size: var(--title-accent-size);
+  font-weight:bold;
+  font-style: normal;
+}
+
+#home_quote {
+  text-align: center;
+  font-family: var(--quote-font);
+  font-size: var(--quote-font-size);
+  padding: 5px 20px;
+}
+
+#home_links{
+  margin:20px 0px;
+  text-align: center;
+}
+
+#home_links a{
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 15px;
+  text-align: center;
+  font-family: var(--links-font);
+  font-size: var(--links-font-size);
+  font-weight: bold;
+  color:var(--text);
+  border: 1px solid var(--links-border-color);
+  border-radius: 10%;
+}
+
+#home_links a:hover{
+  color:var(--background);
+  background-color: var(--text);
+  border-radius: 0%;
+}
+
+#home_desc{
+  margin:30px 0;
+}
