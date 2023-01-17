@@ -2,4 +2,13 @@
 
 *   Synopsis
 *   History
-*   World (Government, Locations, Organisations & Societies, Species)
+*   World
+    - Social Hierarchy & Government
+    - Locations
+    - Organisations & Societies
+    - Species
+    - Religions
+        - Almechting
+    - Languages
+        - Verstein Andetier (High)
+        - Alegvan Andetier (Common)
