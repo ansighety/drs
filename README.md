@@ -21,3 +21,5 @@
 - https://glenthemes.tumblr.com/post/664493846094315520/hades-fish-page
 - https://undeadmagikarp.tumblr.com/post/660475090478219264/iv-queendom-by-undeadmagikarp-preview-code
 - https://taezs.tumblr.com/post/657299576177442816/talia-character-page-by-taezs
+- https://stardusthms.tumblr.com/post/650728960617005056/poison-love-about-page-by-stardusthms-preview
+- https://aresanglant.tumblr.com/post/649484717357400064/wip-page-vincent-by-aresanglant-bloodynovak
