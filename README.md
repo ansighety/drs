@@ -9,7 +9,7 @@
     - Species
     - Organisations & Societies
     - Religions
-        - Almechting
+        - Almechting (The Church of the Almighty)
     - Languages
         - Verstein Andetier (High)
         - Alegvan Andetier (Common)
