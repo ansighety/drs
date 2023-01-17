@@ -121,17 +121,6 @@ ctrl+F to search for [BITTERN] to jump there.
 /********************************************************** TAGS LIST **/
     /** left photo **/
     --tag-photoURL: url("https://images.unsplash.com/photo-1608914998172-587b1b25f247?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
-    
-    /** tag block categories
-        There are three colour ways that are alternated. **/
-    --tag-category-A-BG: #66a9ba;
-    --tag-category-A-txt: #ffffff;
-    
-    --tag-category-B-BG: #d9ab5b;
-    --tag-category-B-txt: #ffffff;
-    
-    --tag-category-C-BG: #f0e3ad;
-    --tag-category-C-txt: #9c6527;
 
     /** tag link buttons **/
     --tag-link-BG: #f6f6f6;
@@ -245,32 +234,32 @@ iframe#tumblr_controls, .iframe-controls--desktop {
 
 /** ============================================== MAIN CONTENT WINDOW **/
 
-.maincon {
-    width: 100%;
-    height: 100%;
-}
-
 #main {
-    padding: 30px;
-    width: 540px;
+  margin:0 auto;
+  margin-top:50px;
+    width: 900px;
     background: #888;
+    
+    background-color: rgba(var(--translucent-border),0.3);
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(var(--translucent-border),0.6);
+
+    /*
+    padding: 30px;
     position: fixed;
     top: 50%;
     -ms-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
-    right: calc(50% - 300px); /** half of the width **/
-    
-    background-color: rgba(var(--translucent-border),0.3);
-    backdrop-filter: blur(2px);
-    border: 1px solid rgba(var(--translucent-border),0.6);
+    right: calc(50% - 300px);
+    */
 }
 
 
 /** ========================================= HEADER / NAVIGATION BAR **/
 
 .header {
-    width: 540px;
+    width: 900px;
     height: 60px;
     background-color: var(--contentBG);
     overflow: hidden;
@@ -349,27 +338,24 @@ iframe#tumblr_controls, .iframe-controls--desktop {
 .content {
     border: 20px solid var(--windowBG);
     background-color: var(--windowBG);
-    height: 300px;
+    height: 600px;
     overflow: hidden;
 }
 
 .allviews {
     transition: 0.6s ease-in-out;
-    width: 2000px;
+    width: 3440px;
     overflow-y: auto;
     overflow: hidden;
 }
 
 .view {
     float: left;
-    width: 500px;
-    height: 300px;
+    width: 860px;
     overflow: hidden;
 }
 
 /** ============================================================== ABOUT **/
-
-.abt-layout {height: 300px;}
 
 .abt-basic {
     width: 150px;
@@ -415,8 +401,6 @@ iframe#tumblr_controls, .iframe-controls--desktop {
 }
 
 .abt-bio {
-    width: 300px;
-    height: 260px;
     overflow: hidden;
     padding: 20px 10px 20px 20px;
     background-color: var(--contentBG);
@@ -426,20 +410,11 @@ iframe#tumblr_controls, .iframe-controls--desktop {
 .bio-graphy {
     font-size: 12px;
     line-height: 20px;
-    height: 260px;
+    height: 560px;
     overflow-y: auto;
     padding-right: 10px;
     text-align: justify;
     color: var(--txtcolour);
-}
-
-.bio-graphy:first-letter {
-    font-size: 40px;
-    float: left;
-    font-family: fredoka one;
-    color: var(--abt-header);
-    margin: 10px 6px 0 0;
-    text-transform: uppercase;
 }
 
 .bio-graphy blockquote {
@@ -522,172 +497,11 @@ li { margin-bottom: 5px; }
     background-image: var(--tag-photoURL);
 }
 
-.tag-con {
-    width: 340px;
-    max-height: 300px;
-    overflow-y: auto;
-}
-
-.tag-con::-webkit-scrollbar-track-piece{background-color: var(--windowBG);}
-.tag-con::-webkit-scrollbar-thumb:vertical{border: 4px solid var(--windowBG);}
-
-.tag-block {
-    display: inline-block;
-    float: left;
-    margin: 0 0 10px 10px;
-    width: 150px;
-    font-size: 10px;
-    border-radius: 10px;
-}
-
-.tag-category {
-    padding: 6px 8px;
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 1000;
-    position: sticky;
-    top: 0;
-}
-
-.tag-block:nth-child(3n+0) .tag-category {
-    background-color: var(--tag-category-A-BG);
-    color: var(--tag-category-A-txt);
-}
-
-.tag-block:nth-child(3n+1) .tag-category {
-    background-color: var(--tag-category-B-BG);
-    color: var(--tag-category-B-txt);
-}
-
-.tag-block:nth-child(3n+2) .tag-category {
-    background-color: var(--tag-category-C-BG);
-    color: var(--tag-category-C-txt);
-}
-
-.tag-btn {
-    margin-top: 2px;
-    padding: 2px 6px;
-    transition: 0.3s ease-in-out;
-    border-left: 4px solid var(--tag-link-border);
-    background-color: var(--tag-link-BG);
-    color: var(--tag-link-txt);
-}
-
-.tag-btn:hover {
-    background-color: var(--tag-link-BG-hovered);
-    color: var(--tag-link-txt-hovered);
-}
-
-.tag-block:nth-child(3n+0) .tag-btn:hover {
-    border-left: 4px solid var(--tag-category-A-BG);
-}
-
-.tag-block:nth-child(3n+1) .tag-btn:hover {
-    border-left: 4px solid var(--tag-category-B-BG);
-}
-
-.tag-block:nth-child(3n+2) .tag-btn:hover {
-    border-left: 4px solid var(--tag-category-C-BG);
-}
-
 /** ========================================================== BLOGROLL **/
 
 .fol-photo {
     background-image: var(--fol-photoURL);
     margin-right: 20px;
-}
-
-.fol-content::-webkit-scrollbar-track-piece { 
-    background-color: var(--windowBG);
-}
-
-.fol-content::-webkit-scrollbar-thumb:vertical { 
-    border: 4px solid var(--windowBG);
-}
-
-.fol-content {
-    padding-right: 10px;
-    float: left;
-    width: 320px;
-    max-height: 300px;
-    overflow-y: auto;
-    overflow-x: hidden;
-}
-
-.fol-block {
-    border-radius: 10px;
-    padding: 15px 0 15px 15px;
-    height: 40px;
-    background-color: var(--contentBG);
-    overflow: hidden;
-    margin-bottom: 10px;
-}
-
-.fol-block:last-child { margin-bottom: 0; }
-
-.fol-actions {
-    width: 80px;
-    float: left;
-    margin: 8px 0;
-}
-
-.fol-acticon {
-    float: left;
-    width: 25px;
-    height: 25px;
-    text-align: center;
-    line-height: 28px;
-    border-radius: 7px;
-    margin-right: 10px;
-    font-size: 10px;
-}
-
-.acticon1 { 
-    background-color: var(--fol-visit-icon-BG);
-    color: var(--fol-visit-icon);
-}
-
-.acticon2 {
-    background-color: var(--fol-follow-icon-BG);
-    color: var(--fol-follow-icon);
-}
-
-.fol-pfp {
-    border-radius: 10px;
-    float: left;
-    margin-right: 15px;
-}
-
-.fol-info {
-    width: 140px;
-    float: left;
-    position: relative;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    margin-right: 10px;
-}
-
-.fol-info-un {
-    font-size: 14px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    color: var(--fol-info-username);
-}
-
-.fol-info-ti {
-    font-size: 7px;
-    text-transform: uppercase;
-    letter-spacing: .5px;
-    font-weight: 1000;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    padding-bottom: 4px;
-    color: var(--fol-info-blogtitle);
 }
 
 /** ============================================================ CONTACT **/
@@ -699,8 +513,8 @@ li { margin-bottom: 5px; }
 
 .qna-content {
     float: left;
-    width: 310px;
-    height: 300px;
+    width: 670px;
+    height: 600px;
     overflow-y: auto;
     padding-right: 20px;
     font-size: 12px;
@@ -726,7 +540,6 @@ li { margin-bottom: 5px; }
     background-color: var(--contentBG);
     border-radius: 10px;
     padding: 10px 10px;
-    width: 280px;
     cursor: pointer;
     transition: 0.6s ease-in-out;
 }
@@ -748,7 +561,6 @@ li { margin-bottom: 5px; }
     line-height: 18px;
     background-color: var(--contentBG);
     padding: 10px 15px;
-    width: 270px;
     border-radius: 0 0 10px 10px;
     font-size: 11px;
     display: none;
@@ -764,7 +576,6 @@ li { margin-bottom: 5px; }
     margin-bottom: 20px;
     background-color: var(--contentBG);
     padding: 20px;
-    width: 260px;
     border-radius: 10px;
     line-height: 18px;
 }
@@ -798,10 +609,10 @@ li { margin-bottom: 5px; }
     <div class="header-nav">
     <!-- header navigation buttons -->
     <!-- you can edit the titles of the sections below -->
-    <div class="hbtn hbtn-one hbtn-active">   about         </div>
-    <div class="hbtn hbtn-two">               tags          </div>
-    <div class="hbtn hbtn-three">             following     </div>
-    <div class="hbtn hbtn-four">              contact       </div>
+    <div class="hbtn hbtn-one hbtn-active">   Structure         </div>
+    <div class="hbtn hbtn-two">               Executive          </div>
+    <div class="hbtn hbtn-three">             Legislative     </div>
+    <div class="hbtn hbtn-four">              Judiciary       </div>
     </div>
     
 </div><!--header-->
@@ -810,41 +621,82 @@ li { margin-bottom: 5px; }
 <div class="content"><div class="allviews">
     
 <div class="view"><!-- about me intro panel -------------------------------->
-<div class="abt-layout">
+  <div class="view-photo tag-photo"></div>
+    
+  <div class="abt-bio">
+      <div class="bio-graphy">
+      
+<!-- Replace this text with your own bio --------------------------------->
 
-    <div class="abt-basic">
-        <div class="abt-photo"></div>
-        <div class="abt-pts">
-            
-            <!-- the simple intro points below the photo
-                 You can change the labels and what's shared about too. -->
-            
-            <!-- 1: name -->
-            <div class="abt-ptline">
-                <div class="abt-pttitle">name</div>
-                someone
-            </div>
-            
-            <!-- 2: location -->
-            <div class="abt-ptline">
-                <div class="abt-pttitle">location</div>
-                somewhere
-            </div>
-            
-            <!-- 3: status -->
-            <div class="abt-ptline">
-                <div class="abt-pttitle">status</div>
-                unknown
-            </div>
-            
-        </div><!--abt-pts-->
-    </div><!--abt-basic-->
+<p>Despite the existence of a monarchy in the empire, the Government of The Inviolable Holy Empire functions similarly to a constitutional monarchy and parliamentary republic which consists of the below 3 branches:</p>
+
+<ul>
+  <li>Executive</li>
+  <li>Legislative</li>
+  <li>Judiciary</li>
+</ul>
+
+<h2>Executive</h2>
+
+<p>The Executive branch, also known as the Cabinet, executes and enforces the law, and has overall responsibility for the governance of the Empire. This branch consists of the following main members that are collectively responsible to the Legislative:</p>
+
+<ul>
+  <li><b>Head of State</b>: The Emperor/Empress</li>
+  <li><b>Head of Government</b>: The Emperor/Empress Consort</li>
+  <li><b>Cabinet</b>: The High Council</li>
+</ul>
+
+<h2>Legislative</h2>
+
+<p>The Legislative branch, also known as the Parliament, holds the authority to make laws for the Empire and may observe or steer governing actions, with the authority to amend and control the Empire's finances. They are in charge of keeping the Executive's actions in check.</p>
+<p>Legislators, which are the members of the Legislative branch, are typically elected from the Almechting Church every 10 years, with the Church's High Priest always leading the Legislative. It is also possible for the Executive to nominate legislators.</p>
+  
+<p>This branch consists of the following main members:</p>
+
+<ul>
+  <li><b>Head of Parliament</b>: The High Priest</li>
+  <li><b>Parliament</b>: Legislators</li>
+</ul>
+
+<h2>Judiciary</h2>
+
+<p>The Judiciary branch, also known as the Judicature, is a system of judiciary courts that adjudicates legal disputes/disagreements, interprets, defends and applies the laws passed by the Legislative in legal cases. This branch operates independently from the Legislative and Executive, and its judges are all apointed by the Head of State with advice from the Head of Government.</p>
+
+<p>This branch consists of two tiers of judiciary courts:</p>
+
+<ul>
+  <li><b>Supreme Court</b></li>
+  <li><b>State Courts</b></li>
+</ul>
+
+<p>The Supreme Court consists of the High Court and the Court of Appeals. The High Court hears crimes that are considered serious or severe, and civil cases with claims exceeding $250,000. The Court of Appeals hears all of the appeals against any decision made by the High Court.</p>
+
+<p>The State Courts consist of the following smaller judiciary courts:</p>
+
+<ul>
+  <li>District Courts</li>
+  <li>Magistrate Courts</li>
+  <li>Juvenile Courts</li>
+  <li>Coroners’ Courts</li>
+  <li>Small Claims Tribunals
+</ul>
+      
+<!-- end of biography space ----------------------------------------------->
+      
+      </div><!--bio-graphy-->
+      
+  </div><!--abt-bio-->
+</div><!-- end of INTRO panel -->
+    
+
+<div class="view"><!-- tags list panel ------------------------------------->
+    <div class="view-photo tag-photo"></div>
     
     <div class="abt-bio">
-        <div class="bio-graphy">
-        
+      <div class="bio-graphy">
+      
 <!-- Replace this text with your own bio --------------------------------->
-        
+      
 <p>The first letter in your bio is capitalised. Do not start the bio with a header or a blockquote block. This is how you <b>bold</b> text. Add in some <i>italics</i> for some pizazz. And of course, a <a href="URL" title="hover title">link</a> to your favourite pages. A scrollbar automatically appears if your bio gets too long.</p>
 
 <blockquote>This is a blockquote. Great for putting in quotes!</blockquote>
@@ -856,90 +708,109 @@ li { margin-bottom: 5px; }
 <p>Here is a <b>numbered</b> list:</p>
 
 <ol>
-    <li>Item 1</li>
-    <li>Item number two</li>
+  <li>Item 1</li>
+  <li>Item number two</li>
 </ol>
 
 <p>Or instead, you can have an <b>unordered</b> list:</p>
 
 <ul>
-    <li>Great for listing stuff out</li>
-    <li>that has no order</li>
-    <li>like a wishlist or to-do list</li>
+  <li>Great for listing stuff out</li>
+  <li>that has no order</li>
+  <li>like a wishlist or to-do list</li>
 </ul>
-        
+
+<p>The first letter in your bio is capitalised. Do not start the bio with a header or a blockquote block. This is how you <b>bold</b> text. Add in some <i>italics</i> for some pizazz. And of course, a <a href="URL" title="hover title">link</a> to your favourite pages. A scrollbar automatically appears if your bio gets too long.</p>
+
+<blockquote>This is a blockquote. Great for putting in quotes!</blockquote>
+
+<h2>Heading</h2>
+
+<p>Use headers to space out your text if you've got a lot of things to say. You can also use lists!</p>
+
+<p>Here is a <b>numbered</b> list:</p>
+
+<ol>
+  <li>Item 1</li>
+  <li>Item number two</li>
+</ol>
+
+<p>Or instead, you can have an <b>unordered</b> list:</p>
+
+<ul>
+  <li>Great for listing stuff out</li>
+  <li>that has no order</li>
+  <li>like a wishlist or to-do list</li>
+</ul>
+      
 <!-- end of biography space ----------------------------------------------->
-        
-        </div><!--bio-graphy-->
-        
-    </div><!--abt-bio-->
-</div><!--abt-layout-->
-</div><!-- end of INTRO panel -->
-    
+      
+      </div><!--bio-graphy-->
+      
+  </div><!--abt-bio-->
 
-<div class="view"><!-- tags list panel ------------------------------------->
-    <div class="view-photo tag-photo"></div>
-    <div class="tag-con">
-
-<!--
-
-Each tag blog consists of a CATEGORY and the TAGS. Copy and paste the block below out of the comments for as many tag blocks you would like to add.
-        
-        <div class="tag-block">
-            <div class="tag-category"></div>
-            <a href="/tagged/"><div class="tag-btn">tag</div></a>
-            <a href="/tagged/"><div class="tag-btn">tag</div></a>
-            <a href="/tagged/"><div class="tag-btn">tag</div></a>
-            <a href="/tagged/"><div class="tag-btn">tag</div></a>
-        </div>
-        
--->
-        
-        <div class="tag-block">
-            <div class="tag-category">Category Title</div>
-            <a href="/tagged/"><div class="tag-btn">tag</div></a>
-            <a href="/tagged/"><div class="tag-btn">tag</div></a>
-            <a href="/tagged/"><div class="tag-btn">tag</div></a>
-            <a href="/tagged/"><div class="tag-btn">tag</div></a>
-        </div>
-        
-        <div class="tag-block">
-            <div class="tag-category">Category Title</div>
-            <a href="/tagged/"><div class="tag-btn">tag</div></a>
-            <a href="/tagged/"><div class="tag-btn">tag</div></a>
-            <a href="/tagged/"><div class="tag-btn">tag</div></a>
-            <a href="/tagged/"><div class="tag-btn">tag</div></a>
-        </div>
-        
-        <div class="tag-block">
-            <div class="tag-category">Category Title</div>
-            <a href="/tagged/"><div class="tag-btn">tag</div></a>
-            <a href="/tagged/"><div class="tag-btn">tag</div></a>
-            <a href="/tagged/"><div class="tag-btn">tag</div></a>
-            <a href="/tagged/"><div class="tag-btn">tag</div></a>
-        </div>
-        
-    </div><!--tag-con-->
 </div><!-- end of TAGSLIST panel -->
 
 
 <div class="view"><!-- FOLLOWING panel -------------------------------->
     <div class="view-photo fol-photo"></div>
     
-    <!-- no need to edit anything in the blogroll section -->
-{block:Following}<div class="fol-content">
-    {block:Followed}<div class="fol-block">
-        <img class="fol-pfp" src="{FollowedPortraitURL-40}">
-        <div class="fol-info">
-            <div class="fol-info-un">{FollowedName}</div>
-            <div class="fol-info-ti">{FollowedTitle}</div>
-        </div><!--info-->
-        <div class="fol-actions">
-            <a href="{FollowedURL}" title="visit blog"><div class="fol-acticon acticon1"><i class="cp cp-exit-top-right"></i></div></a>
-            <a href="https://tumblr.com/follow/{FollowedName}" title="follow"><div class="fol-acticon acticon2"><i class="cp cp-user"></i></div></a>
-        </div><!--actions-->
-    </div><!--fol-block-->{/block:Followed}
-</div><!--fol-content-->{/block:Following}
+    <div class="abt-bio">
+      <div class="bio-graphy">
+      
+<!-- Replace this text with your own bio --------------------------------->
+      
+<p>The first letter in your bio is capitalised. Do not start the bio with a header or a blockquote block. This is how you <b>bold</b> text. Add in some <i>italics</i> for some pizazz. And of course, a <a href="URL" title="hover title">link</a> to your favourite pages. A scrollbar automatically appears if your bio gets too long.</p>
+
+<blockquote>This is a blockquote. Great for putting in quotes!</blockquote>
+
+<h2>Heading</h2>
+
+<p>Use headers to space out your text if you've got a lot of things to say. You can also use lists!</p>
+
+<p>Here is a <b>numbered</b> list:</p>
+
+<ol>
+  <li>Item 1</li>
+  <li>Item number two</li>
+</ol>
+
+<p>Or instead, you can have an <b>unordered</b> list:</p>
+
+<ul>
+  <li>Great for listing stuff out</li>
+  <li>that has no order</li>
+  <li>like a wishlist or to-do list</li>
+</ul>
+
+<p>The first letter in your bio is capitalised. Do not start the bio with a header or a blockquote block. This is how you <b>bold</b> text. Add in some <i>italics</i> for some pizazz. And of course, a <a href="URL" title="hover title">link</a> to your favourite pages. A scrollbar automatically appears if your bio gets too long.</p>
+
+<blockquote>This is a blockquote. Great for putting in quotes!</blockquote>
+
+<h2>Heading</h2>
+
+<p>Use headers to space out your text if you've got a lot of things to say. You can also use lists!</p>
+
+<p>Here is a <b>numbered</b> list:</p>
+
+<ol>
+  <li>Item 1</li>
+  <li>Item number two</li>
+</ol>
+
+<p>Or instead, you can have an <b>unordered</b> list:</p>
+
+<ul>
+  <li>Great for listing stuff out</li>
+  <li>that has no order</li>
+  <li>like a wishlist or to-do list</li>
+</ul>
+      
+<!-- end of biography space ----------------------------------------------->
+      
+      </div><!--bio-graphy-->
+      
+  </div><!--abt-bio-->
     
 </div><!-- end of FOLLOWING panel -->
 
@@ -970,6 +841,48 @@ Each tag blog consists of a CATEGORY and the TAGS. Copy and paste the block belo
          You can delete this entire block if you do not want to have
          asking guidelines. -->
     <div class="qna-notice">
+        <div class="qna-notice-title">Asking Guidelines</div>
+        Before you message, please take note of the following:
+        <ul>
+            <li>Notice item one</li>
+            <li>Notice item two</li>
+        </ul>
+        <div class="qna-notice-title">Asking Guidelines</div>
+        Before you message, please take note of the following:
+        <ul>
+            <li>Notice item one</li>
+            <li>Notice item two</li>
+        </ul>
+        <div class="qna-notice-title">Asking Guidelines</div>
+        Before you message, please take note of the following:
+        <ul>
+            <li>Notice item one</li>
+            <li>Notice item two</li>
+        </ul>
+        <div class="qna-notice-title">Asking Guidelines</div>
+        Before you message, please take note of the following:
+        <ul>
+            <li>Notice item one</li>
+            <li>Notice item two</li>
+        </ul>
+        <div class="qna-notice-title">Asking Guidelines</div>
+        Before you message, please take note of the following:
+        <ul>
+            <li>Notice item one</li>
+            <li>Notice item two</li>
+        </ul>
+        <div class="qna-notice-title">Asking Guidelines</div>
+        Before you message, please take note of the following:
+        <ul>
+            <li>Notice item one</li>
+            <li>Notice item two</li>
+        </ul>
+        <div class="qna-notice-title">Asking Guidelines</div>
+        Before you message, please take note of the following:
+        <ul>
+            <li>Notice item one</li>
+            <li>Notice item two</li>
+        </ul>
         <div class="qna-notice-title">Asking Guidelines</div>
         Before you message, please take note of the following:
         <ul>
@@ -1046,7 +959,7 @@ $(".hbtn-two").click(function(){
     $(".hbtn-two").addClass("hbtn-active");
     $(".hbtn-three").removeClass("hbtn-active");
     $(".hbtn-four").removeClass("hbtn-active");
-    $(".allviews").css("margin-left", "-500px");
+    $(".allviews").css("margin-left", "-860px");
 });
     
 $(".hbtn-three").click(function(){
@@ -1054,7 +967,7 @@ $(".hbtn-three").click(function(){
     $(".hbtn-two").removeClass("hbtn-active");
     $(".hbtn-three").addClass("hbtn-active");
     $(".hbtn-four").removeClass("hbtn-active");
-    $(".allviews").css("margin-left", "-1000px");
+    $(".allviews").css("margin-left", "-1720px");
 });
     
 $(".hbtn-four").click(function(){
@@ -1062,7 +975,7 @@ $(".hbtn-four").click(function(){
     $(".hbtn-two").removeClass("hbtn-active");
     $(".hbtn-three").removeClass("hbtn-active");
     $(".hbtn-four").addClass("hbtn-active");
-    $(".allviews").css("margin-left", "-1500px");
+    $(".allviews").css("margin-left", "-2580px");
 });
     
 $(".qna-qn").click(function(){
@@ -1072,19 +985,6 @@ $(".qna-qn").click(function(){
 });
 
 }); /** jquery the end **/
-</script>
-
-<!-- masonry -->
-<!-- https://masonry.desandro.com/ -->
-<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-<script src="/path/to/masonry.pkgd.min.js"></script>
-<script type="text/javascript">
-$(window).load(function () {
-$('.tag-con').masonry({
-  // options
-  itemSelector: '.tag-block'
-});
-});
 </script>
 
 </html>
