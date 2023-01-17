@@ -1,23 +1,11 @@
 /* https://vanillacss.com/ */
 /* Reset */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    font: inherit;
+    font-size: 100%;
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
-    font: inherit;
     vertical-align: baseline;
 }
 
@@ -36,10 +24,9 @@ time, mark, audio, video {
 /* Typography */
 body {
     color: var(--text-color);
-    margin: 0 auto;
     max-width: 75ch;
+    margin: 0 auto;
     padding: 0 0.5rem;
-    /* Set core body defaults */
     min-height: 100vh;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
@@ -68,39 +55,39 @@ sub { font-size: 60%; vertical-align: bottom; }
 small { font-size: 80%; }
 
 blockquote, q {
-    background: var(--secondary-color);
-    border-left: 10px solid var(--primary-color);
     display: block;
     font-family: "Georgia", serif;
     padding: 1rem;
+    background: var(--secondary-color);
+    border-left: 10px solid var(--primary-color);
 }
 blockquote p:first-child { margin-top: 0; }
 blockquote p:last-child { margin-bottom: 0; }
 cite {
+    margin-top: 1rem;
     font-family: "Georgia", serif;
     font-style: italic;
     font-weight: bold;
-    margin-top: 1rem;
 }
 
 kbd,code,samp,pre,var {
-    font-size: var(--mobile-font-size);
     font-family:monospace;
+    font-size: var(--mobile-font-size);
 }
 code, pre {
-    background: var(--tertiary-color);
-    border: 1px solid;
-    overflow: auto;
     padding: 0.25rem 0.5rem;
+    border: 1px solid;
+    background: var(--tertiary-color);
+    overflow: auto;
 }
 code pre , pre code { border: 0; padding: 0; }
 
 /* Elements */
 hr {
-    background: var(--text-color);
-    border: 0;
     height: 1px;
     margin: 4rem 0;
+    border: 0;
+    background: var(--text-color);
 }
 
 img {
@@ -190,9 +177,7 @@ sup { font-size: 80%; vertical-align: top; }
 
 /* https://piccalil.li/blog/a-modern-css-reset/ */
 /* Box sizing rules */
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
@@ -206,25 +191,19 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
-
-
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
 /* Make images easier to work with */
-img,
-picture {
+img, picture {
   max-width: 100%;
   display: block;
 }
 
 /* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
+input, button, textarea, select {
   font: inherit;
 }
 
