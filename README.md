@@ -54,3 +54,6 @@ From: https://buffer.com/library/free-images/
 - Freepik
 - Free Images
 - Canva
+
+## Icons
+https://cappuccicons.com/

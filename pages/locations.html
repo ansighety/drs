@@ -1,1196 +1,1177 @@
-<!------ 
-
-talia - characters page by taezs
-
-credits:
-
-- flickity carousel: flickity.metafizzy.co
-- ionic icons: ionic.io/ionicons
-- day/night tutorial by @eggdesign
-- preview images from unsplash
-
-send questions to @taezsthemes
-
-note: i recommend having experience with coding to use this page as it's not very easy to customise.
-
-i do not recommend changing any colours, but leaving it white or black. to change the theme to default dark, ctrl+f to <body> and change it to <body class="night"> 
-
-for v2, go to "carousel carousel-main" and change it to "carousel carousel-main v2". hope that makes sense. for the other options shown in the v2 preview, read the instructions where it says CAROUSEL OPTIONS.
-
-:-)
-
-
------->
-
 <!DOCTYPE html>
+<html>
+
+<!---      
+            UNDEAD MAGIKARP THEMES
+                    iv | queendom
+            http://undeadmagikarp.tumblr.com/
+                   
+General theme/page rules apply. Thank you!
+--->
+
+<!-- 
+NOTES:
+- Tumblr page preview is a lie. Save the page and view it in your browser to see your full changes.
+- Don't add styling to the first letter of your description.
+- Icons are from "https://ionic.io/ionicons" (containers are flexible and will expand as you add/delete icons).
+- To get the drop caps effect (first letter of your description is stylized and capitalized), make sure to put your text in <p></p> tags.
+- Skip to the <body> tag to see how to customize your code.
+-->
+
 <head>
-<link rel="shortcut icon" href="{Favicon}">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,500&family=Nunito:ital,wght@0,200;0,300;0,600;1,200;1,300;1,600&family=Viaoda+Libre&display=swap" rel="stylesheet"><link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_o5hd5vvqpoqiwwmi.css"><script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-
-<link href="https://static.tumblr.com/0podkko/oDSpg7y88/photosets.css" rel="stylesheet"><script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-
-<!--icon font-->
-<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_o5hd5vvqpoqiwwmi.css">
-
-<!-- CSS -->
-<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-<!-- JavaScript -->
-<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-
-<script>
-$(document).ready(function(){
-    $('body').tooltip({track:true});    
- 
-});
-</script>
-
-<!-- browser page title ---->
-<title>{title}: characters</title>
-
-<style>
-
-
-/*tooltip*/
-
-.ui-tooltip {  
-    position:Absolute;
-    z-index:9999;
-    padding-top:5px;
-}
- 
-.ui-tooltip-content {
-    padding:4px 10px;
-    border-radius:10px;
-    transition:.5s;
-    font:italic 10pt 'Cormorant Garamond', serif;
-    border:1px solid rgba(238, 238, 238, 0.4);
-    background:rgba(255,255,255, 0.4);
-    backdrop-filter: blur(3px);
-}
-
-
-.iframe-controls--desktop {
-    position:fixed;
-    top:0px;
-    right:0px;
-    filter:invert(100%);
-    -webkit-filter:invert(100%); 
-    z-index:999999999999;
-    -webkit-transform:scale(0.6,0.6);
-    -webkit-transform-origin: 100% 0%;
-    -ms-transform-origin:100% 0%;
-    -ms-transform:scale(0.6,0.6);
-    transform:scale(0.6,0.6);
-    transform-origin:100% 0%;
-}
- 
-body {
-    font-family: 'Nunito', sans-serif;
-    color:#333;
-    font-size: 10pt;
-    width:100%;
-    height:100%;
-    margin:0;
-    padding:0;
-    left:0;
-    top:0;
-    background-color:#fff;
-    letter-spacing:0.5px;
-    -moz-osx-font-smoothing:grayscale;
-    -webkit-font-smoothing:antialiased;
-    font-smoothing:antialiased;
-}
-
-a {
-    color: #777;
-    text-decoration: none;
-    letter-spacing:0.5px;
-    -webkit-transition: all 0.3s ease-in-out;
-	-moz-transition: all 0.3s ease-in-out;
-	-o-transition: all 0.3s ease-in-out;
-	-ms-transition: all 0.3s ease-in-out;
-	transition: all 0.3s ease-in-out;
-}
-
-a:hover {
-    color: #222; 
-    transition: 0.3s ease-in-out;
-}
-
-.taezs, .daynight{
-    position:fixed;
-    bottom:18px;
-    right:20px;
-    width:200px;
-    height:20px;
-}
-
-.taezs a, .daynight span{
-    display:inline-block;
-    background:#fff;
-    border:1px solid #eee;
-    border-radius:50%;
-    right:20px;
-    position:fixed;
-    padding:8px 10px;
-    color:black;
-    bottom:13px;
-    cursor:pointer;
-    border:1px solid rgba(238, 238, 238, 0.4);
-    background:rgba(255,255,255, 0.4);
-    backdrop-filter: blur(3px);
-}
-
-.daynight, .daynight span{
-    top:10px;
-    left:20px;
-    right:auto;
-    bottom:auto;
-}
-
-.taezs a ion-icon, .daynight ion-icon{
-    margin-bottom:-2px;
-}
-
-.taezs a:before, .daynight span:before{
-    content:"'talia' page code by taezs";
-    position:fixed;
-    right:50px;
-    padding:5px 10px;
-    border-radius:10px;
-    opacity:0;
-    background:white;
-    bottom:-20px;
-    transition:.5s;
-    border:1px solid rgba(238, 238, 238, 0.4);
-    background:rgba(255,255,255, 0.4);
-    backdrop-filter: blur(3px);
-    white-space: nowrap;
-}
-
-.daynight span:before{
-    right:auto;
-    content:"toggle dark mode";
-    left:50px;
-    bottom:auto;
-    top:-20px;
-}
-
-.taezs a:hover:before, .daynight span:hover:before{
-    opacity:1;
-    bottom:0;
-    transition:.5s;
-}
- .daynight span:hover:before{
-     bottom:auto;
-     top:3px;}
-
-::-webkit-scrollbar{
-    height:1px;
-    width:1px;
-    background:inherit;
-}
-
-::-webkit-scrollbar-thumb {background:#aaa;}
-
-::-webkit-scrollbar-track {background:transparent;}
-
-::-webkit-scrollbar-thumb, ::-webkit-scrollbar-track {border:5px solid transparent;}
-
-/* container */
-main{
-    position:fixed;
-    left:15%;
-    height:80vh;
-    top:10vh;
-    width:900px;
-    left:calc(50% - 450px);
-}
-
-
-/* flickity carousel */
-
-* { box-sizing: border-box; }
-
-
-.carousel {
-    background:#fff;
-  margin-bottom: 40px;
-}
-
-.carousel-cell {
-  width: 100%;
-  height: 50vh;
-  margin-right: 10px;
-background-color: #fafafa;
-  border-radius: 20px;
-  overflow:hidden;
-}
-.carousel-nav{
-    background:none;
-    border-top:30px solid white;
-    
-}
-
-.carousel-nav .carousel-cell{
-    cursor:pointer;
-}
-
-/* no circle */
-.flickity-button {
-  background: transparent;
-}
-/* big previous & next buttons */
-.flickity-prev-next-button {
-  width: 20px;
-  height: 20px;
-}
-
-.carousel-nav .carousel-cell {
-  height: 60px;
-  width: 60px;
-  filter:grayscale(100%);
-}
-
-.carousel-cell img{
-    position:absolute;
-    top:0;
-    z-index:1;
-    height:100%;
-    width:60%;
-    border-radius:20px;
-    object-fit:cover;
-}
-
-.carousel-nav img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-
-.carousel-nav .carousel-cell.is-nav-selected {
-  filter:grayscale(0);
-}
-
-
-.info{
-    position:absolute;
-    right:0;
-    bottom:0;
-    border-top:1px solid rgba(238, 238, 238, 0.4);
-    border-left:1px solid rgba(238, 238, 238, 0.4);
-    padding:20px;
-    width:55%;
-    z-index:10;
-    border-top-left-radius:20px;
-    background:rgba(238, 238, 238, 0.4);
-    backdrop-filter: blur(3px);
-}
-
-.desc{
-    margin-top:20px;
-    line-height:1.5;
-    font-size:9pt;
-    padding:0 10px;
-    padding-bottom:20px;
-    max-height:100px;
-    overflow-y:scroll;
-    overflow-x:hidden;
-    text-align:justify;
-}
-
-h2:before{
-    content:'';
-    width:30px;
-    display:inline-block;
-    height:3px;
-    border-top:1px solid #333;
-    margin:0 10px 0 20px;
-}
-
-h1{
-    font:30pt/15px 'Cormorant Garamond', serif;
-    padding-bottom:10px;
-    margin-bottom:0;
-}
-
-h2{
-    text-transform:uppercase;
-    font-size:10px;
-    padding-top:5px;
-}
-
-.info h1{
-    margin:0;
-    margin-top:10px;
-}
-
-.things{
-    z-index:20;
-    line-height:2;
-}
-
-.things{
-    margin:-20px;
-    padding:15px 10px;
-    margin:0 -21px -21px -20px;
-    border-top:1px solid rgba(238, 238, 238, 0.4);
-    backdrop-filter: blur(2px);
-}
-
-.things ion-icon {
-  display:inline-block;
-  margin-right:10px;
-  margin-left:20px;
-  margin-bottom:-2px;
-}
-
-.links{
-    top:-20px;
-    right:30px;
-    position:absolute;
-    text-align:right;
-}
-
-.links a{
-    margin-left:10px;
-    display:inline-block;
-    line-height:35px;
-    width:35px;
-    background:white;
-    color:black;
-    text-align:center;
-    border-radius:50%;
-}
-
-.links a:hover{
-    background:#eee;
-}
-
-.links ion-icon{
-    margin-bottom:-2px;
-}
-
-.flickity-page-dots .dot {
-  height: 2px;
-  width: 40px;
-  background:#aaa;
-  margin: 0;
-  border-radius: 0;
-}
-
-.flickity-button {
-  background: transparent;
-}
-
-.pt h1{
-    display:inline-block;
-    margin-right:10px;
-    font-size:20pt;
-    font-style:italic;
-    line-height:8pt;
-}
-
-.pt ion-icon{
-    margin-bottom:-3px;
-    margin-right:10px;
-}
-
-.pt a{
-    display:inline-block;
-    margin:0 5px -5px 5px;
-}
-
-.pt span:last-of-type a:last-of-type ion-icon{
-    margin-right:0;
-}
-
-.pt{
-    position:relative;
-    margin-bottom:30px;
-    margin-top:10px;
-    width:100%;
-    justify-content:space-between;
-    align-items:flex-end;
-    display:flex;
-}
-
-main:before, main:after{
-    position:fixed;
-    content:'';
-    width:100%;
-    height:30px;
-    left:0;
-    top:0;
-    background:#eee;
-}
-
-main:after{
-    bottom:0;
-    top:auto;
-}
-.flickity-button {
-    background: rgba(155,155,155,.5);
-    transition:0.5s;
-}
-.flickity-button:hover {
-    background: rgba(255,255,255,.9);
-    transition:0.5s;
-}
-
-.v2 .carousel-cell{
-    width:30vw;
-  filter:grayscale(100%);
-}
-
-.v2 .carousel-cell.is-selected {
-  filter:grayscale(0);
-}
-
-
-.v2 .info{
-    width:100%;
-        margin-bottom:-100px;
-        transition:0.5s;
-}
-
-.v2 img{
-    width:100%;}
-    
-.v2 .desc{
-        height:0px;
-        transition:0.5s;
-        overflow:hidden;
-        max-height:40vh;
-        transition:0.5s;
+<title>Locations - 𝐃𝐈𝐕𝐈𝐍𝐄 𝐑𝐄𝐐𝐔𝐈𝐄𝐌.</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Roboto&display=swap" rel="stylesheet">
+
+<style type="text/css">
+    body,
+    html {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        width: 100vw;
+        word-wrap: break-word;
+        font-family: 'Roboto', sans-serif; /* FONT FAMILY (make sure to import it if you use something different) */
+        /* CUSTOMIZE COLORS HERE */
+        background-color: #f2f2f2;
+        --linkUnderline: #919191;
+        --navigationTextColor: #5E5E5E;
+        --activeNavigationText: #000000;
+        --bodyColor: #7e7e7e;
+        --titleColor: #000000;
+        --subtitleColor: #303030;
+        --iconColor: #e4e4e4;
+        --searchHighlight: #6f54d8;
+        --linkColor: #5E5E5E;
+        --linkHover: #919191;
     }
 
-.v2 .info:hover{
-        margin-bottom:0;
-        transition:0.5s;
-    backdrop-filter: blur(8px);
+    /* tumblr controls by magnusthemes + my own modifications */
+    .iframe-controls--phone-mobile {
+        display: none !important;
     }
-    
-    .v2 .info:hover .desc{
-        height:10vh;
-        overflow-y:scroll;
-        transition:0.5s;
+
+    .tmblr-iframe-pushdown {
+        padding-top: 0 !important;
     }
-    
 
-/*--- MEDIA QUERIES ---*/
-
-@media only screen and (max-width: 1024px) {
-    main {
-        width:600px;
-        left:calc(50% - 300px);
-        
+    .tmblr-iframe--app-cta-button {
+        display: none !important;
     }
-}
 
-/*--- for mobile devices ---*/
-
-@media only screen and (max-width: 720px) {
-    .tmblr-iframe-compact .tmblr-iframe--unified-controls {display: none!important;}
-
-tumblr_controls, .tmblr-iframe{display:none!important;}
-
-    main{
-    width:80vw;
-    left:calc(50% - 40vw);
-    top:30px;
+    .iframe-controls--desktop {
+        display: none !important;
     }
-    
-    .carousel-cell{
-        height:45vh;
+
+    a {
+        cursor: help;
+        color: var(--linkColor);
+        text-decoration: none;
+        transition: all .5s ease;
+        -webkit-transition: all .5s ease;
+        -moz-transition: all .5s ease;
+        -ms-transition: all .5s ease;
+        -o-transition: all .5s ease;
     }
-    
-    
-    .pt span:first-of-type{
-        display:none;
+
+    a:hover {
+        color: var(--linkHover);
     }
-    
-    .pt h1{
+
+    p {
+        font-size: 0.85rem;
+        word-spacing: 2px;
+        color: var(--bodyColor);
     }
-    
-    .pt{
-        flex-direction:column-reverse;
-        margin-top:20px;
+
+    h1 {
+        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+        font-size: 4.5rem;
+        line-height: 100%;
+        margin: 0.625rem 0;
+        padding: 0;
+        color: var(--titleColor);
     }
-    
-    .pt span{
-        display:block;
-        text-align:center;
-        float:none;
-        width:100%;
+
+    h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.625rem;
     }
-    
-    .carousel img{
-        width:100%;
+
+    h3 {
+        text-transform: capitalize;
+        font-size: 1rem;
+        margin: 1rem;
+        padding: 0;
+        color: var(--subtitleColor);
     }
-    
-    .info{
-        transition:0.5s;
-        width:100%;
-        margin-bottom:-100px;
+
+    hr {
+        border: 0;
+        width: 50%;
+        height: 2px;
+        margin: 1.5rem 0;
+        position: relative;
+        /* To change the hr line color, Ctrl+F/Cmd+F "rgba(0, 0, 0," and replace with the color's rgb hex code. Do not touch the fourth number which is the opacity. */
+        background: -moz-linear-gradient(left, rgba(126, 126, 126, 0) 0%, rgba(126, 126, 126, 0) 10%, rgba(126, 126, 126, 0.65) 50%, rgba(126, 126, 126, 0) 90%, rgba(126, 126, 126, 0) 100%);
+        /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(126, 126, 126, 0)), color-stop(10%, rgba(126, 126, 126, 0)), color-stop(50%, rgba(126, 126, 126, 0.65)), color-stop(90%, rgba(126, 126, 126, 0)), color-stop(100%, rgba(126, 126, 126, 0)));
+        /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(left, rgba(126, 126, 126, 0) 0%, rgba(126, 126, 126, 0) 10%, rgba(126, 126, 126, 0.65) 50%, rgba(126, 126, 126, 0) 90%, rgba(126, 126, 126, 0) 100%);
+        /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(left, rgba(126, 126, 126, 0) 0%, rgba(126, 126, 126, 0) 10%, rgba(126, 126, 126, 0.65) 50%, rgba(126, 126, 126, 0) 90%, rgba(126, 126, 126, 0) 100%);
+        /* Opera 11.10+ */
+        background: -ms-linear-gradient(left, rgba(126, 126, 126, 0) 0%, rgba(126, 126, 126, 0) 10%, rgba(126, 126, 126, 0.65) 50%, rgba(126, 126, 126, 0) 90%, rgba(126, 126, 126, 0) 100%);
+        /* IE10+ */
+        background: linear-gradient(left, rgba(126, 126, 126, 0) 0%, rgba(126, 126, 126, 0) 10%, rgba(126, 126, 126, 0.65) 50%, rgba(126, 126, 126, 0) 90%, rgba(126, 126, 126, 0) 100%);
+        /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#00000000', GradientType=1);
+        /* IE6-9 */
     }
-    
-    .desc{
-        height:0px;
-        transition:0.5s;
-        overflow:hidden;
-        max-height:20vh;
+
+    hr:before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        top: 50%;
+        z-index: 1;
     }
-    
-    .info:hover{
-        margin-bottom:0;
-        transition:0.5s;
-    backdrop-filter: blur(8px);
+
+    hr:last-child {
+        margin-top: 2.125rem;
     }
-    
-    .info:hover .desc{
-        height:10vh;
-        overflow-y:scroll;
-        transition:0.5s;
+
+    #credit {
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--bodyColor);
     }
-    
-    .info:hover .desc::-webkit-scrollbar-thumb {background:#fafafa;}
-    
-}
 
-/* COLOR VARIABLES */
+    #credit a:hover {
+        opacity: 0.7;
+    }
 
-:root {
-  --grey: #fafafa;
-  --white: #ffffff;
-}
+    .socials.navigation {
+        position: fixed;
+        top: 20px;
+        z-index: 99;
+    }
 
+    ion-icon {
+        pointer-events: none;
+    }
 
-/* END OF MEDIA QUERIES */
+    .socials {
+        position: absolute;
+        bottom: 20px;
+        left: 25px;
+        height: max-content;
+        width: max-content;
+    }
 
-ion-icon {
-  pointer-events: none;
-}
+    .socials a {
+        color: var(--iconColor);
+        padding-right: 15px;
+        transition: all .5s ease;
+        -webkit-transition: all .5s ease;
+        -moz-transition: all .5s ease;
+        -ms-transition: all .5s ease;
+        -o-transition: all .5s ease;
+    }
 
-/* NIGHT MODE */
+    .socials a:last-child {
+        padding-right: 0;
+    }
 
-body.night a, body.night b, body.night i { color:white!important; }
+    .socials a:hover {
+        opacity: 0.7;
+    }
 
+    .container {
+        position: absolute;
+        width: 60%;
+        height: 100vh;
+        max-height: 100vh;
+        right: 0;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 
-body.night, body.night .carousel, body.night .links a{
-    background:#1f1f1f;
-    color:white!important;
-}
+    .header {
+        position: relative;
+        top: 0;
+        right: 0;
+        max-width: 100%;
+        padding: 20px 30px;
+        height: min-content;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-content: space-between;
+    }
 
-body.night a{
-    color:white!important;
-}
+    .tablink {
+        margin: 5px 10px;
+        padding: 0;
+        padding-bottom: 4px;
+        font-size: 1rem;
+        font-weight: 500;
+        text-align: center;
+        text-transform: uppercase;
+        color: var(--navigationTextColor);
+        background: none;
+        border: none;
+        border-bottom: 1px solid transparent;
+        cursor: pointer;
 
-body.night a:hover{
-    color:#aaa!important;
-}
-body.night .carousel{
-    border-color:#1f1f1f;
-}
+        transition: all .5s ease;
+        -webkit-transition: all .5s ease;
+        -moz-transition: all .5s ease;
+        -ms-transition: all .5s ease;
+        -o-transition: all .5s ease;
+    }
 
-body.night .carousel-cell{
-    background:#333;
-}
+    .tablink.activated {
+        font-weight: 700;
+        color: var(--activeNavigationText);
+        border-bottom: 1px solid var(--linkUnderline);
+    }
 
-body.night .info, body.night .taezs a, body.night .daynight span, body.night .taezs a:before, body.night .daynight span:before, body.night .ui-tooltip-content {
-    background:rgba(51, 51, 51, 0.4)!important;
-    color:white!important;
-    border-color:rgba(102, 102, 102, 0.8);
-}
+    .tablink:hover {
+        opacity: 0.7;
+    }
 
-body.night .things{
-    border-color:rgba(102, 102, 102, 0.8);
-}
+    .content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+        padding: 1rem;
+        overflow: hidden;
+        height: 75%;
+        bottom: 0;
+        font-size: 1rem;
+    }
 
-body.night h2:before{
-    border-color:#eee;
-}
+    .textContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+    }
 
-body.night main:before, body.night main:after{
-    background:#333;
-}
+    #searchResults {
+        height: 100%;
+    }
 
-body.night .iframe-controls--desktop {
-    filter:invert(0%);
-    -webkit-filter:invert(0%); }
+    .titles {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        cursor: default;
+    }
 
+    .byline {
+        font-size: 1rem;
+        margin: 0 1rem 1rem 1rem;
+        color: var(--subtitleColor);
+    }
+
+    .description {
+        padding: 0 9.5rem;
+        overflow-x: hidden;
+        overflow-y: auto;
+        color: var(--bodyColor);
+
+        line-height: 1.625rem;
+        text-align: left;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* Internet Explorer 10+ */
+    }
+
+        .description::-webkit-scrollbar { /* WebKit */
+            width: 0;
+            height: 0;
+        }
+
+        .description p:first-child {
+            margin-top: 0;
+        }
+
+        .description p:last-child {
+            margin-bottom: 0;
+        }
+
+        .description a {
+            border-bottom: 1px solid var(--linkUnderline);
+        }
+
+    .first-letter {
+        float: left;
+        font-family: 'Playfair Display', serif;
+        font-size: 3rem;
+        font-weight: 600;
+        line-height: 100%;
+        padding-right: 0.7rem;
+        color: var(--titleColor);
+    }
+
+    .result {
+        margin: 0;
+        margin-bottom: 25px;
+        border: none;
+        padding: 0;
+        background: none;
+        text-align: left;
+        color: var(--subtitleColor);
+        cursor: pointer;
+        font-size: 15px;
+        transition: all .5s ease;
+        -webkit-transition: all .5s ease;
+        -moz-transition: all .5s ease;
+        -ms-transition: all .5s ease;
+        -o-transition: all .5s ease;
+    }
+
+    .result:hover {
+        opacity: 0.7;
+    }
+
+    .result h3 {
+        margin: 0 0 5px 0;
+        font-family: 'Playfair Display', serif;
+        font-size: 1.1rem;
+
+    }
+
+    .result p b {
+        color: var(--searchHighlight);
+    }
+
+    .foundList {
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .foundList p {
+        margin: 5px 0;
+    }
+
+    .foundList p:first-child {
+        margin-top: 0;
+    }
+
+    .foundList p:last-child {
+        margin-bottom: 0;
+    }
+
+    .status {
+        display: block;
+        margin: 0;
+        position: absolute;
+        top: 40%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        font-family: 'Playfair Display', serif;
+        font-weight: 400;
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+    }
+
+    .resultContainer {
+        margin-bottom: calc(2.125rem + 1.5rem + 1rem + 2px);
+        width: 70%;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding-right: 30px;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* Internet Explorer 10+ */
+    }
+
+        .resultContainer::-webkit-scrollbar {
+            /* WebKit */
+            width: 4px;
+            height: 4px;
+        }
+
+        .resultContainer::-webkit-scrollbar-thumb {
+            background-color: rgba(0, 0, 0, 0.1);
+            height: 4px;
+            width: 4px;
+        }
+
+    .profile {
+        position: fixed;
+        width: 40%;
+        height: 100vh;
+        max-height: 100vh;
+        left: 0;
+        top: 0;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .footer {
+        display: none;
+    }
+
+    @media screen and (max-width: 1024px) {
+        h3 {
+            margin-bottom: 0;
+        }
+
+        .content {
+            overflow-y: auto;
+            overflow-x: hidden;
+            display: block;
+            height: 100%;
+        }
+
+        .container {
+            width: 100%;
+        }
+
+        .titles:first-child {
+            margin-top: 3rem;
+        }
+
+        .profile {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 60vh;
+            min-height: 60vh;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+
+        .socials {
+            position: relative;
+            margin: 0 auto;
+            top: calc(100% + 1rem);
+            left: 0;
+        }
+
+        .socials a {
+            color: var(--navigationTextColor);
+            padding-right: 15px;
+            transition: all .5s ease;
+            -webkit-transition: all .5s ease;
+            -moz-transition: all .5s ease;
+            -ms-transition: all .5s ease;
+            -o-transition: all .5s ease;
+        }
+
+        .textContent {
+            height: auto;
+        }
+
+        #searchResults .profile {
+            display: none;
+            height: 0;
+            width: 0;
+        }
+
+        .socials.navigation {
+            width: 0;
+            display: none;
+        }
+
+        #credit {
+            display: none;
+        }
+
+        .footer {
+            position: relative;
+            display: block;
+            height: min-content;
+            width: 100%;
+            margin: 16px;
+        }
+
+            .footer .mobileNav {
+                margin: 0 auto;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+            }
+
+                .footer .mobileNav a {
+                    margin-right: 20px;
+                    color: var(--navigationTextColor);
+                }
+
+                    .footer .mobileNav a:hover {
+                        opacity: 0.7;
+                    }
+
+                    .footer .mobileNav a:last-child {
+                        margin-right: 0px;
+                    }
+    }
+
+    @media screen and (max-width: 700px) {
+        .header {
+            width: 75%;
+            margin: 0 auto;
+        }
+    }
 
 </style>
 </head>
 
-<!-- change this to <body class="night"> for default dark mode -->
 <body>
 
-<!----- 
+    <div class="socials navigation">
+        <a href="./home.html" title="Home">
+            <ion-icon name="chevron-back" title="Home" size="small"></ion-icon>
+        </a>
+        <!-- needs a duplicate for some reason zzz -->
+        <ion-icon name="chevron-back" style="display: none;"></ion-icon>
+    </div>
+
+    <div class="container">
+        <div class="header">
+
+            <!-- NAVIGATION -->
+            <button class="tablink activated" onclick="openTab(event, 'home', 'homePic')">intro</button>
+            <button class="tablink" onclick="openTab(event, 'tab01', 'image01')">Sacraaliag</button>
+            <button class="tablink" onclick="openTab(event, 'tab02', 'image02')">Grondkule</button>
+            <button class="tablink" onclick="openTab(event, 'tab03', 'image03')">Zeehav</button>
+            <button class="tablink" onclick="openTab(event, 'tab04', 'image04')">Helseheid</button>
+            <button class="tablink" onclick="openTab(event, 'tab05', 'image05')">Nyskandereit</button>
+            <button class="tablink" onclick="openTab(event, 'tab06', 'image06')">Raadserium</button>
+            <button class="tablink" onclick="openTab(event, 'tab07', 'image07')">Jordem</button>
+            <button class="tablink" onclick="openTab(event, 'tab08', 'image08')">Trade & Finance</button>
+            <button class="tablink" onclick="openTab(event, 'tab09', 'image09')">Heimvander</button>
+            <button class="tablink" onclick="openTab(event, 'tab10', 'image10')">Verisjon</button>
+            <button class="tablink" onclick="openTab(event, 'tab11', 'image11')">Verheid</button>
+            <button class="tablink" onclick="openTab(event, 'tab12', 'image12')">Foreign Affairs</button>
+            <!-- ADD MORE NAVIGATION LINKS HERE -->
+
+        </div>
+
+
+        <!-- HOME PANEL -->
+        <div class="content activated" id="home">
+
+            <div class="profile" id="homePic"
+                style="background-image: url('https://static.tumblr.com/bkdoxe7/lgxqy7i09/group-photo-cropped.jpg');">
+            </div>
+
+            <div class="textContent">
+                <div class="titles">
+                    <h3>SUBTITLE</h3>
+                    <h1>Intro</h1>
+                </div>
+                <hr>
+                <div class="titles">
+                    <span class="byline">by <b>Author</b></span>
+                </div>
+                <div class="description">
+                    <p>Lorem <b>bold</b> <i>italic</i> <u>underline</u> ipsum dolor sit amet, consectetur adipiscing
+                        elit, sed do eiusmod <a href="">link</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur.</p>
+                </div>
+                <hr>
+            </div>
+        </div>
+
+        <!-- PANEL 1 -->
+        <div class="content" id="tab01" style="display:none">
+            <div class="profile" id="image01"
+                style="background-image: url('../assets/images/courts/sacraaliag/brx-sierzega-medieval-kingdom-01.jpg');">
+            </div>
+            <div class="textContent">
+                <div class="titles">
+                    <h3>The Region of the Sacraaliag Court</h3>
+                    <h1>Sacraaliag</h1>
+                </div>
+                <hr>
+                <div class="titles">
+                    <span class="byline">by <b>Author</b></span>
+                </div>
+                <div class="description">
+                    <p>Lorem <b>bold</b> <i>italic</i> <u>underline</u> ipsum dolor sit amet, consectetur adipiscing
+                        elit, sed do eiusmod <a href="">link</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur.</p>
+                </div>
+                <hr>
+            </div>
+        </div>
+
+        <!-- PANEL 2 -->
+        <div class="content" id="tab02" style="display:none">
+            <div class="profile" id="image02"
+                style="background-image: url('../assets/images/courts/grondkule/marnix-rekkers-templar-mc-po2-04.jpg');">
+            </div>
+            <div class="textContent">
+                <div class="titles">
+                    <h3>The Region of the Grondkule Court</h3>
+                    <h1>Grondkule</h1>
+                </div>
+                <hr>
+                <div class="titles">
+                    <span class="byline">by <b>Author</b></span>
+                </div>
+                <div class="description">
+                    <p>Lorem <b>bold</b> <i>italic</i> <u>underline</u> ipsum dolor sit amet, consectetur adipiscing
+                        elit, sed do eiusmod <a href="">link</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur.</p>
+                </div>
+                <hr>
+            </div>
+        </div>
+
+        <!-- PANEL 3 -->
+        <div class="content" id="tab03" style="display:none">
+            <div class="profile" id="image03"
+                style="background-image: url('../assets/images/courts/zeehav/goodname-studio-atlantis-final-no-watermark.png');">
+            </div>
+            <div class="textContent">
+                <div class="titles">
+                    <h3>The Region of the Zeehav Court</h3>
+                    <h1>Zeehav</h1>
+                </div>
+                <hr>
+                <div class="titles">
+                    <span class="byline">by <b>Author</b></span>
+                </div>
+                <div class="description">
+                    <p>Lorem <b>bold</b> <i>italic</i> <u>underline</u> ipsum dolor sit amet, consectetur adipiscing
+                        elit, sed do eiusmod <a href="">link</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur.</p>
+                </div>
+                <hr>
+            </div>
+        </div>
+
+        <!-- PANEL 4 -->
+        <div class="content" id="tab04" style="display:none">
+            <div class="profile" id="image04"
+                style="background-image: url('../assets/images/courts/helseheid/guillermo-martinez-ventana-de-los-graciares.jpg');">
+            </div>
+            <div class="textContent">
+                <div class="titles">
+                    <h3>The Region of the Helseheid Court</h3>
+                    <h1>Helseheid</h1>
+                </div>
+                <hr>
+                <div class="titles">
+                    <span class="byline">by <b>Author</b></span>
+                </div>
+                <div class="description">
+                    <p>Lorem <b>bold</b> <i>italic</i> <u>underline</u> ipsum dolor sit amet, consectetur adipiscing
+                        elit, sed do eiusmod <a href="">link</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur.</p>
+                </div>
+                <hr>
+            </div>
+        </div>
+
+        <!-- PANEL 5 -->
+        <div class="content" id="tab05" style="display:none">
+            <div class="profile" id="image05"
+                style="background-image: url('../assets/images/courts/nyskandereit/volodymyr-donchenko-camera-008-08-19-2020.jpg');">
+            </div>
+            <div class="textContent">
+                <div class="titles">
+                    <h3>The Region of the Nyskandereit Court</h3>
+                    <h1>Nyskandereit</h1>
+                </div>
+                <hr>
+                <div class="titles">
+                    <span class="byline">by <b>Author</b></span>
+                </div>
+                <div class="description">
+                    <p>Lorem <b>bold</b> <i>italic</i> <u>underline</u> ipsum dolor sit amet, consectetur adipiscing
+                        elit, sed do eiusmod <a href="">link</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur.</p>
+                </div>
+                <hr>
+            </div>
+        </div>
+
+        <!-- PANEL 6 -->
+        <div class="content" id="tab06" style="display:none">
+            <div class="profile" id="image06"
+                style="background-image: url('https://static.tumblr.com/bkdoxe7/mcjqy6js4/wendy.jpg');">
+            </div>
+            <div class="textContent">
+                <div class="titles">
+                    <h3>The Region of the Raadserium Court</h3>
+                    <h1>Raadserium</h1>
+                </div>
+                <hr>
+                <div class="titles">
+                    <span class="byline">by <b>Author</b></span>
+                </div>
+                <div class="description">
+                    <p>Lorem <b>bold</b> <i>italic</i> <u>underline</u> ipsum dolor sit amet, consectetur adipiscing
+                        elit, sed do eiusmod <a href="">link</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur.</p>
+                </div>
+                <hr>
+            </div>
+        </div>
+
+        <!-- PANEL 7 -->
+        <div class="content" id="tab07" style="display:none">
+            <div class="profile" id="image07"
+                style="background-image: url('../assets/images/courts/jordem/guillermo-martinez-vinedos-de-favola-4.jpg');">
+            </div>
+            <div class="textContent">
+                <div class="titles">
+                    <h3>The Region of the Jordem Court</h3>
+                    <h1>Jordem</h1>
+                </div>
+                <hr>
+                <div class="titles">
+                    <span class="byline">by <b>Author</b></span>
+                </div>
+                <div class="description">
+                    <p>Lorem <b>bold</b> <i>italic</i> <u>underline</u> ipsum dolor sit amet, consectetur adipiscing
+                        elit, sed do eiusmod <a href="">link</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur.</p>
+                </div>
+                <hr>
+            </div>
+        </div>
+
+        <!-- PANEL 8 -->
+        <div class="content" id="tab08" style="display:none">
+            <div class="profile" id="image08"
+                style="background-image: url('https://static.tumblr.com/bkdoxe7/mcjqy6js4/wendy.jpg');">
+            </div>
+            <div class="textContent">
+                <div class="titles">
+                    <h3>The Region of the Trade & Finance Court</h3>
+                    <h1>Trade & Finance</h1>
+                </div>
+                <hr>
+                <div class="titles">
+                    <span class="byline">by <b>Author</b></span>
+                </div>
+                <div class="description">
+                    <p>Lorem <b>bold</b> <i>italic</i> <u>underline</u> ipsum dolor sit amet, consectetur adipiscing
+                        elit, sed do eiusmod <a href="">link</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur.</p>
+                </div>
+                <hr>
+            </div>
+        </div>
+
+        <!-- PANEL 9 -->
+        <div class="content" id="tab09" style="display:none">
+            <div class="profile" id="image09"
+                style="background-image: url('../assets/images/courts/heimvander/ricky-ho-ashesofcreation-dunir-city-center-ricky-ho.jpg');">
+            </div>
+            <div class="textContent">
+                <div class="titles">
+                    <h3>The Region of the Heimvander Court</h3>
+                    <h1>Heimvander</h1>
+                </div>
+                <hr>
+                <div class="titles">
+                    <span class="byline">by <b>Author</b></span>
+                </div>
+                <div class="description">
+                    <p>Lorem <b>bold</b> <i>italic</i> <u>underline</u> ipsum dolor sit amet, consectetur adipiscing
+                        elit, sed do eiusmod <a href="">link</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur.</p>
+                </div>
+                <hr>
+            </div>
+        </div>
+
+        <!-- PANEL 10 -->
+        <div class="content" id="tab10" style="display:none">
+            <div class="profile" id="image10"
+                style="background-image: url('../assets/images/courts/verisjon/terraform-studios-112321-praxis-mk-aerial-cityshot-a-01.jpg');">
+            </div>
+            <div class="textContent">
+                <div class="titles">
+                    <h3>The Region of the Verisjon Court</h3>
+                    <h1>Verisjon</h1>
+                </div>
+                <hr>
+                <div class="titles">
+                    <span class="byline">by <b>Author</b></span>
+                </div>
+                <div class="description">
+                    <p>Lorem <b>bold</b> <i>italic</i> <u>underline</u> ipsum dolor sit amet, consectetur adipiscing
+                        elit, sed do eiusmod <a href="">link</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur.</p>
+                </div>
+                <hr>
+            </div>
+        </div>
+
+        <!-- PANEL 11 -->
+        <div class="content" id="tab11" style="display:none">
+            <div class="profile" id="image11"
+                style="background-image: url('../assets/images/courts/verheid/martechi-falkberg-03-tiered-city.jpg');">
+            </div>
+            <div class="textContent">
+                <div class="titles">
+                    <h3>The Region of the Verheid Court</h3>
+                    <h1>Verheid</h1>
+                </div>
+                <hr>
+                <div class="titles">
+                    <span class="byline">by <b>Author</b></span>
+                </div>
+                <div class="description">
+                    <p>Lorem <b>bold</b> <i>italic</i> <u>underline</u> ipsum dolor sit amet, consectetur adipiscing
+                        elit, sed do eiusmod <a href="">link</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur.</p>
+                </div>
+                <hr>
+            </div>
+        </div>
+
+        <!-- PANEL 12 -->
+        <div class="content" id="tab12" style="display:none">
+            <div class="profile" id="image12"
+                style="background-image: url('https://static.tumblr.com/bkdoxe7/mcjqy6js4/wendy.jpg');">
+            </div>
+            <div class="textContent">
+                <div class="titles">
+                    <h3>The Region of the Foreign Affairs Court</h3>
+                    <h1>Foreign Affairs</h1>
+                </div>
+                <hr>
+                <div class="titles">
+                    <span class="byline">by <b>Author</b></span>
+                </div>
+                <div class="description">
+                    <p>Lorem <b>bold</b> <i>italic</i> <u>underline</u> ipsum dolor sit amet, consectetur adipiscing
+                        elit, sed do eiusmod <a href="">link</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur.</p>
+                </div>
+                <hr>
+            </div>
+        </div>
+
+        <!-- PANEL TEMPLATE -->
+        <!-- 1. Give the content panel a unique id (eg. "tab4") -->
+        <!-- 2. Set the profile image inside background-image and give it a unique id (eg. image4) -->
+        <!-- 3. Add a tablink corresponding to the panel and image id under NAVIGATION 
+        (eg. <button class="tablink" onclick="openTab(event, 'tab4', 'image4')">tab title</button>) -->
+
+        <!-- <div class="content" id="tab4" style="display:none">
+            <div class="profile" id="image4"
+                style="background-image: url('URL HERE');">
+                MODIFY USING ICONS FROM "https://ionic.io/ionicons""
+                <div class="socials">
+                    <a href="/" target="_blank" title="Instagram">
+                        <ion-icon size="small" name="logo-instagram"></ion-icon>
+                    </a>
+                    <a href="/" target="_blank" title="YouTube">
+                        <ion-icon size="small" name="logo-youtube"></ion-icon>
+                    </a>
+                    <a href="/" target="_blank" title="Link">
+                        <ion-icon size="small" name="link" style="pointer-events: auto;"></ion-icon>
+                    </a>
+                </div>
+            </div>
+            <div class="textContent">
+                <div class="titles">
+                    <h3>SUBTITLE</h3>
+                    <h1>Title 4</h1>
+                </div>
+                <hr>
+                <div class="titles">
+                    <span class="byline">by <b>Author</b></span>
+                </div>
+                <div class="description">
+                    <p>Lorem <b>bold</b> <i>italic</i> <u>underline</u> ipsum dolor sit amet, consectetur adipiscing
+                        elit, sed do eiusmod <a href="">link</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur.</p>
+                </div>
+                <hr>
+            </div>
+        </div> -->
+
+        <div class="content" id="searchResults" style="display:none">
+            <span class="status">Loading...</span>
+        </div>
+
+    </div>
+
+    <!-- import icons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- script to make first letter special -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var descriptions = document.getElementsByClassName("description");
+            for (var i = 0; i < descriptions.length; i++) {
+				try {
+					const element = descriptions[i].querySelector('p');
+                	const keep = element.innerHTML.substring(1);
+                	// store the first character for memory
+                	var first = element.innerText[0];
+                	// remove first character
+                	element.innerText = element.innerText.substring(1);
+                	// add span tag
+                	var firstLetter = document.createElement("span");
+                	firstLetter.innerText = first;
+                	firstLetter.classList.add("first-letter");
+                	// add to first paragraph
+                	element.innerHTML = "<span class='first-letter'>" + first + "</span>" + keep;
+				}
+				catch { console.log("Couldn't stylize drop caps") }
+            }
+        });
+    </script>
+
+    <!-- script to change tab panels + search bar functionality -->
+    <script>
+        // get the id of the default image that displays on page load
+        var currImage = document.getElementsByClassName("content activated")[0].getElementsByClassName("profile")[0].id;
+
+        // add a footer to every content panel
+        document.addEventListener("DOMContentLoaded", function () {
+            const panel = document.getElementsByClassName("content");
+            for (let i = 0; i < panel.length; i++) {
+                const footer = document.createElement("div");
+                footer.classList.add("footer");
+                footer.innerHTML =
+                    '<div class="mobileNav"><a href="./home.html" title="Home">Home</a><a href="https://undeadmagikarp.tumblr.com/" target="_blank" title="Theme Credit"> CREDIT</a></div>';
+                panel[i].appendChild(footer);
+            }
+            const c = document.createElement("div");
+            c.id = "credit";
+            c.innerHTML =
+                '<a href="https://undeadmagikarp.tumblr.com/" target="_blank" title="Theme Credit" style="color: var(--bodyColor);"><ion-icon name="code-slash-outline"></ion-icon></a>';
+            document.body.appendChild(c);
+        });
+
+        function changeImage(imageName) {
+            const sidePics = document.getElementsByClassName("profile");
+            for (j = 0; j < sidePics.length; j++) {
+                sidePics[j].style.display = 'none';
+            }
+            document.getElementById(imageName).style.display = 'block';
+        }
+
+        function openTab(evt, tabName, imageName) {
+            // change side image
+            if (tabName !== "searchResults") {
+                changeImage(imageName);
+                currImage = imageName;
+            } else if (tabName === "searchResults" && !window.matchMedia("(max-width: 1024px)").matches) {
+                let dupImage = document.getElementById(currImage).cloneNode(true);
+                dupImage.id = "";
+                document.getElementById("searchResults").appendChild(dupImage);
+            };
+
+            var i, j, x, tablinks;
+            // display tab panel content
+            x = document.getElementsByClassName("content");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            document.getElementById(tabName).style.display = "flex";
+
+            // activate
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" activated", "");
+            }
+            try {
+                evt.currentTarget.className += " activated";
+            } catch {
+                console.log('searching...')
+            }
+        }
+
+        // SEARCH FEATURE
+
+        function getIndicesOf(searchStr, str, caseSensitive) {
+            var searchStrLen = searchStr.length;
+            if (searchStrLen == 0) {
+                return [];
+            }
+            var startIndex = 0,
+                index, indices = [];
+            if (!caseSensitive) {
+                str = str.toLowerCase();
+                searchStr = searchStr.toLowerCase();
+            }
+            while ((index = str.indexOf(searchStr, startIndex)) > -1) {
+                indices.push(index);
+                startIndex = index + searchStrLen;
+            }
+            return indices;
+        }
+
+        var searchInput = document.getElementById("search");
+        searchInput.addEventListener('input', onInput);
+
+        function onInput() {
+            // switch to search panel
+            const searchPanel = document.getElementById("searchResults");
+            if (!searchPanel.classList.contains("activated")) {
+                let loading = document.createElement("span");
+                loading.classList.add("status");
+                loading.innerText = "Loading...";
+                searchPanel.innerHTML = "";
+                searchPanel.appendChild(loading);
+                openTab(null, "searchResults", null);
+            }
+            // add timer to run search when user input stops
+            var duration = 200;
+            clearTimeout(searchInput._timer);
+            searchInput._timer = setTimeout(() => {
+                search(this.value);
+            }, duration);
+        }
+
+        function search(query) {
+            // if search result is empty go back to first panel
+            if (!query) {
+                var tablinks = document.getElementsByClassName("tablink")[0].click();
+            } else {
+                const searchPanel = document.getElementById("searchResults");
+
+                // add a container to store results
+                let resultContainer = document.createElement("div");
+                resultContainer.classList.add("resultContainer");
+                searchPanel.appendChild(resultContainer);
+
+                // loop through each content container
+                const content = document.getElementsByClassName("content");
+                let total = 0;
+                for (let i = 0; i < content.length; i++) {
+                    // don't search in the search panel
+                    if (content[i].id === "searchResults") break;
+
+                    // separate content into array of sentences
+                    let sentences = content[i].getElementsByClassName("description")[0].innerText.replace(
+                        /([.?!])\s*(?=[A-Z])/g, "$1|").split("|");
+                    sentences.push(content[i].querySelector('h1').innerText);
+                    sentences.push(content[i].querySelector('h3').innerText);
+                    sentences.push(content[i].getElementsByClassName("byline")[0].innerText);
+
+                    // loop through sentences and try to find match
+                    let matches = [];
+                    let sentenceIndices = [];
+                    for (let j = 0; j < sentences.length; j++) {
+                        let positions = getIndicesOf(query.trim(), sentences[j].trim(), false);
+                        if (positions.length > 0) {
+                            matches.push(positions);
+                            sentenceIndices.push(j);
+                        };
+                    };
+
+                    // found substring in sentence
+                    if (matches.length > 0) {
+                        // create result div
+                        let result = document.createElement("button");
+                        result.classList.add("result");
+                        result.onclick = function () {
+                            document.getElementsByClassName("tablink")[i].click();
+                        };
+                        // fill it in with query info
+                        let found = document.createElement('div');
+                        found.classList.add("foundList");
+
+                        let matchCount = 0;
+
+                        // loop through matches and create a separate p tag for each sentence with a match
+                        for (let k = 0; k < sentenceIndices.length; k++) {
+                            total += 1;
+                            matchCount += 1;
+                            let resultSentence = sentences[sentenceIndices[k]].trim();
+                            let match = document.createElement("p");
+                            match.innerHTML = resultSentence.slice(0, matches[k][0]) + '<b>' +
+                                resultSentence.slice(matches[k][0], matches[k][0] + query.trim().length) + '</b>' +
+                                resultSentence.slice(matches[k][0] + query.trim().length, resultSentence.length);
+                            found.appendChild(match);
+                        };
+
+                        let title = document.createElement("h3");
+                        title.innerText = document.getElementById(content[i].id).querySelector('h1').innerText + " (" +
+                            matchCount + ")";
+
+                        result.appendChild(title);
+                        result.appendChild(found);
+                        // add it to the panel
+                        resultContainer.appendChild(result);
+                    };
+                };
+
+                // clear loading notice
+                searchPanel.removeChild(searchPanel.querySelector('span'));
+
+                // Couldn't find anything
+                if (total == 0) {
+                    let notFound = document.createElement("span");
+                    notFound.classList.add("status");
+                    notFound.innerText = "No results found.";
+                    searchPanel.appendChild(notFound);
+                } else {
+                    let sum = document.createElement('h2');
+                    sum.innerText = "Results (" + total + ")";
+                    searchPanel.insertBefore(sum, resultContainer);
+                };
+            };
+        };
+    </script>
 
-
-HOW TO USE THIS PAGE 
-
-Please don't attempt to use this page if you've never touched this type of code - it can be quite confusing and annoying to customize.
-
-
-The two carousels - the main one and the bottom, navigation one - need to be done separately so you need to be careful when adding/removing characters so that there are the same number of characters in both rows, and that they match up. 
-
----->
-
-<main>
-
-<div class="pt">
-
-
-<span><a href="/"><ion-icon name="chevron-back-outline"></ion-icon> return to blog</a></span>
-
-
-<span>
-    <h1>original characters</h1>
- </span>   
-
-<!-- add/remove links as you wish - go to ionic.io/ionicons to see other icons, click on it, and copy the "web component code" that pops up at the bottom -->
-
-<span>
-    <a href="/" title="home"><ion-icon name="home-outline"></ion-icon></a>
-    <a href="/ask" title="message"><ion-icon name="chatbubble-outline"></ion-icon></a>
-    <a href="/" title="profile"><ion-icon name="person-outline"></ion-icon></a>
-    <a href="/" title="site map"><ion-icon name="map-outline"></ion-icon></a>
-</span>
-</div>
-
-<!---- start carousel ------>
-
-<!---- 
-
-CAROUSEL OPTIONS - for even more options go to https://flickity.metafizzy.co/options.html
-
-- If you want previous/next buttons, change "prevNextButtons":false to "prevNextButtons":true
-
-- if you want the autoplay to be quicker or slower, change the number. if you want autoplay to be removed, change the number to say false instead.
-
-
---->
-
-<div class="carousel carousel-main" data-flickity='{ "prevNextButtons": true, "freeScroll": true, "wrapAround": true, "autoPlay": 4000 }'>
-
-<!-- end carousel wrap -->
-
-
-<!-- start muses/characters. i recommend keeping in the numbers. add in as many as you like. -->
-
-
-<!-- begin muse 1 -->
-  <div class="carousel-cell">
-  <div class="info">
-  
-  <!-- start links - you can add more, remove some, or remove this div entirely. -->
-        <div class="links">
-            <a href="/" title="browse tag">
-                <ion-icon name="bookmark-outline"></ion-icon>
-            </a>
-            <a href="/" title="about">
-                <ion-icon name="person-outline"></ion-icon>
-            </a>
-            <a href="/" title="rp threads">
-                <ion-icon name="chatbubbles-outline"></ion-icon>
-            </a>
-</div>   
-<!-- end links -->
-
-<!-- name, title -->
-      <h1>Talia</h1>
-      <h2>etym. Hebrew: "Dew of Heaven"</h2>
-      
-<!-- character description. if too long it will become scrollable. -->
-      <div class="desc">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit suscipit massa nec hendrerit. Morbi malesuada rutrum urna, nec ultrices tortor porta sit amet. Sed at ultricies mi. Integer molestie nibh non nisl euismod, sed hendrerit augue imperdiet.<br>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit suscipit massa nec hendrerit. Morbi malesuada rutrum urna, nec ultrices tortor porta sit amet. Sed at ultricies mi. Integer molestie nibh non nisl euismod, sed hendrerit augue imperdiet.<br>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit suscipit massa nec hendrerit. Morbi malesuada rutrum urna, nec ultrices tortor porta sit amet. Sed at ultricies mi. Integer molestie nibh non nisl euismod, sed hendrerit augue imperdiet.<br>
-   
-      </div>
-<!-- end description -->
-
-<!-- here you can add descriptors, i recommend only a few, especially if you plan on it being really mobile friendly -->
-      <div class="things">
-        <ion-icon name="leaf-outline"></ion-icon>26
-        <ion-icon name="person-outline"></ion-icon>she/her<br>
-        <ion-icon name="briefcase-outline"></ion-icon>sculptor
-        <ion-icon name="heart-outline"></ion-icon>aidan
-        <ion-icon name="planet-outline"></ion-icon>gemini
-      </div>
-  </div>
-
-<!-- here is where you put your image. it can be the same as the one on the nav or different. it will automatically resize to fit the screen, so i recommend having it quite large. -->
-      <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80">
-  </div>
-<!-- end muse 1 -->  
-
-
-
-<!---->
-
-
-
-<!-- begin muse 2 -->
-  <div class="carousel-cell">
-  <div class="info">
-<div class="links">
-    <a href="/" title="browse tag"><ion-icon name="bookmark-outline"></ion-icon></a>
-    <a href="/" title="about"><ion-icon name="person-outline"></ion-icon></a>
-    <a href="/" title="rp threads"><ion-icon name="chatbubbles-outline"></ion-icon></a>
-</div>  
-      <h1>Aidan</h1>
-      <h2>etym. celtic: "Born of Fire"</h2>
-      
-      <div class="desc">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit suscipit massa nec hendrerit. Morbi malesuada rutrum urna, nec ultrices tortor porta sit amet. Sed at ultricies mi. Integer molestie nibh non nisl euismod, sed hendrerit augue imperdiet.
-   
-      </div>
-      <div class="things">
-        <ion-icon name="leaf-outline"></ion-icon>24
-        <ion-icon name="person-outline"></ion-icon>he/they<br>
-        <ion-icon name="briefcase-outline"></ion-icon>barista
-        <ion-icon name="heart-outline"></ion-icon>talia
-        <ion-icon name="planet-outline"></ion-icon>virgo
-      </div>
-  </div>
-      
-      <img src="https://images.unsplash.com/photo-1622236297949-eb7f7aa3a3cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=668&q=80">
-  </div>
-<!-- end muse 2 -->  
-
-<!-- begin muse 3 -->
-  <div class="carousel-cell">
-  <div class="info">
-<div class="links">
-    <a href="/" title="browse tag"><ion-icon name="bookmark-outline"></ion-icon></a>
-    <a href="/" title="about"><ion-icon name="person-outline"></ion-icon></a>
-    <a href="/" title="rp threads"><ion-icon name="chatbubbles-outline"></ion-icon></a>
-</div>   
-      <h1>Julien</h1>
-      <h2>etym. french: "child born of love"</h2>
-      
-      <div class="desc">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit suscipit massa nec hendrerit. Morbi malesuada rutrum urna, nec ultrices tortor porta sit amet. Sed at ultricies mi. Integer molestie nibh non nisl euismod, sed hendrerit augue imperdiet.
-   
-      </div>
-      <div class="things">
-        <ion-icon name="leaf-outline"></ion-icon>28
-        <ion-icon name="person-outline"></ion-icon>he/him<br>
-        <ion-icon name="briefcase-outline"></ion-icon>assistant professor
-        <ion-icon name="heart-outline"></ion-icon>leo
-        <ion-icon name="planet-outline"></ion-icon>aquarius
-      </div>
-  </div>
-      
-      <img src="https://images.unsplash.com/photo-1559697242-07e90b48b9fe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=668&q=800">
-  </div>
-<!-- end muse 3 -->  
-
-<!-- begin muse 4 -->
-  <div class="carousel-cell">
-  <div class="info">
-<div class="links">
-    <a href="/" title="browse tag"><ion-icon name="bookmark-outline"></ion-icon></a>
-    <a href="/" title="about"><ion-icon name="person-outline"></ion-icon></a>
-    <a href="/" title="rp threads"><ion-icon name="chatbubbles-outline"></ion-icon></a>
-</div>   
-      <h1>Morgen</h1>
-      <h2>etym. Old Welsh: "Sea Born"</h2>
-      
-      <div class="desc">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit suscipit massa nec hendrerit. Morbi malesuada rutrum urna, nec ultrices tortor porta sit amet. Sed at ultricies mi. Integer molestie nibh non nisl euismod, sed hendrerit augue imperdiet.
-   
-      </div>
-      <div class="things">
-        <ion-icon name="leaf-outline"></ion-icon>22
-        <ion-icon name="person-outline"></ion-icon>she/they<br>
-        <ion-icon name="briefcase-outline"></ion-icon>student
-        <ion-icon name="planet-outline"></ion-icon>libra
-      </div>
-  </div>
-      
-      <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80">
-  </div>
-<!-- end muse 4 -->  
-
-<!-- begin muse 5 -->
-  <div class="carousel-cell">
-  <div class="info">
-<div class="links">
-    <a href="/" title="browse tag"><ion-icon name="bookmark-outline"></ion-icon></a>
-    <a href="/" title="about"><ion-icon name="person-outline"></ion-icon></a>
-    <a href="/" title="rp threads"><ion-icon name="chatbubbles-outline"></ion-icon></a>
-</div>  
-      <h1>Daphne</h1>
-      <h2>etym. Greek: "laurel tree"</h2>
-      
-      <div class="desc">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit suscipit massa nec hendrerit. Morbi malesuada rutrum urna, nec ultrices tortor porta sit amet. Sed at ultricies mi. Integer molestie nibh non nisl euismod, sed hendrerit augue imperdiet.
-   
-      </div>
-      <div class="things">
-        <ion-icon name="leaf-outline"></ion-icon>26
-        <ion-icon name="person-outline"></ion-icon>she/her<br>
-        <ion-icon name="briefcase-outline"></ion-icon>sculptor
-        <ion-icon name="planet-outline"></ion-icon>taurus
-      </div>
-  </div>
-      
-      <img src="https://images.unsplash.com/photo-1624984674735-7ecdbd7de244?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDI2fHRvd0paRnNrcEdnfHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60">
-  </div>
-<!-- end muse 5 -->  
-
-<!-- begin muse 6 -->
-  <div class="carousel-cell">
-  <div class="info">
-<div class="links">
-    <a href="/" title="browse tag"><ion-icon name="bookmark-outline"></ion-icon></a>
-    <a href="/" title="about"><ion-icon name="person-outline"></ion-icon></a>
-    <a href="/" title="rp threads"><ion-icon name="chatbubbles-outline"></ion-icon></a>
-</div>  
-      <h1>Leo</h1>
-      <h2>etym. Greek: "Lion"</h2>
-      
-      <div class="desc">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit suscipit massa nec hendrerit. Morbi malesuada rutrum urna, nec ultrices tortor porta sit amet. Sed at ultricies mi. Integer molestie nibh non nisl euismod, sed hendrerit augue imperdiet.
-   
-      </div>
-      <div class="things">
-        <ion-icon name="leaf-outline"></ion-icon>25
-        <ion-icon name="person-outline"></ion-icon>they/them<br>
-        <ion-icon name="briefcase-outline"></ion-icon>student
-        <ion-icon name="heart-outline"></ion-icon>julien
-        <ion-icon name="planet-outline"></ion-icon>gemini
-      </div>
-  </div>
-      
-      <img src="https://images.unsplash.com/photo-1607556114526-058f5efdf49e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=668&q=80">
-  </div>
-<!-- end muse 6 --> 
-<!-- begin muse 7 -->
-  <div class="carousel-cell">
-  <div class="info">
-<div class="links">
-    <a href="/" title="browse tag"><ion-icon name="bookmark-outline"></ion-icon></a>
-    <a href="/" title="about"><ion-icon name="person-outline"></ion-icon></a>
-    <a href="/" title="rp threads"><ion-icon name="chatbubbles-outline"></ion-icon></a>
-</div>   
-      <h1>Name</h1>
-      <h2>etymology/subtitle/rank etc.</h2>
-      
-      <div class="desc">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit suscipit massa nec hendrerit. <b>bold</b>, <i>italic</i>, <s>strike. </s>
-   
-      </div>
-      <div class="things">
-        <ion-icon name="leaf-outline"></ion-icon>xx
-        <ion-icon name="person-outline"></ion-icon>pronouns<br>
-        <ion-icon name="briefcase-outline"></ion-icon>occupation
-        <ion-icon name="heart-outline"></ion-icon>love interest
-        <ion-icon name="planet-outline"></ion-icon>sign
-      </div>
-  </div>
-      
-      <img src="https://images.unsplash.com/photo-1504834636679-cd3acd047c06?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=400&q=60">
-  </div>
-<!-- end muse 7 -->  
-
-<!-- begin muse 8 -->
-   <div class="carousel-cell">
-  <div class="info">
-<div class="links">
-    <a href="/" title="browse tag"><ion-icon name="bookmark-outline"></ion-icon></a>
-    <a href="/" title="about"><ion-icon name="person-outline"></ion-icon></a>
-    <a href="/" title="rp threads"><ion-icon name="chatbubbles-outline"></ion-icon></a>
-</div>   
-      <h1>Name</h1>
-      <h2>etymology/subtitle/rank etc.</h2>
-      
-      <div class="desc">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit suscipit massa nec hendrerit. <b>bold</b>, <i>italic</i>, <s>strike. </s>
-   
-      </div>
-      <div class="things">
-        <ion-icon name="leaf-outline"></ion-icon>xx
-        <ion-icon name="person-outline"></ion-icon>pronouns<br>
-        <ion-icon name="briefcase-outline"></ion-icon>occupation
-        <ion-icon name="heart-outline"></ion-icon>love interest
-        <ion-icon name="planet-outline"></ion-icon>sign
-      </div>
-  </div>
-      
-      <img src="https://images.unsplash.com/photo-1514846326710-096e4a8035e0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE4fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=400&q=60">
-  </div>
-<!-- end muse 8 -->  
-
-<!-- begin muse 9 -->
-  <div class="carousel-cell">
-  <div class="info">
-<div class="links">
-    <a href="/" title="browse tag"><ion-icon name="bookmark-outline"></ion-icon></a>
-    <a href="/" title="about"><ion-icon name="person-outline"></ion-icon></a>
-    <a href="/" title="rp threads"><ion-icon name="chatbubbles-outline"></ion-icon></a>
-</div>   
-      <h1>Name</h1>
-      <h2>etymology/subtitle/rank etc.</h2>
-      
-      <div class="desc">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit suscipit massa nec hendrerit. <b>bold</b>, <i>italic</i>, <s>strike. </s>
-   
-      </div>
-      <div class="things">
-        <ion-icon name="leaf-outline"></ion-icon>xx
-        <ion-icon name="person-outline"></ion-icon>pronouns<br>
-        <ion-icon name="briefcase-outline"></ion-icon>occupation
-        <ion-icon name="heart-outline"></ion-icon>love interest
-        <ion-icon name="planet-outline"></ion-icon>sign
-      </div>
-  </div>
-      
-      <img src="https://images.unsplash.com/photo-1590926938512-c0d7e5c39abd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=666&q=80">
-  </div>
-<!-- end muse 9 -->  
-
-<!-- begin muse 10 -->
-   <div class="carousel-cell">
-  <div class="info">
-<div class="links">
-    <a href="/" title="browse tag"><ion-icon name="bookmark-outline"></ion-icon></a>
-    <a href="/" title="about"><ion-icon name="person-outline"></ion-icon></a>
-    <a href="/" title="rp threads"><ion-icon name="chatbubbles-outline"></ion-icon></a>
-</div>   
-      <h1>Name</h1>
-      <h2>etymology/subtitle/rank etc.</h2>
-      
-      <div class="desc">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit suscipit massa nec hendrerit. <b>bold</b>, <i>italic</i>, <s>strike. </s>
-   
-      </div>
-      <div class="things">
-        <ion-icon name="leaf-outline"></ion-icon>xx
-        <ion-icon name="person-outline"></ion-icon>pronouns<br>
-        <ion-icon name="briefcase-outline"></ion-icon>occupation
-        <ion-icon name="heart-outline"></ion-icon>love interest
-        <ion-icon name="planet-outline"></ion-icon>sign
-      </div>
-  </div>
-      
-      <img src="https://images.unsplash.com/photo-1554513647-dfaf0ef7c168?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80">
-  </div>
-<!-- end muse 10 -->  
-
-<!-- begin muse 11 -->
-  <div class="carousel-cell">
-  <div class="info">
-<div class="links">
-    <a href="/" title="browse tag"><ion-icon name="bookmark-outline"></ion-icon></a>
-    <a href="/" title="about"><ion-icon name="person-outline"></ion-icon></a>
-    <a href="/" title="rp threads"><ion-icon name="chatbubbles-outline"></ion-icon></a>
-</div>   
-      <h1>Name</h1>
-      <h2>etymology/subtitle/rank etc.</h2>
-      
-      <div class="desc">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit suscipit massa nec hendrerit. <b>bold</b>, <i>italic</i>, <s>strike. </s>
-   
-      </div>
-      <div class="things">
-        <ion-icon name="leaf-outline"></ion-icon>xx
-        <ion-icon name="person-outline"></ion-icon>pronouns<br>
-        <ion-icon name="briefcase-outline"></ion-icon>occupation
-        <ion-icon name="heart-outline"></ion-icon>love interest
-        <ion-icon name="planet-outline"></ion-icon>sign
-      </div>
-  </div>
-      
-      <img src="https://images.unsplash.com/photo-1488161628813-04466f872be2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80">
-  </div>
-<!-- end muse 11 -->  
-
-<!-- begin muse 12 -->
-   <div class="carousel-cell">
-  <div class="info">
-<div class="links">
-    <a href="/" title="browse tag"><ion-icon name="bookmark-outline"></ion-icon></a>
-    <a href="/" title="about"><ion-icon name="person-outline"></ion-icon></a>
-    <a href="/" title="rp threads"><ion-icon name="chatbubbles-outline"></ion-icon></a>
-</div>   
-      <h1>Name</h1>
-      <h2>etymology/subtitle/rank etc.</h2>
-      
-      <div class="desc">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit suscipit massa nec hendrerit. <b>bold</b>, <i>italic</i>, <s>strike. </s>
-   
-      </div>
-      <div class="things">
-        <ion-icon name="leaf-outline"></ion-icon>xx
-        <ion-icon name="person-outline"></ion-icon>pronouns<br>
-        <ion-icon name="briefcase-outline"></ion-icon>occupation
-        <ion-icon name="heart-outline"></ion-icon>love interest
-        <ion-icon name="planet-outline"></ion-icon>sign
-      </div>
-  </div>
-      
-      <img src="https://images.unsplash.com/photo-1512413316925-fd4b93f31521?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80">
-  </div>
-<!-- end muse 12 --> 
-
-<!-- begin muse 13 -->
-  <div class="carousel-cell">
-  <div class="info">
-<div class="links">
-    <a href="/" title="browse tag"><ion-icon name="bookmark-outline"></ion-icon></a>
-    <a href="/" title="about"><ion-icon name="person-outline"></ion-icon></a>
-    <a href="/" title="rp threads"><ion-icon name="chatbubbles-outline"></ion-icon></a>
-</div>   
-      <h1>Name</h1>
-      <h2>etymology/subtitle/rank etc.</h2>
-      
-      <div class="desc">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit suscipit massa nec hendrerit. <b>bold</b>, <i>italic</i>, <s>strike. </s>
-   
-      </div>
-      <div class="things">
-        <ion-icon name="leaf-outline"></ion-icon>xx
-        <ion-icon name="person-outline"></ion-icon>pronouns<br>
-        <ion-icon name="briefcase-outline"></ion-icon>occupation
-        <ion-icon name="heart-outline"></ion-icon>love interest
-        <ion-icon name="planet-outline"></ion-icon>sign
-      </div>
-  </div>
-      
-      <img src="https://images.unsplash.com/photo-1615843653880-104c9a0a4d47?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=400&q=60">
-  </div>
-<!-- end muse 13 --> 
-
-<!-- begin muse 14 -->
-  <div class="carousel-cell">
-  <div class="info">
-<div class="links">
-    <a href="/" title="browse tag"><ion-icon name="bookmark-outline"></ion-icon></a>
-    <a href="/" title="about"><ion-icon name="person-outline"></ion-icon></a>
-    <a href="/" title="rp threads"><ion-icon name="chatbubbles-outline"></ion-icon></a>
-</div>   
-      <h1>Name</h1>
-      <h2>etymology/subtitle/rank etc.</h2>
-      
-      <div class="desc">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit suscipit massa nec hendrerit. <b>bold</b>, <i>italic</i>, <s>strike. </s>
-   
-      </div>
-      <div class="things">
-        <ion-icon name="leaf-outline"></ion-icon>xx
-        <ion-icon name="person-outline"></ion-icon>pronouns<br>
-        <ion-icon name="briefcase-outline"></ion-icon>occupation
-        <ion-icon name="heart-outline"></ion-icon>love interest
-        <ion-icon name="planet-outline"></ion-icon>sign
-      </div>
-  </div>
-      
-      <img src="https://images.unsplash.com/photo-1613053340702-e6df1fb10b34?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80">
-  </div>
-<!-- end muse 14 --> 
-    
-
-</div>
-
-
-
-<!-- start navigation carousel -->
-<div class="carousel carousel-nav"
-  data-flickity='{ "prevNextButtons": false, "asNavFor": ".carousel-main", "contain": true, "pageDots": false }' >
-  
-  
-<!-- here you add your muses/characters. Again, i recommend keeping them numbered so it's easier to keep track. again, you can have as many or as few as you want, it's up to you. example images from unsplash. --->
-
-
-<!-- start muse -->
-<div class="carousel-cell" title="Talia">
-    <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80">
-</div>
-<!-- end muse -->
-
-<!-- start muse 2 -->
-  <div class="carousel-cell" title="Aidan"><img src="https://images.unsplash.com/photo-1622236297949-eb7f7aa3a3cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=668&q=80"></div>
-<!-- end muse 2 -->
-
-<!-- start muse 3 -->
-  <div class="carousel-cell" title="Julien"><img src="https://images.unsplash.com/photo-1559697242-07e90b48b9fe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=668&q=800" style="object-position:top;"></div>
-<!-- end muse 3 -->
-
-<!-- start muse 4 -->
-  <div class="carousel-cell" title="Morgen"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"></div>
-<!-- end muse 4 -->
-
-<!-- start muse 5 -->
-  <div class="carousel-cell" title="Daphne"><img src="https://images.unsplash.com/photo-1624984674735-7ecdbd7de244?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDI2fHRvd0paRnNrcEdnfHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"></div>
-<!-- end muse 5 -->
-
-<!-- start muse 6 -->
-  <div class="carousel-cell" title="Leo"><img src="https://images.unsplash.com/photo-1607556114526-058f5efdf49e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=668&q=80"></div>
-<!-- end muse 6 -->
-
-<!-- start muse 7 -->
-  <div class="carousel-cell" title="Name"><img src="https://images.unsplash.com/photo-1504834636679-cd3acd047c06?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=400&q=60"></div>
-<!-- end muse 7 -->
-
-<!-- start muse 8 -->
-  <div class="carousel-cell" title="Name"><img src="https://images.unsplash.com/photo-1514846326710-096e4a8035e0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE4fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=400&q=60"></div>
-<!-- end muse 8 -->
-
-<!-- start muse 9 -->
-  <div class="carousel-cell" title="Name"><img src="https://images.unsplash.com/photo-1590926938512-c0d7e5c39abd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=666&q=80"></div>
-<!-- end muse 9 -->
-
-<!-- start muse 10 -->
-  <div class="carousel-cell" title="Name"><img src="https://images.unsplash.com/photo-1554513647-dfaf0ef7c168?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80"></div>
-<!-- end muse 10 -->
-
-<!-- start muse 11 -->
-  <div class="carousel-cell" title="Name"><img src="https://images.unsplash.com/photo-1488161628813-04466f872be2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80"></div>
-<!-- end muse 11 -->
-
-<!-- start muse 12 -->
-  <div class="carousel-cell" title="Name"><img src="https://images.unsplash.com/photo-1512413316925-fd4b93f31521?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80"></div>
-<!-- end muse 12 -->
-
-<!-- start muse 13 -->
-  <div class="carousel-cell" title="Name"><img src="https://images.unsplash.com/photo-1615843653880-104c9a0a4d47?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=400&q=60"></div>
-<!-- end muse 13 -->
-
-<!-- start muse 14 -->
-  <div class="carousel-cell" title="Name"><img src="https://images.unsplash.com/photo-1613053340702-e6df1fb10b34?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"></div>
-<!-- end muse 14 -->
-
-</div>
-
-
-<!---- end carousel ------>
-
-</main>
-
-
- <div class="daynight"><span><ion-icon name="moon-outline"></ion-icon></span></div>
-
-
-<!------ LEAVE CREDIT IN TACT ------------>
-<div class="taezs"><a href="https://taezs.tumblr.com"><ion-icon name="star-outline"></ion-icon></a></div>
-<!------ LEAVE CREDIT IN TACT ------------>
-
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-
-<script>
-    $(document).ready(function(){
-      $('.daynight').click(function(){
-         $('body').toggleClass('night');
-      });
-   });
-</script>
 </body>
+
 </html>
