@@ -1,5 +1,5 @@
 #page_wrapper{
   margin:2px auto;
-  width:1430px;
-  height:810px;
+  max-width:1430px;
+  max-height:810px;
 }
