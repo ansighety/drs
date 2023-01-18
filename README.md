@@ -31,14 +31,12 @@ From: https://buffer.com/library/free-images/
 
 - Unsplash
 - Pexels
-- Freepik
 - Burst (by Shopify)
 - Pixabay
-- Free Images
 - Kaboompics
 - Stocksnap.io
-- Canva
 - Life of Pix
+
 - Gratisography
 - Flickr
 - The Jopwell Collection (by Jopwell)
@@ -52,3 +50,7 @@ From: https://buffer.com/library/free-images/
 - iStock
 - New Old Stock
 - Google Advanced Image Search
+
+- Freepik
+- Free Images
+- Canva
