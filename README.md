@@ -25,3 +25,30 @@
 
 - https://bebewrites.tumblr.com/post/692749135326134272/wip-page-07-a-simple-wip-page-preview-code
 - https://pneuma-themes.tumblr.com/post/680219153039343616/kardia-about-page-01-by-pneuma-themes-i-am-by
+
+## Free Stock Images
+From: https://buffer.com/library/free-images/
+
+- Unsplash
+- Pexels
+- Freepik
+- Burst (by Shopify)
+- Pixabay
+- Free Images
+- Kaboompics
+- Stocksnap.io
+- Canva
+- Life of Pix
+- Gratisography
+- Flickr
+- The Jopwell Collection (by Jopwell)
+- WOCinTech
+- CreateHER Stock
+- Death to Stock
+- Getty Images
+- PicJumbo
+- Crello
+- Depositphotos
+- iStock
+- New Old Stock
+- Google Advanced Image Search
