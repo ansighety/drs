@@ -16,12 +16,34 @@
 
 <html>
 
-<title>{title}</title>
+<title>𝐓𝐇𝐄 𝐃𝐈𝐕𝐈𝐍𝐄 𝐑𝐄𝐐𝐔𝐈𝐄𝐌 𝐒𝐄𝐑𝐈𝐄𝐒.</title>
+
+<link rel="stylesheet" href="../styles/main.css">
+<link rel="stylesheet" href="../styles/index.css">
   
 <style type="text/css"> 
 @import url('https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:ital@0;1&display=swap');
 
 :root {
+
+/* MINE */
+/* FONTS */
+--background-color: #F9F6F0;
+--border-color: #d4cdc9;
+
+--text-font: times;
+--text-size: 13.5px;
+--text-color: #000; 
+
+--bold-size: 10.5px;
+--bold-color: #000;
+
+--special-color: #fff;  
+--special-bg: #bfb5ae;  
+
+--header-font: "Sorts Mill Goudy";
+--header-font: 'UnifrakturMaguntia', times;/*title font*/
+--nav-link-hover: #ccc;
 
 /* FONTS */
   --font-one: Sorts Mill Goudy; 
@@ -58,60 +80,7 @@
 
 ::-webkit-scrollbar { display: none; }
 
- body {
-    background: var(--background);
-    margin: 0 auto;
-    width: 100%;
-}
-
 /* MAIN TITLE */
-
- .header {
-    margin: 50px auto;
-    text-align: center;
-    width: var(--container);
-    word-break: break-word;
-}
-
-.header h1 {
-    font-family: var(--font-one);
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size:  var(--text-header);
-    line-height: 70px;
-    margin: 15px 0px;
- }
-
-.header i {
-    font-family: var(--font-two);
-    font-weight: 400;
-    text-transform: lowercase;
-    font-size: var(--text-subtitle);
-    letter-spacing: 1px;
-    margin: 0;
-}
-
-.header a {
-    padding: 0 10px;
-    margin-top: 0px;
-    font-family: var(--font-two);
-    text-decoration: none;
-    color: var(--text);
-    font-style: italic;
-    letter-spacing: 1px;
-    transition: 0.5s ease all;
-    font-size: 13px;
-}
-
-.header a:hover {
-    color: var(--linkhover);
-    transition: 0.5s ease all;
-}
-
-.header em {
-    font-size: 10px;
-    vertical-align: middle;
-}
 
 .line {
     width: 1px;
@@ -154,62 +123,12 @@
 
 /* BODY  */
 
-.text {
-    color: var(--text);
-    width: var(--container);
-    margin: 0 auto;
-    margin-top: 70px;
-    border: 2px solid var(--background);
-    padding: 0px 65px 30px 65px;
-    margin-bottom: 75px;
-    text-align:center;
-}
-
-.double-border {
-  outline: 2px solid var(--border);
-  box-shadow:inset 0 0 0 1px var(--border);
-}
-
 span {
     float: left;
     margin-top: 15px; /* change top of the letter's spacing */
     width: .8em;  /* change right of the letter's spacing */
     font-size: var(--text-firstletter);
     font-family: var(--font-two);
-}
-
-
-.text p {
-    font-family: var(--font-two);
-    font-size: var(--text-body);
-    text-align: justify;
-    line-height: 165%;
- }
-
-.text b {
-    text-transform: uppercase;
-    font-size: var(--text-bold);
-    color: var(--bold);
-    letter-spacing: 0.5px;
-}
-
-.text special {
-    color: var(--text-special);
-    background: var(--specialbg);
-    padding: 1px 5px;
-    border-radius: 2px;
-    margin: 0 2px;
-}
-
-.text u {
-    text-decoration: none;
-    border-bottom: 1.5px solid var(--border);
-}
-
-.text img {
-    width: 100%;
-    object-fit: cover;
-    padding: 20px 0px;
 }
 
 
@@ -265,57 +184,69 @@ span {
 </style>
 <body>
 
-<div class="text double-border">
-<div class="header">
-    <i> words here </i>
-    <h1> title here </h1>
-    
-     <a href="/"> ask </a>   <em> * </em> 
-     <a href="/"> navigation </a> <em> * </em> 
-     <a href="/"> submit </a>
+<div id="page_wrapper">
+
+    <div id="page_index"><div class="index_cont double-border">
+
+        <div id="index_header">
+            <i> the </i>
+            <h1> divine requiem </h1>
+            <i> series </i>
+            <div id="index_header_nav">
+                <a href="/"> ask </a>   <em> * </em> 
+                <a href="/"> navigation </a> <em> * </em> 
+                <a href="/"> submit </a>
+            </div>
+        </div>
+
+        <div class="header">
+            
+        </div>
+        
+        
+        <div class="flex-container">
+        
+                <div class="flex-items" id="flex-sides" style="border-right: 1px solid var(--border);"> words here   </div> 
+        
+                <div class="flex-items" id="flex-center">   <img src="https://via.placeholder.com/60"></img>  </div>  <!-- PLACE IMAGE HERE -->
+            
+                <div class="flex-items" id="flex-sides" style="border-left: 1px solid var(--border);"> words here   </div>  <!-- COPY THIS LINE IF YOU WANT MORE ITEMS -->
+        
+        </div>
+        
+        
+        <p> <span>T</span> is some normal text. <i> This is italic text. </i> <b>This is bold text.</b> <u> This is underlinelined text.</u> This is <special>special</special> text.  Aliquam erat volutpat. Vestibulum eget nunc semper dolor ullamcorper elementum et sit amet nulla. Nullam convallis et odio at iaculis. Suspendisse ac rhoncus nisl. Morbi eu mollis erat. Mauris in mauris sit amet sem pellentesque facilisis. Praesent id rutrum neque. Aliquam placerat posuere massa, sed vehicula lectus dignissim eu. Integer vitae tortor nisl. Suspendisse eget nibh ac quam molestie bibendum et sed turpis. Suspendisse ac magna nec nibh dapibus pretium.</p>
+        
+        
+            <img src="https://via.placeholder.com/560x200"></img>  <!-- PLACE IMAGE HERE -->
+        
+        
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <b>Etiam mollis euismod lectus, id vulputate quam tincidunt at.</b> Aliquam erat volutpat. Vestibulum eget nunc semper dolor ullamcorper elementum et sit amet nulla. Nullam convallis et odio at iaculis. Suspendisse ac rhoncus nisl. Morbi eu mollis erat. Mauris in mauris sit amet sem pellentesque facilisis. Praesent id rutrum neque. Aliquam placerat posuere massa, sed vehicula lectus dignissim eu. Integer vitae tortor nisl. Suspendisse eget nibh ac quam molestie bibendum et sed turpis. Suspendisse ac magna nec nibh dapibus pretium.</p>
+        
+        
+                <p id="quote">
+                "PLACE YOUR QUOTE HERE."
+                <br></br>
+                <em> - author  <i>"title here"</i> </em>
+                </p>
+        
+        
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis euismod lectus, id vulputate quam tincidunt at. Aliquam erat volutpat. Vestibulum eget nunc semper dolor ullamcorper elementum et sit amet nulla. Nullam convallis et odio at iaculis. Suspendisse ac rhoncus nisl. Morbi eu mollis erat. Mauris in mauris sit amet sem pellentesque facilisis. Praesent id rutrum neque. Aliquam placerat posuere massa, sed vehicula lectus dignissim eu. Integer vitae tortor nisl. Suspendisse eget nibh ac quam molestie bibendum et sed turpis. Suspendisse ac magna nec nibh dapibus pretium.</p>
+        
+        
+            <h1 id="subheader"> subheader </h1>
+            <p id="subheader-subtitle"> subtitle here </p>
+        
+            <div class="line">⠀</div>
+            
+        
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis euismod lectus, id vulputate quam tincidunt at. Aliquam erat volutpat. Vestibulum eget nunc semper dolor ullamcorper elementum et sit amet nulla. Nullam convallis et odio at iaculis. Suspendisse ac rhoncus nisl. Morbi eu mollis erat. Mauris in mauris sit amet sem pellentesque facilisis. Praesent id rutrum neque. Aliquam placerat posuere massa, sed vehicula lectus dignissim eu. Integer vitae tortor nisl. Suspendisse eget nibh ac quam molestie bibendum et sed turpis. Suspendisse ac magna nec nibh dapibus pretium.</p>
+
+    </div></div>
+
 </div>
 
 
-<div class="flex-container">
-
-      <div class="flex-items" id="flex-sides" style="border-right: 1px solid var(--border);"> words here   </div> 
-
-      <div class="flex-items" id="flex-center">   <img src="https://via.placeholder.com/60"></img>  </div>  <!-- PLACE IMAGE HERE -->
-    
-      <div class="flex-items" id="flex-sides" style="border-left: 1px solid var(--border);"> words here   </div>  <!-- COPY THIS LINE IF YOU WANT MORE ITEMS -->
-
-</div>
-
-
-<p> <span>T</span> is some normal text. <i> This is italic text. </i> <b>This is bold text.</b> <u> This is underlinelined text.</u> This is <special>special</special> text.  Aliquam erat volutpat. Vestibulum eget nunc semper dolor ullamcorper elementum et sit amet nulla. Nullam convallis et odio at iaculis. Suspendisse ac rhoncus nisl. Morbi eu mollis erat. Mauris in mauris sit amet sem pellentesque facilisis. Praesent id rutrum neque. Aliquam placerat posuere massa, sed vehicula lectus dignissim eu. Integer vitae tortor nisl. Suspendisse eget nibh ac quam molestie bibendum et sed turpis. Suspendisse ac magna nec nibh dapibus pretium.</p>
-
-
-    <img src="https://via.placeholder.com/560x200"></img>  <!-- PLACE IMAGE HERE -->
-
-
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <b>Etiam mollis euismod lectus, id vulputate quam tincidunt at.</b> Aliquam erat volutpat. Vestibulum eget nunc semper dolor ullamcorper elementum et sit amet nulla. Nullam convallis et odio at iaculis. Suspendisse ac rhoncus nisl. Morbi eu mollis erat. Mauris in mauris sit amet sem pellentesque facilisis. Praesent id rutrum neque. Aliquam placerat posuere massa, sed vehicula lectus dignissim eu. Integer vitae tortor nisl. Suspendisse eget nibh ac quam molestie bibendum et sed turpis. Suspendisse ac magna nec nibh dapibus pretium.</p>
-
-
-     <p id="quote">
-        "PLACE YOUR QUOTE HERE."
-     <br></br>
-        <em> - author  <i>"title here"</i> </em>
-     </p>
-
-
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis euismod lectus, id vulputate quam tincidunt at. Aliquam erat volutpat. Vestibulum eget nunc semper dolor ullamcorper elementum et sit amet nulla. Nullam convallis et odio at iaculis. Suspendisse ac rhoncus nisl. Morbi eu mollis erat. Mauris in mauris sit amet sem pellentesque facilisis. Praesent id rutrum neque. Aliquam placerat posuere massa, sed vehicula lectus dignissim eu. Integer vitae tortor nisl. Suspendisse eget nibh ac quam molestie bibendum et sed turpis. Suspendisse ac magna nec nibh dapibus pretium.</p>
-
-
-    <h1 id="subheader"> subheader </h1>
-    <p id="subheader-subtitle"> subtitle here </p>
-
-    <div class="line">⠀</div>
-    
-
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis euismod lectus, id vulputate quam tincidunt at. Aliquam erat volutpat. Vestibulum eget nunc semper dolor ullamcorper elementum et sit amet nulla. Nullam convallis et odio at iaculis. Suspendisse ac rhoncus nisl. Morbi eu mollis erat. Mauris in mauris sit amet sem pellentesque facilisis. Praesent id rutrum neque. Aliquam placerat posuere massa, sed vehicula lectus dignissim eu. Integer vitae tortor nisl. Suspendisse eget nibh ac quam molestie bibendum et sed turpis. Suspendisse ac magna nec nibh dapibus pretium.</p>
-
-
-</div>
 
 <!-- DO NOT TOUCH BELOW THIS LINE -->
 <div class="credit">

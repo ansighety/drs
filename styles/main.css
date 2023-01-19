@@ -1,5 +1,17 @@
 #page_wrapper{
-  margin:2px auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
   max-width:1350px;
   max-height:650px;
+  transform: translate(-50%, -50%);
+  overflow:auto;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration:none;
 }
