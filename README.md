@@ -1,5 +1,18 @@
 # 𝐓𝐇𝐄 𝐃𝐈𝐕𝐈𝐍𝐄 𝐑𝐄𝐐𝐔𝐈𝐄𝐌 𝐒𝐄𝐑𝐈𝐄𝐒.
 
+# Tasks
+- Make pages width vw and height vh
+    - Home
+    - Government
+    - Courts
+    - Locations
+- Make pages responsive
+    - Home
+    - Government
+    - Courts
+    - Locations
+- Standardise colour scheme
+
 *   Synopsis
 *   History
 *   World
