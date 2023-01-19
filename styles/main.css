@@ -1,11 +1,13 @@
 #page_wrapper{
-  position: absolute;
+  /*position: absolute;
   top: 50%;
   left: 50%;
   max-width:1350px;
   max-height:650px;
   transform: translate(-50%, -50%);
-  overflow:auto;
+  overflow:auto;*/
+  width:95vw;
+  height:95vh;
 }
 
 *{

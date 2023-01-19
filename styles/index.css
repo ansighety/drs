@@ -1,3 +1,23 @@
+:root {
+--background-color: #F9F6F0;
+--border-color: #d4cdc9;
+
+--text-font: times;
+--text-size: 13.5px;
+--text-color: #000; 
+--first-letter-text-size: 400%;
+
+--bold-size: 10.5px;
+--bold-color: #000;
+
+--special-color: #fff;  
+--special-bg: #bfb5ae;  
+
+--header-font: 'UnifrakturMaguntia', times;
+--header-font: "Sorts Mill Goudy";
+--nav-link-hover: #ccc;
+}
+
 body {
   width: 100%;
   margin: 0 auto;
@@ -80,6 +100,7 @@ img {
 
 #index_header_nav{
   margin:10px 0;
+  text-align:center;
 }
 
 #index_header_nav a{
@@ -100,6 +121,88 @@ img {
   vertical-align: middle;
 }
 
+#index_stats{
+  display:flex;
+  justify-content: space-around;
+  margin:30px auto;
+  padding:0 10px;
+  font-style:italic;
+  letter-spacing: 1px;
+}
+
+.index_stat{
+  display: flex;
+  flex:1;
+  justify-content: center;
+  align-items: center;
+  height:20px;
+  margin:10px;
+  border-right:1px solid var(--border-color);
+}
+
+.index_stat img{
+  height:100px;
+  object-fit: contain;
+}
+
+#index_stats .index_stat:last-of-type{
+  border-right:0px solid var(--border-color);
+}
+
+span{
+  float:left;
+  margin-top: 15px;
+  width: .8em;
+  font-size: var(--first-letter-text-size);
+}
+
+.quote{
+  width:70%;
+  margin: 35px auto;
+  font-style: italic;
+  letter-spacing: 1px;
+  text-transform: lowercase;
+  text-align: center;
+}
+
+.quote em{
+  font-weight: 700;
+  font-size:0.9em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.quote em i {
+ margin-left: 8px;
+ font-weight: normal;
+ text-transform: lowercase;
+}
+
+h2.subheader{
+  /*margin: 40px 0px -15px 0px;*/
+  font-family:var(--header-font);
+  font-family: var(--font-one);
+  font-size: 2.15em;
+  text-align:center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+p.subheader-subtitle{
+  margin-top:-20px;
+  font-style: italic;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.text-line{
+  margin: 35px auto;
+  width:1px;
+  height: 50px;
+  background-color:var(--text-color);
+}
+
 @media screen and (max-width: 1024px) {
   #page_index{
     width:60vw;
@@ -117,3 +220,8 @@ img {
     width:95vw;
   }
 }
+
+::-webkit-scrollbar { display: none; }
+
+.credit { position: fixed;     bottom: 0.7em;    right: 1em; }
+.credit a {font-size: 14px; text-decoration: none; transition: 0.3s ease all; color:  var(--text-color);}
