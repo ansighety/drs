@@ -1,22 +1,11 @@
 # 𝐓𝐇𝐄 𝐃𝐈𝐕𝐈𝐍𝐄 𝐑𝐄𝐐𝐔𝐈𝐄𝐌 𝐒𝐄𝐑𝐈𝐄𝐒.
 
 # Tasks
-- Clean up "Locations" page
+- Recode up "Locations" page
 - Look for another simpler theme for the "Courts" page
 - Look for another more fitting page theme for "Societies and Organisations"
 - Look for another more fitting page theme for "Religions"
 - Look for another more fitting page theme for "Languages"
-
-- Make pages width vw and height vh
-    - Home
-    - Government
-    - Courts
-    - Locations
-- Make pages responsive
-    - Home
-    - Government
-    - Courts
-    - Locations
 - Standardise colour scheme
 
 *   Synopsis
