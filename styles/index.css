@@ -1,21 +1,21 @@
 :root {
---background-color: #F9F6F0;
---border-color: #d4cdc9;
+--background-color: var(--brown-01);
+--border-color: var(--brown-02);
 
 --text-font: times;
 --text-size: 13.5px;
---text-color: #000; 
+--text-color: var(--mono-05); 
 --first-letter-text-size: 400%;
 
 --bold-size: 10.5px;
---bold-color: #000;
+--bold-color: var(--mono-05);
 
---special-color: #fff;  
---special-bg: #bfb5ae;  
+--special-color: var(--mono-01);  
+--special-bg: var(--brown-03);  
 
 --header-font: 'UnifrakturMaguntia', times;
 --header-font: "Sorts Mill Goudy";
---nav-link-hover: #ccc;
+--nav-link-hover: var(--mono-03);
 }
 
 body {

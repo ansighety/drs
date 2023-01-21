@@ -1,5 +1,13 @@
 :root{
-  
+  --mono-01: #ffffff;
+  --mono-02: #f6f6f6;
+  --mono-03: #cccccc;
+  --mono-04: #bbbbbb;
+  --mono-05: #000000;
+  --brown-01: #F9F6F0;
+  --brown-02: #d4cdc9;
+  --brown-03: #bfb5ae;
+  --brown-04: #e5b8ad;
 }
 
 #page_wrapper{
