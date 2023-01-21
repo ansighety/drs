@@ -1,0 +1,824 @@
+<!-----------------------------------------------------------------------
+Colors Page [01]: Euphoria
+Made by glenthemes
+ 
+Initial release: 2020/04/26
+Last updated: 2021/10/21
+ 
+TERMS OF USE:
+1) Do not remove the page credit.
+2) Do not repost/redistribute my themes.
+3) Do not take parts of the code and use it as your own.
+4) Do not use my themes as a base code.
+5) Do not mix my themes together.
+
+Customization pointers:
+ 🍑🍑🍑🍑🍑🍑🍑 = places to edit
+ 🍓🍓🍓🍓🍓🍓🍓 = start of a section || start copy
+ 🛑🛑🛑🛑🛑🛑🛑 = end of a section || end copy
+------------------------------------------------------------------------>
+ 
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<!--  🍑🍑🍑🍑🍑🍑🍑 -->
+<!------ TITLE (the one that appears as your tab/browser title ------>
+
+<title>Colour Palette - 𝐓𝐇𝐄 𝐃𝐈𝐕𝐈𝐍𝐄 𝐑𝐄𝐐𝐔𝐈𝐄𝐌 𝐒𝐄𝐑𝐈𝐄𝐒.</title>
+
+
+<!--------------------JAVASCRIPTS-------------------->
+<script src="../vendor/jquery-3.6.3.min.js"></script>
+<script src="https://static.tumblr.com/2pnwama/DLppehqvd/feathericons.js"></script>
+<script src="https://glenthemes.s3.eu-west-2.amazonaws.com/color-pages/01/euphoria.js"></script>
+ 
+<link href="https://fonts.googleapis.com/css?family=Nunito|Questrial:400|Work+Sans|Manrope:300,400|Libre+Franklin" rel="stylesheet">
+
+<!-------------------------------------------------------------------->
+ 
+<style type="text/css">
+ 
+/*--------------------TOOLTIPS--------------------*/
+#s-m-t-tooltip {
+    padding:5px 12px;
+    margin:20px;
+    background-color:var(--Tooltips-BG);
+    font-family:work sans;
+    font-size:var(--Top-Links-Font-Size);
+    text-transform:uppercase;
+    letter-spacing:.7px;
+    color:var(--Tooltips-Text);
+    z-index:99;
+    max-width:40vw;
+}
+ 
+/*--------------------TUMBLR CONTROLS--------------------*/
+iframe#tumblr_controls, .iframe-controls--desktop {
+    top:calc(var(--Top-Bar-Padding) - 3px)!important;
+    right:calc(var(--Top-Bar-Padding) + var(--Bars-Width) + (var(--Top-Bar-Item-Spacing) * 2))!important;
+    position:fixed!important;
+    
+    transform:scale(0.7,0.7);
+    -webkit-transform:scale(0.7,0.7);
+    -moz-transform:scale(0.7,0.7);
+    -o-transform:scale(0.7,0.7);
+    -ms-transform:scale(0.7,0.7);
+    
+    transform-origin:100% 0;
+    -webkit-transform-origin:100% 0;
+    -moz-transform-origin:100% 0;
+    -o-transform-origin:100% 0;
+    -ms-transform-origin:100% 0;
+    
+    filter:invert(100%) hue-rotate(180deg);
+    -webkit-filter:invert(100%) hue-rotate(180deg);
+    
+    z-index:999999!important;
+}
+ 
+/*--------------------SCROLLBAR--------------------*/
+::-webkit-scrollbar {
+    width:17px;
+    height:17px;
+    background-color:var(--Background);
+}
+ 
+::-webkit-scrollbar-thumb {
+    border:8px solid var(--Background);
+    background-color:var(--Scrollbar-Thumb);
+}
+
+::-webkit-scrollbar-button {
+    width:3px;
+    height:3px;
+}
+ 
+/*--------------------TEXT HIGHLIGHT--------------------*/
+::selection {
+background:#BBD3FD;
+}
+ 
+::-moz-selection {
+background:#BBD3FD;
+}
+ 
+/*--------------------BASICS--------------------*/
+body {
+    background:var(--Background) url(''); /* background image [if u want] */
+    background-attachment:fixed;
+    background-repeat:repeat;
+    color:#888;
+    cursor:normal;
+    font-family:work sans;
+    line-height:1.6em;
+    font-size:12px;
+    text-align:left;
+    overflow:hidden;
+}
+ 
+blockquote {
+    padding-left:10px;
+    margin-left:5px;
+    border-left:1px solid;
+    border-color:#aaa;
+    margin:10px;
+}
+
+a {
+    color:#000;
+    text-decoration:none;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+}
+
+pre, code {
+    white-space:pre-wrap;
+}
+
+hr {
+    width:70%;
+    border-width:0px;
+    height:1px;
+    background-color:#bbb;
+}
+
+img {vertical-align:middle;}
+ 
+/*------- CUSTOMIZATION OPTIONS -------*/
+
+:root {
+    --Top-Bar-Background:#fff;
+    --Top-Bar-Bottom-Border:#f7f7f7;
+    
+    --Top-Avatar-Size:32px;
+    --Top-Bar-Padding:24px;
+    --Top-Bar-Item-Spacing:7px;
+    --Top-Title-Font-Size:11px;
+    --Top-Title-Color:#0d0d0d;
+    
+    --Separator-Height:26px;
+    --Separator:#eee;
+    
+    --Top-Links:#111;
+    --Top-Links-Font-Size:10px;
+    
+    /* top right corner */
+    --Bars-Width:13px;
+    --Bars:#111;
+    
+    /* main background color*/
+    --Background:#fdfdfd;
+    
+    --Sidebar-Width:269px;
+    
+    --Sidebar-Title-Color:#090909;
+    --Sidebar-Title-Font-Size:18px;
+    --Sidebar-Title-Bottom-Gap:18px;
+    --Sidebar-Desc-Text:#777;
+    --Sidebar-Desc-Line-Height:1.8em;
+    --Sidebar-Desc-Links:#111; /* if any */
+    --Sidebar-Desc-Bottom-Gap:10px;
+    
+    /* the circular color filters in the sidebar */
+    --Filter-Colors-Top-Gap:15px;
+    --Filter-Colors-Size:20px;
+    --Filter-Colors-Padding:3px;
+    --Filter-Colors-Border:#f2f2f2;
+    --Filter-Colors-Spacing:3px;
+    --Tooltips-BG:#111;
+    --Tooltips-Text:#eee;
+    
+    /* top & bottom gap of your screen */
+    --Window-Margin:40px;
+    --Sidebar-Right-Gap:80px;
+    
+    /* MAIN color blocks */
+    --Color-Block-Width:110px;
+    --Color-Block-Spacing:14px;
+    --Color-Blocks-Per-Row:5; /* number only, no 'px' */
+    --Color-Blocks-Background:#fff;
+    --Color-Blocks-Border:#f7f7f7;
+    --Color-Blocks-Roundness-Top:3px;
+    --Color-Blocks-Roundness-Bottom:5px;
+    --HexCode-Padding:14px;
+    --HexCode-Font-Size:11px;
+    --HexCode-Color:#777;
+    --Filter-Fade-Speed:269ms; /* in milliseconds ONLY - do not remove 'ms' */
+    
+    --ReCenter-Amount:-45px; /* if you want to shift the container left/right */
+    
+    --Scrollbar-Thumb:#777;
+    --Scrollbar-Track:#ddd;
+    
+    --Credit-Color:#666;
+}
+
+/*------------ TOP BAR ------------*/
+
+#heather {
+    position:fixed;
+    top:0;margin-top:0;
+    left:0;margin-left:0;
+    width:100%;
+    height:calc(var(--Top-Avatar-Size) + (var(--Top-Bar-Padding) * 2));
+    background:var(--Top-Bar-Background);
+    border-bottom:1px solid var(--Top-Bar-Bottom-Border);
+    z-index:69;
+}
+
+#m_i {
+    margin:0 var(--Top-Bar-Padding);
+    width:calc(100% - (var(--Top-Bar-Padding) * 2));
+    height:100%;
+    display:table;
+}
+
+#m_ii {
+    display:table-cell;
+    vertical-align:middle;
+}
+
+#m_iii {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin:0 calc(var(--Top-Bar-Item-Spacing) * -1);
+    padding:0 5px;
+}
+
+.felix {
+    display:flex;
+    align-items:center;
+}
+
+.felix.right {justify-content:flex-end}
+
+#heather .felix > * {
+    margin:0 var(--Top-Bar-Item-Spacing);
+}
+
+.avi {
+    width:var(--Top-Avatar-Size);
+    height:var(--Top-Avatar-Size);
+    border-radius:100%;
+}
+
+.title {
+    font-family:manrope;
+    font-size:var(--Top-Title-Font-Size);
+    font-weight:400;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    color:var(--Top-Title-Color);
+}
+
+.separator {
+    width:1px;
+    height:var(--Separator-Height);
+    background:var(--Separator);
+}
+
+.toplinks a {
+    padding:1em 4px;
+    font-family:work sans;
+    font-size:var(--Top-Links-Font-Size);
+    text-transform:uppercase;
+    letter-spacing:.7px;
+    color:var(--Top-Links);
+}
+
+.toplinks dot {
+    font-size:var(--Top-Links-Font-Size);
+    color:var(--Top-Links);
+}
+
+.bars {
+    
+}
+
+.bar {
+    margin:3px 0;
+    width:var(--Bars-Width);
+    height:1px;
+    background:var(--Bars);
+}
+
+/*------------ MAIN CONTAINER ------------*/
+
+#main {
+    position:absolute;
+    top:0;left:0;right:0;
+    margin-top:calc(var(--Top-Avatar-Size) + (var(--Top-Bar-Padding) * 2) + 1px);
+    height:calc(100vh - (var(--Top-Avatar-Size) + (var(--Top-Bar-Padding) * 2)));
+    text-align:center;
+    overflow-y:scroll;
+}
+
+#mais {
+    display:inline-block;
+    height:100%;
+    margin-left:calc( 
+        (var(--Sidebar-Width) + var(--Sidebar-Right-Gap) + 
+        (var(--Color-Block-Width) * var(--Color-Blocks-Per-Row)) +
+        (var(--Color-Block-Spacing) * ((var(--Color-Blocks-Per-Row) - 1) * 2)))
+        * -1);
+}
+
+#thatsawrap {
+    margin-left:var(--ReCenter-Amount);
+    height:100%;
+    text-align:left;
+}
+
+/*------------ SIDEBAR ------------*/
+
+#sb-a {
+    position:fixed;
+    margin-top:calc(var(--Top-Bar-Padding) * -2);
+    height:100%;
+    width:var(--Sidebar-Width);
+    display:table;
+}
+
+#sb-b {
+    display:table-cell;
+    vertical-align:middle;
+}
+
+.sidebar {
+    width:100%;
+}
+
+.sb-title {
+    font-family:manrope;
+    font-size:var(--Sidebar-Title-Font-Size);
+    font-weight:300;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    color:var(--Sidebar-Title-Color);
+    text-align:right;
+}
+
+.sb-desc {
+    margin-top:var(--Sidebar-Title-Bottom-Gap);
+    margin-bottom:var(--Sidebar-Desc-Bottom-Gap);
+    font-family:libre franklin;
+    letter-spacing:.3px;
+    color:var(--Sidebar-Desc-Text);
+    line-height:var(--Sidebar-Desc-Line-Height);
+    text-align:right;
+}
+
+.sb-desc a {
+    color:var(--Sidebar-Desc-Links);
+}
+
+.filter-cont {
+    margin-top:var(--Filter-Colors-Top-Gap);
+}
+
+.filter-color {
+    margin:0 var(--Filter-Colors-Spacing);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:var(--Filter-Colors-Padding);
+    border:1px solid var(--Filter-Colors-Border);
+    border-radius:100%;
+    cursor:help;
+}
+
+.filter-color .color {
+    width:var(--Filter-Colors-Size);
+    height:var(--Filter-Colors-Size);
+    border-radius:100%;
+}
+
+.filter-color:first-of-type {margin-left:0;}
+.filter-color:last-of-type {margin-right:0;}
+
+/*------------ MAIN COLORS CONTAINER ------------*/
+
+.cont {
+    position:absolute;
+    margin-top:var(--Window-Margin);
+    margin-bottom:var(--Window-Margin);
+    margin-left:calc(var(--Sidebar-Width) + var(--Sidebar-Right-Gap));
+    width:calc(
+        (var(--Color-Block-Width) * var(--Color-Blocks-Per-Row)) +
+        (var(--Color-Block-Spacing) * ((var(--Color-Blocks-Per-Row) - 1) * 2))
+    );
+}
+
+.inc {
+    display:flex;
+    flex-wrap:wrap;
+    margin:calc(var(--Color-Block-Spacing) * -1);
+}
+
+.ghost {
+    opacity:0;
+}
+
+.inc, .ghost {
+    -webkit-transition:opacity var(--Filter-Fade-Speed) ease-in-out;
+    -moz-transition: opacity var(--Filter-Fade-Speed) ease-in-out;
+    -o-transition: opacity var(--Filter-Fade-Speed) ease-in-out;
+}
+
+.one-color {
+    margin:var(--Color-Block-Spacing);
+    width:var(--Color-Block-Width);
+}
+
+.fennel {
+    width:100%;
+    height:100%;
+    background:var(--Color-Blocks-Background);
+    border-radius:
+        var(--Color-Blocks-Roundness-Top)
+        var(--Color-Blocks-Roundness-Top)
+        var(--Color-Blocks-Roundness-Bottom)
+        var(--Color-Blocks-Roundness-Bottom);
+    border:1px solid var(--Color-Blocks-Border);
+}
+
+.fennel .color {
+    width:var(--Color-Block-Width);
+    height:var(--Color-Block-Width);
+    border-radius:var(--Color-Blocks-Roundness-Top) var(--Color-Blocks-Roundness-Top) 0 0;
+}
+
+.hexcode {
+    padding:var(--HexCode-Padding);
+    font-family:Questrial;
+    font-size:var(--HexCode-Font-Size);
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:var(--HexCode-Color);
+    line-height:1.3em;
+    text-align:center;
+}
+
+.glenjamin {
+    position:fixed;
+    bottom:0;padding-bottom:23px;
+    right:0;padding-right:23px;
+}
+
+.glenjamin svg {
+    width:14px;
+    height:14px;
+    color:var(--Credit-Color);
+}
+
+</style>
+ 
+</head>
+ 
+<body>
+
+<div id="heather">
+<div id="m_i">
+<div id="m_ii">
+<div id="m_iii">
+    <div class="on_left">
+    <div class="felix">
+    
+    
+        <!--  🍑🍑🍑🍑🍑🍑🍑 -->
+        
+        <!------ TOP BAR ICON / AVATAR ------>
+        <!-- put your image url between the quotation marks of src="" -->
+        
+        <img class="avi" src="https://66.media.tumblr.com/ee6838ca69e3cc4506d0ea4ff6c6d00a/24c7e052fbab7744-b3/s400x600/664883dca5ebcd29f362170d768c5a2f06f33167.png">
+        
+        
+        
+        
+        <!--  🍑🍑🍑🍑🍑🍑🍑 -->
+        
+        <!------ TOP BAR TITLE ------>
+        
+        <span class="title">colors of the soul</span>
+        
+        
+        
+        
+        <div class="separator"></div>
+        
+        
+        
+        <!--  🍑🍑🍑🍑🍑🍑🍑 -->
+        
+        <!------ TOP BAR LINKS / CUSTOM LINKS / NAV LINKS ------>
+        <!-- url goes between the quotation marks of href="" -->
+        
+        <div class="toplinks">
+        
+        
+            <a href="/">home</a>
+            
+            <dot>✦</dot> <!-- divider -->
+            
+            <a href="/ask">inbox</a>
+            
+            <dot>✦</dot> <!-- divider -->
+            
+            <a href="">custom link</a>
+            
+            <dot>✦</dot> <!-- divider -->
+            
+            <a href="">custom link</a>
+            
+            
+        </div><!--toplinks-->
+    </div><!--felix-->
+    </div><!--on_left-->
+    
+    <div class="on_right">
+        <div class="felix">
+            <div class="bars">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div><!--bars-->
+        </div><!--felix-->
+    </div><!--on_right-->
+</div><!--m_iii-->
+</div><!--m_ii-->
+</div><!--m_i-->
+</div><!--heather-->
+
+<div id="main">
+<div id="mais">
+<div id="thatsawrap">
+    <div id="sb-a">
+    <div id="sb-b">
+        <div class="sidebar">
+        
+            <!--  🍑🍑🍑🍑🍑🍑🍑 -->
+            
+            <!------ SIDEBAR TITLE ------>
+            
+            <div class="sb-title">euphoria</div>
+            
+            
+            
+            
+            <!--  🍑🍑🍑🍑🍑🍑🍑 -->
+            
+            <!------ SIDEBAR DESCRIPTION ------>
+            <!-- you can use <br> for a line break -->
+            
+            <div class="sb-desc">
+            
+            If the eyes are the window to the soul,
+            <br>why do you only feel alive when<br>they are closed?
+            
+            </div><!--end desc, do not delete this line-->
+            
+            
+            
+            
+            
+            <div class="filter-cont felix right">
+            
+            <!--  🍑🍑🍑🍑🍑🍑🍑 -->
+            
+            <!------ COLOR FILTERS (SIDEBAR) ------>
+            <!-- 
+            
+                you can set the color category name between the
+                quotation marks of type=""
+                
+                PLEASE NOTE that you will need to use the same word later!
+                
+                the color of each circle is set between the
+                quotation marks of color=""
+                
+             -->
+                
+             <a class="filter-color" type="monochrome" title="monochrome">
+              <div class="color" color="#D4CDC9"></div>
+            </a>
+             
+                <!----------------------->
+                <!-- 🍓🍓🍓🍓🍓🍓🍓 -->
+                
+                <a class="filter-color" type="brown" title="hover text for brown">
+                    <div class="color" color="#eac2b8"></div>
+                </a>
+                
+                <!-- 🛑🛑🛑🛑🛑🛑🛑-->
+                <!----------------------->
+                
+                
+                <a class="filter-color" type="sandy" title="hover text for sandy">
+                    <div class="color" color="#ffd6bd"></div>
+                </a>
+                
+                
+                <a class="filter-color" type="peach" title="hover text for peach">
+                    <div class="color" color="#ffb29a"></div>
+                </a>
+                
+                
+                <a class="filter-color" type="pink" title="hover text for pink">
+                    <div class="color" color="#fd9a9c"></div>
+                </a>
+                
+                
+                <a class="filter-color" type="red" title="hover text for red">
+                    <div class="color" color="#fb8787"></div>
+                </a>
+                
+                
+            </div><!--filter-cont-->
+        </div><!--sidebar-->
+    </div><!--sb-b-->
+    </div><!--sb-a-->
+    
+    
+    
+    
+    <div class="cont">
+    <div class="inc">
+    
+        
+        <!--  🍑🍑🍑🍑🍑🍑🍑 -->
+        
+        <!------ MAIN: COLOR BLOCKS ------>
+        <!-- 
+            
+            INSTRUCTIONS:
+            1. edit the word between the quotation marks of type=""
+               to match what you asserted earlier
+               e.g. type="brown" from above, also means type="brown" here
+               
+            2. insert a hex code (WITH the hashtag) between the
+               quotation marks of color=""
+               
+               the hex code (the displayed text) is auto generated, so
+               you don't have to edit the class="hexcode" line
+        
+            feel free to relabel the grey comments!
+            they aren't required, but will help you not to get lost
+            
+        -->
+        
+        <div class="one-color" type="monochrome">
+          <div class="fennel">
+              <div class="color" color="#ffffff"></div>
+              <div class="hexcode"></div>
+          </div>
+        </div>
+        
+        <div class="one-color" type="monochrome">
+          <div class="fennel">
+              <div class="color" color="#F9F6F0"></div>
+              <div class="hexcode"></div>
+          </div>
+        </div>
+        
+        <div class="one-color" type="monochrome">
+          <div class="fennel">
+              <div class="color" color="#d4cdc9"></div>
+              <div class="hexcode"></div>
+          </div>
+        </div>
+        
+        <div class="one-color" type="monochrome">
+          <div class="fennel">
+              <div class="color" color="#cccccc"></div>
+              <div class="hexcode"></div>
+          </div>
+        </div>
+        
+        <div class="one-color" type="monochrome">
+          <div class="fennel">
+              <div class="color" color="#bfb5ae"></div>
+              <div class="hexcode"></div>
+          </div>
+        </div>
+        
+        <div class="one-color" type="monochrome">
+          <div class="fennel">
+              <div class="color" color="#000000"></div>
+              <div class="hexcode"></div>
+          </div>
+        </div>
+         
+        <!------- BROWN------->
+        
+        <!----------------------->
+        <!-- 🍓🍓🍓🍓🍓🍓🍓-->
+        
+        <div class="one-color" type="brown">
+            <div class="fennel">
+                <div class="color" color="#e5b8ad"></div>
+                <div class="hexcode"></div>
+            </div>
+        </div>
+        
+        <!-- 🛑🛑🛑🛑🛑🛑🛑-->
+        <!----------------------->
+        
+        
+        
+        
+        
+        
+        <!------- SANDY------->
+        
+        <!----------------------->
+        <!-- 🍓🍓🍓🍓🍓🍓🍓-->
+        
+        <div class="one-color" type="sandy">
+            <div class="fennel">
+                <div class="color" color="#ffd0b3"></div>
+                <div class="hexcode"></div>
+            </div>
+        </div>
+        
+        <!-- 🛑🛑🛑🛑🛑🛑🛑-->
+        <!----------------------->
+        
+        
+        
+        
+        
+        
+        <!------- PEACH------->
+        
+        <!----------------------->
+        <!-- 🍓🍓🍓🍓🍓🍓🍓-->
+        
+        <div class="one-color" type="peach">
+            <div class="fennel">
+                <div class="color" color="#ffb29a"></div>
+                <div class="hexcode"></div>
+            </div>
+        </div>
+        
+        <!-- 🛑🛑🛑🛑🛑🛑🛑-->
+        <!----------------------->
+        
+        
+        
+        
+        
+        
+        <!------- PINK------->
+        
+        <!----------------------->
+        <!-- 🍓🍓🍓🍓🍓🍓🍓-->
+        
+        <div class="one-color" type="pink">
+            <div class="fennel">
+                <div class="color" color="#ff9e9d"></div>
+                <div class="hexcode"></div>
+            </div>
+        </div>
+        
+        <!-- 🛑🛑🛑🛑🛑🛑🛑-->
+        <!----------------------->
+        
+        
+        
+        
+        
+        
+        <!------- RED------->
+        
+        <!----------------------->
+        <!-- 🍓🍓🍓🍓🍓🍓🍓-->
+        
+        <div class="one-color" type="red">
+            <div class="fennel">
+                <div class="color" color="#ff8686"></div>
+                <div class="hexcode"></div>
+            </div>
+        </div>
+        
+        <!-- 🛑🛑🛑🛑🛑🛑🛑-->
+        <!----------------------->
+
+            
+            
+        <!--do not delete below this line-->
+    </div><!--inc-->
+    </div><!--cont-->
+</div><!--thatsawrap-->
+</div><!--mais-->
+</div><!--main-->
+
+<a class="glenjamin" href="https://glenthemes.tumblr.com" title="page by glenthemes"><i data-feather="code"></i></a>
+
+<script>feather.replace()</script>
+</body>
+
+</html>

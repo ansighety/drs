@@ -25,6 +25,10 @@ body {
   background-color: var(--background-color);
 }
 
+a{
+  transition: 0.5s ease all;
+}
+
 #page_wrapper{
   width:100%;
 }
@@ -113,7 +117,7 @@ img {
 
 #index_header_nav a:hover{
   color: var(--nav-link-hover);
-  transition: 0.5s ease all;
+  letter-spacing:1.5px;
 }
 
 #index_header_nav em{

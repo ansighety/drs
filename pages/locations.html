@@ -25,6 +25,8 @@ NOTES:
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Roboto&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles/main.css">
+<link rel="stylesheet" href="../styles/locations.css">
 
 <style type="text/css">
     body,
@@ -200,18 +202,6 @@ NOTES:
         opacity: 0.7;
     }
 
-    .container {
-        position: absolute;
-        width: 60%;
-        height: 100vh;
-        max-height: 100vh;
-        right: 0;
-        top: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
     .header {
         position: relative;
         top: 0;
@@ -256,26 +246,6 @@ NOTES:
 
     .tablink:hover {
         opacity: 0.7;
-    }
-
-    .content {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        max-width: 100%;
-        padding: 1rem;
-        overflow: hidden;
-        height: 75%;
-        bottom: 0;
-        font-size: 1rem;
-    }
-
-    .textContent {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 100%;
     }
 
     #searchResults {
@@ -407,28 +377,16 @@ NOTES:
         -ms-overflow-style: none; /* Internet Explorer 10+ */
     }
 
-        .resultContainer::-webkit-scrollbar {
-            /* WebKit */
-            width: 4px;
-            height: 4px;
-        }
+    .resultContainer::-webkit-scrollbar {
+        /* WebKit */
+        width: 4px;
+        height: 4px;
+    }
 
-        .resultContainer::-webkit-scrollbar-thumb {
-            background-color: rgba(0, 0, 0, 0.1);
-            height: 4px;
-            width: 4px;
-        }
-
-    .profile {
-        position: fixed;
-        width: 40%;
-        height: 100vh;
-        max-height: 100vh;
-        left: 0;
-        top: 0;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
+    .resultContainer::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.1);
+        height: 4px;
+        width: 4px;
     }
 
     .footer {
@@ -441,13 +399,13 @@ NOTES:
         }
 
         .content {
-            overflow-y: auto;
-            overflow-x: hidden;
             display: block;
             height: 100%;
+            overflow-y: auto;
+            overflow-x: hidden;
         }
 
-        .container {
+        #page_locations {
             width: 100%;
         }
 
@@ -483,7 +441,7 @@ NOTES:
             -o-transition: all .5s ease;
         }
 
-        .textContent {
+        .text_content {
             height: auto;
         }
 
@@ -544,18 +502,15 @@ NOTES:
 
 <body>
 
-    <div class="socials navigation">
+    <div id="home_nav">
         <a href="../index.html" title="Home">
             <ion-icon name="chevron-back" title="Home" size="small"></ion-icon>
         </a>
-        <!-- needs a duplicate for some reason zzz -->
         <ion-icon name="chevron-back" style="display: none;"></ion-icon>
     </div>
 
-    <div class="container">
-        <div class="header">
-
-            <!-- NAVIGATION -->
+    <div id="page_locations">
+        <div id="locations_header">
             <button class="tablink activated" onclick="openTab(event, 'home', 'homePic')">intro</button>
             <button class="tablink" onclick="openTab(event, 'tab01', 'image01')">Sacraaliag</button>
             <button class="tablink" onclick="openTab(event, 'tab02', 'image02')">Grondkule</button>
@@ -569,384 +524,328 @@ NOTES:
             <button class="tablink" onclick="openTab(event, 'tab10', 'image10')">Verisjon</button>
             <button class="tablink" onclick="openTab(event, 'tab11', 'image11')">Verheid</button>
             <button class="tablink" onclick="openTab(event, 'tab12', 'image12')">Foreign Affairs</button>
-            <!-- ADD MORE NAVIGATION LINKS HERE -->
-
         </div>
 
-
-        <!-- HOME PANEL -->
-        <div class="content activated" id="home">
-
-            <div class="profile" id="homePic"
-                style="background-image: url('https://static.tumblr.com/bkdoxe7/lgxqy7i09/group-photo-cropped.jpg');">
-            </div>
-
-            <div class="textContent">
-                <div class="titles">
-                    <h3>SUBTITLE</h3>
-                    <h1>Intro</h1>
+            <!-- HOME PANEL -->
+            <div class="content activated" id="home">
+    
+                <div class="profile" id="homePic"
+                    style="background-image: url('https://static.tumblr.com/bkdoxe7/lgxqy7i09/group-photo-cropped.jpg');">
                 </div>
-                <hr>
-                <div class="titles">
-                    <span class="byline">by <b>Author</b></span>
-                </div>
-                <div class="description">
-                    <p>Lorem <b>bold</b> <i>italic</i> <u>underline</u> ipsum dolor sit amet, consectetur adipiscing
-                        elit, sed do eiusmod <a href="">link</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur.</p>
-                </div>
-                <hr>
-            </div>
-        </div>
-
-        <!-- PANEL 1 -->
-        <div class="content" id="tab01" style="display:none">
-            <div class="profile" id="image01"
-                style="background-image: url('../assets/images/courts/sacraaliag/brx-sierzega-medieval-kingdom-01.jpg');">
-            </div>
-            <div class="textContent">
-                <div class="titles">
-                    <h3>The Region of the Sacraaliag Court</h3>
-                    <h1>Sacraaliag</h1>
-                </div>
-                <hr>
-                <div class="titles">
-                    <span class="byline">by <b>Author</b></span>
-                </div>
-                <div class="description">
-                    <p>Lorem <b>bold</b> <i>italic</i> <u>underline</u> ipsum dolor sit amet, consectetur adipiscing
-                        elit, sed do eiusmod <a href="">link</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur.</p>
-                </div>
-                <hr>
-            </div>
-        </div>
-
-        <!-- PANEL 2 -->
-        <div class="content" id="tab02" style="display:none">
-            <div class="profile" id="image02"
-                style="background-image: url('../assets/images/courts/grondkule/marnix-rekkers-templar-mc-po2-04.jpg');">
-            </div>
-            <div class="textContent">
-                <div class="titles">
-                    <h3>The Region of the Grondkule Court</h3>
-                    <h1>Grondkule</h1>
-                </div>
-                <hr>
-                <div class="titles">
-                    <span class="byline">by <b>Author</b></span>
-                </div>
-                <div class="description">
-                    <p>Lorem <b>bold</b> <i>italic</i> <u>underline</u> ipsum dolor sit amet, consectetur adipiscing
-                        elit, sed do eiusmod <a href="">link</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur.</p>
-                </div>
-                <hr>
-            </div>
-        </div>
-
-        <!-- PANEL 3 -->
-        <div class="content" id="tab03" style="display:none">
-            <div class="profile" id="image03"
-                style="background-image: url('../assets/images/courts/zeehav/goodname-studio-atlantis-final-no-watermark.png');">
-            </div>
-            <div class="textContent">
-                <div class="titles">
-                    <h3>The Region of the Zeehav Court</h3>
-                    <h1>Zeehav</h1>
-                </div>
-                <hr>
-                <div class="titles">
-                    <span class="byline">by <b>Author</b></span>
-                </div>
-                <div class="description">
-                    <p>Lorem <b>bold</b> <i>italic</i> <u>underline</u> ipsum dolor sit amet, consectetur adipiscing
-                        elit, sed do eiusmod <a href="">link</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur.</p>
-                </div>
-                <hr>
-            </div>
-        </div>
-
-        <!-- PANEL 4 -->
-        <div class="content" id="tab04" style="display:none">
-            <div class="profile" id="image04"
-                style="background-image: url('../assets/images/courts/helseheid/guillermo-martinez-ventana-de-los-graciares.jpg');">
-            </div>
-            <div class="textContent">
-                <div class="titles">
-                    <h3>The Region of the Helseheid Court</h3>
-                    <h1>Helseheid</h1>
-                </div>
-                <hr>
-                <div class="titles">
-                    <span class="byline">by <b>Author</b></span>
-                </div>
-                <div class="description">
-                    <p>Lorem <b>bold</b> <i>italic</i> <u>underline</u> ipsum dolor sit amet, consectetur adipiscing
-                        elit, sed do eiusmod <a href="">link</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur.</p>
-                </div>
-                <hr>
-            </div>
-        </div>
-
-        <!-- PANEL 5 -->
-        <div class="content" id="tab05" style="display:none">
-            <div class="profile" id="image05"
-                style="background-image: url('../assets/images/courts/nyskandereit/volodymyr-donchenko-camera-008-08-19-2020.jpg');">
-            </div>
-            <div class="textContent">
-                <div class="titles">
-                    <h3>The Region of the Nyskandereit Court</h3>
-                    <h1>Nyskandereit</h1>
-                </div>
-                <hr>
-                <div class="titles">
-                    <span class="byline">by <b>Author</b></span>
-                </div>
-                <div class="description">
-                    <p>Lorem <b>bold</b> <i>italic</i> <u>underline</u> ipsum dolor sit amet, consectetur adipiscing
-                        elit, sed do eiusmod <a href="">link</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur.</p>
-                </div>
-                <hr>
-            </div>
-        </div>
-
-        <!-- PANEL 6 -->
-        <div class="content" id="tab06" style="display:none">
-            <div class="profile" id="image06"
-                style="background-image: url('https://static.tumblr.com/bkdoxe7/mcjqy6js4/wendy.jpg');">
-            </div>
-            <div class="textContent">
-                <div class="titles">
-                    <h3>The Region of the Raadserium Court</h3>
-                    <h1>Raadserium</h1>
-                </div>
-                <hr>
-                <div class="titles">
-                    <span class="byline">by <b>Author</b></span>
-                </div>
-                <div class="description">
-                    <p>Lorem <b>bold</b> <i>italic</i> <u>underline</u> ipsum dolor sit amet, consectetur adipiscing
-                        elit, sed do eiusmod <a href="">link</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur.</p>
-                </div>
-                <hr>
-            </div>
-        </div>
-
-        <!-- PANEL 7 -->
-        <div class="content" id="tab07" style="display:none">
-            <div class="profile" id="image07"
-                style="background-image: url('../assets/images/courts/jordem/guillermo-martinez-vinedos-de-favola-4.jpg');">
-            </div>
-            <div class="textContent">
-                <div class="titles">
-                    <h3>The Region of the Jordem Court</h3>
-                    <h1>Jordem</h1>
-                </div>
-                <hr>
-                <div class="titles">
-                    <span class="byline">by <b>Author</b></span>
-                </div>
-                <div class="description">
-                    <p>Lorem <b>bold</b> <i>italic</i> <u>underline</u> ipsum dolor sit amet, consectetur adipiscing
-                        elit, sed do eiusmod <a href="">link</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur.</p>
-                </div>
-                <hr>
-            </div>
-        </div>
-
-        <!-- PANEL 8 -->
-        <div class="content" id="tab08" style="display:none">
-            <div class="profile" id="image08"
-                style="background-image: url('https://static.tumblr.com/bkdoxe7/mcjqy6js4/wendy.jpg');">
-            </div>
-            <div class="textContent">
-                <div class="titles">
-                    <h3>The Region of the Trade & Finance Court</h3>
-                    <h1>Trade & Finance</h1>
-                </div>
-                <hr>
-                <div class="titles">
-                    <span class="byline">by <b>Author</b></span>
-                </div>
-                <div class="description">
-                    <p>Lorem <b>bold</b> <i>italic</i> <u>underline</u> ipsum dolor sit amet, consectetur adipiscing
-                        elit, sed do eiusmod <a href="">link</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur.</p>
-                </div>
-                <hr>
-            </div>
-        </div>
-
-        <!-- PANEL 9 -->
-        <div class="content" id="tab09" style="display:none">
-            <div class="profile" id="image09"
-                style="background-image: url('../assets/images/courts/heimvander/ricky-ho-ashesofcreation-dunir-city-center-ricky-ho.jpg');">
-            </div>
-            <div class="textContent">
-                <div class="titles">
-                    <h3>The Region of the Heimvander Court</h3>
-                    <h1>Heimvander</h1>
-                </div>
-                <hr>
-                <div class="titles">
-                    <span class="byline">by <b>Author</b></span>
-                </div>
-                <div class="description">
-                    <p>Lorem <b>bold</b> <i>italic</i> <u>underline</u> ipsum dolor sit amet, consectetur adipiscing
-                        elit, sed do eiusmod <a href="">link</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur.</p>
-                </div>
-                <hr>
-            </div>
-        </div>
-
-        <!-- PANEL 10 -->
-        <div class="content" id="tab10" style="display:none">
-            <div class="profile" id="image10"
-                style="background-image: url('../assets/images/courts/verisjon/terraform-studios-112321-praxis-mk-aerial-cityshot-a-01.jpg');">
-            </div>
-            <div class="textContent">
-                <div class="titles">
-                    <h3>The Region of the Verisjon Court</h3>
-                    <h1>Verisjon</h1>
-                </div>
-                <hr>
-                <div class="titles">
-                    <span class="byline">by <b>Author</b></span>
-                </div>
-                <div class="description">
-                    <p>Lorem <b>bold</b> <i>italic</i> <u>underline</u> ipsum dolor sit amet, consectetur adipiscing
-                        elit, sed do eiusmod <a href="">link</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur.</p>
-                </div>
-                <hr>
-            </div>
-        </div>
-
-        <!-- PANEL 11 -->
-        <div class="content" id="tab11" style="display:none">
-            <div class="profile" id="image11"
-                style="background-image: url('../assets/images/courts/verheid/martechi-falkberg-03-tiered-city.jpg');">
-            </div>
-            <div class="textContent">
-                <div class="titles">
-                    <h3>The Region of the Verheid Court</h3>
-                    <h1>Verheid</h1>
-                </div>
-                <hr>
-                <div class="titles">
-                    <span class="byline">by <b>Author</b></span>
-                </div>
-                <div class="description">
-                    <p>Lorem <b>bold</b> <i>italic</i> <u>underline</u> ipsum dolor sit amet, consectetur adipiscing
-                        elit, sed do eiusmod <a href="">link</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur.</p>
-                </div>
-                <hr>
-            </div>
-        </div>
-
-        <!-- PANEL 12 -->
-        <div class="content" id="tab12" style="display:none">
-            <div class="profile" id="image12"
-                style="background-image: url('https://static.tumblr.com/bkdoxe7/mcjqy6js4/wendy.jpg');">
-            </div>
-            <div class="textContent">
-                <div class="titles">
-                    <h3>The Region of the Foreign Affairs Court</h3>
-                    <h1>Foreign Affairs</h1>
-                </div>
-                <hr>
-                <div class="titles">
-                    <span class="byline">by <b>Author</b></span>
-                </div>
-                <div class="description">
-                    <p>Lorem <b>bold</b> <i>italic</i> <u>underline</u> ipsum dolor sit amet, consectetur adipiscing
-                        elit, sed do eiusmod <a href="">link</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur.</p>
-                </div>
-                <hr>
-            </div>
-        </div>
-
-        <!-- PANEL TEMPLATE -->
-        <!-- 1. Give the content panel a unique id (eg. "tab4") -->
-        <!-- 2. Set the profile image inside background-image and give it a unique id (eg. image4) -->
-        <!-- 3. Add a tablink corresponding to the panel and image id under NAVIGATION 
-        (eg. <button class="tablink" onclick="openTab(event, 'tab4', 'image4')">tab title</button>) -->
-
-        <!-- <div class="content" id="tab4" style="display:none">
-            <div class="profile" id="image4"
-                style="background-image: url('URL HERE');">
-                MODIFY USING ICONS FROM "https://ionic.io/ionicons""
-                <div class="socials">
-                    <a href="/" target="_blank" title="Instagram">
-                        <ion-icon size="small" name="logo-instagram"></ion-icon>
-                    </a>
-                    <a href="/" target="_blank" title="YouTube">
-                        <ion-icon size="small" name="logo-youtube"></ion-icon>
-                    </a>
-                    <a href="/" target="_blank" title="Link">
-                        <ion-icon size="small" name="link" style="pointer-events: auto;"></ion-icon>
-                    </a>
+    
+                <div class="text_content">
+                    <div class="titles">
+                        <h3>SUBTITLE</h3>
+                        <h1>Intro</h1>
+                    </div>
+                    <hr>
+                    <div class="titles">
+                        <span class="byline">by <b>Author</b></span>
+                    </div>
+                    <div class="description">
+                        <p>Lorem <b>bold</b> <i>italic</i> <u>underline</u> ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <a href="">link</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                    <hr>
                 </div>
             </div>
-            <div class="textContent">
-                <div class="titles">
-                    <h3>SUBTITLE</h3>
-                    <h1>Title 4</h1>
+    
+            <!-- PANEL 1 -->
+            <div class="content" id="tab01">
+                <div class="profile" id="image01"
+                    style="background-image: url('../assets/images/courts/sacraaliag/brx-sierzega-medieval-kingdom-01.jpg');">
                 </div>
-                <hr>
-                <div class="titles">
-                    <span class="byline">by <b>Author</b></span>
+                <div class="text_content">
+                    <div class="titles">
+                        <h3>The Region of the Sacraaliag Court</h3>
+                        <h1>Sacraaliag</h1>
+                    </div>
+                    <hr>
+                    <div class="titles">
+                        <span class="byline">by <b>Author</b></span>
+                    </div>
+                    <div class="description">
+                        <p>Lorem <b>bold</b> <i>italic</i> <u>underline</u> ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <a href="">link</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                    <hr>
                 </div>
-                <div class="description">
-                    <p>Lorem <b>bold</b> <i>italic</i> <u>underline</u> ipsum dolor sit amet, consectetur adipiscing
-                        elit, sed do eiusmod <a href="">link</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur.</p>
-                </div>
-                <hr>
             </div>
-        </div> -->
+    
+            <!-- PANEL 2 -->
+            <div class="content" id="tab02">
+                <div class="profile" id="image02"
+                    style="background-image: url('../assets/images/courts/grondkule/marnix-rekkers-templar-mc-po2-04.jpg');">
+                </div>
+                <div class="text_content">
+                    <div class="titles">
+                        <h3>The Region of the Grondkule Court</h3>
+                        <h1>Grondkule</h1>
+                    </div>
+                    <hr>
+                    <div class="titles">
+                        <span class="byline">by <b>Author</b></span>
+                    </div>
+                    <div class="description">
+                        <p>Lorem <b>bold</b> <i>italic</i> <u>underline</u> ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <a href="">link</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+    
+            <!-- PANEL 3 -->
+            <div class="content" id="tab03">
+                <div class="profile" id="image03"
+                    style="background-image: url('../assets/images/courts/zeehav/goodname-studio-atlantis-final-no-watermark.png');">
+                </div>
+                <div class="text_content">
+                    <div class="titles">
+                        <h3>The Region of the Zeehav Court</h3>
+                        <h1>Zeehav</h1>
+                    </div>
+                    <hr>
+                    <div class="titles">
+                        <span class="byline">by <b>Author</b></span>
+                    </div>
+                    <div class="description">
+                        <p>Lorem <b>bold</b> <i>italic</i> <u>underline</u> ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <a href="">link</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+    
+            <!-- PANEL 4 -->
+            <div class="content" id="tab04">
+                <div class="profile" id="image04"
+                    style="background-image: url('../assets/images/courts/helseheid/guillermo-martinez-ventana-de-los-graciares.jpg');">
+                </div>
+                <div class="text_content">
+                    <div class="titles">
+                        <h3>The Region of the Helseheid Court</h3>
+                        <h1>Helseheid</h1>
+                    </div>
+                    <hr>
+                    <div class="titles">
+                        <span class="byline">by <b>Author</b></span>
+                    </div>
+                    <div class="description">
+                        <p>Lorem <b>bold</b> <i>italic</i> <u>underline</u> ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <a href="">link</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+    
+            <!-- PANEL 5 -->
+            <div class="content" id="tab05">
+                <div class="profile" id="image05"
+                    style="background-image: url('../assets/images/courts/nyskandereit/volodymyr-donchenko-camera-008-08-19-2020.jpg');">
+                </div>
+                <div class="text_content">
+                    <div class="titles">
+                        <h3>The Region of the Nyskandereit Court</h3>
+                        <h1>Nyskandereit</h1>
+                    </div>
+                    <hr>
+                    <div class="titles">
+                        <span class="byline">by <b>Author</b></span>
+                    </div>
+                    <div class="description">
+                        <p>Lorem <b>bold</b> <i>italic</i> <u>underline</u> ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <a href="">link</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+    
+            <!-- PANEL 6 -->
+            <div class="content" id="tab06">
+                <div class="profile" id="image06"
+                    style="background-image: url('https://static.tumblr.com/bkdoxe7/mcjqy6js4/wendy.jpg');">
+                </div>
+                <div class="text_content">
+                    <div class="titles">
+                        <h3>The Region of the Raadserium Court</h3>
+                        <h1>Raadserium</h1>
+                    </div>
+                    <hr>
+                    <div class="titles">
+                        <span class="byline">by <b>Author</b></span>
+                    </div>
+                    <div class="description">
+                        <p>Lorem <b>bold</b> <i>italic</i> <u>underline</u> ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <a href="">link</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+    
+            <!-- PANEL 7 -->
+            <div class="content" id="tab07">
+                <div class="profile" id="image07"
+                    style="background-image: url('../assets/images/courts/jordem/guillermo-martinez-vinedos-de-favola-4.jpg');">
+                </div>
+                <div class="text_content">
+                    <div class="titles">
+                        <h3>The Region of the Jordem Court</h3>
+                        <h1>Jordem</h1>
+                    </div>
+                    <hr>
+                    <div class="titles">
+                        <span class="byline">by <b>Author</b></span>
+                    </div>
+                    <div class="description">
+                        <p>Lorem <b>bold</b> <i>italic</i> <u>underline</u> ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <a href="">link</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+    
+            <!-- PANEL 8 -->
+            <div class="content" id="tab08">
+                <div class="profile" id="image08"
+                    style="background-image: url('https://static.tumblr.com/bkdoxe7/mcjqy6js4/wendy.jpg');">
+                </div>
+                <div class="text_content">
+                    <div class="titles">
+                        <h3>The Region of the Trade & Finance Court</h3>
+                        <h1>Trade & Finance</h1>
+                    </div>
+                    <hr>
+                    <div class="titles">
+                        <span class="byline">by <b>Author</b></span>
+                    </div>
+                    <div class="description">
+                        <p>Lorem <b>bold</b> <i>italic</i> <u>underline</u> ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <a href="">link</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+    
+            <!-- PANEL 9 -->
+            <div class="content" id="tab09">
+                <div class="profile" id="image09"
+                    style="background-image: url('../assets/images/courts/heimvander/ricky-ho-ashesofcreation-dunir-city-center-ricky-ho.jpg');">
+                </div>
+                <div class="text_content">
+                    <div class="titles">
+                        <h3>The Region of the Heimvander Court</h3>
+                        <h1>Heimvander</h1>
+                    </div>
+                    <hr>
+                    <div class="titles">
+                        <span class="byline">by <b>Author</b></span>
+                    </div>
+                    <div class="description">
+                        <p>Lorem <b>bold</b> <i>italic</i> <u>underline</u> ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <a href="">link</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+    
+            <!-- PANEL 10 -->
+            <div class="content" id="tab10">
+                <div class="profile" id="image10"
+                    style="background-image: url('../assets/images/courts/verisjon/terraform-studios-112321-praxis-mk-aerial-cityshot-a-01.jpg');">
+                </div>
+                <div class="text_content">
+                    <div class="titles">
+                        <h3>The Region of the Verisjon Court</h3>
+                        <h1>Verisjon</h1>
+                    </div>
+                    <hr>
+                    <div class="titles">
+                        <span class="byline">by <b>Author</b></span>
+                    </div>
+                    <div class="description">
+                        <p>Lorem <b>bold</b> <i>italic</i> <u>underline</u> ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <a href="">link</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+    
+            <!-- PANEL 11 -->
+            <div class="content" id="tab11">
+                <div class="profile" id="image11"
+                    style="background-image: url('../assets/images/courts/verheid/martechi-falkberg-03-tiered-city.jpg');">
+                </div>
+                <div class="text_content">
+                    <div class="titles">
+                        <h3>The Region of the Verheid Court</h3>
+                        <h1>Verheid</h1>
+                    </div>
+                    <hr>
+                    <div class="titles">
+                        <span class="byline">by <b>Author</b></span>
+                    </div>
+                    <div class="description">
+                        <p>Lorem <b>bold</b> <i>italic</i> <u>underline</u> ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <a href="">link</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+    
+            <!-- PANEL 12 -->
+            <div class="content" id="tab12">
+                <div class="profile" id="image12"
+                    style="background-image: url('https://static.tumblr.com/bkdoxe7/mcjqy6js4/wendy.jpg');">
+                </div>
+                <div class="text_content">
+                    <div class="titles">
+                        <h3>The Region of the Foreign Affairs Court</h3>
+                        <h1>Foreign Affairs</h1>
+                    </div>
+                    <hr>
+                    <div class="titles">
+                        <span class="byline">by <b>Author</b></span>
+                    </div>
+                    <div class="description">
+                        <p>Lorem <b>bold</b> <i>italic</i> <u>underline</u> ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <a href="">link</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+    
+            <!-- PANEL TEMPLATE -->
+            <!-- 1. Give the content panel a unique id (eg. "tab4") -->
+            <!-- 2. Set the profile image inside background-image and give it a unique id (eg. image4) -->
+            <!-- 3. Add a tablink corresponding to the panel and image id under NAVIGATION 
+            (eg. <button class="tablink" onclick="openTab(event, 'tab4', 'image4')">tab title</button>) -->
+    
+            <!-- <div class="content" id="tab4">
+                <div class="profile" id="image4"
+                    style="background-image: url('URL HERE');">
+                    MODIFY USING ICONS FROM "https://ionic.io/ionicons""
+                    <div class="socials">
+                        <a href="/" target="_blank" title="Instagram">
+                            <ion-icon size="small" name="logo-instagram"></ion-icon>
+                        </a>
+                        <a href="/" target="_blank" title="YouTube">
+                            <ion-icon size="small" name="logo-youtube"></ion-icon>
+                        </a>
+                        <a href="/" target="_blank" title="Link">
+                            <ion-icon size="small" name="link" style="pointer-events: auto;"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+                <div class="text_content">
+                    <div class="titles">
+                        <h3>SUBTITLE</h3>
+                        <h1>Title 4</h1>
+                    </div>
+                    <hr>
+                    <div class="titles">
+                        <span class="byline">by <b>Author</b></span>
+                    </div>
+                    <div class="description">
+                        <p>Lorem <b>bold</b> <i>italic</i> <u>underline</u> ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod <a href="">link</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                            pariatur.</p>
+                    </div>
+                    <hr>
+                </div>
+            </div> -->    
 
         <div class="content" id="searchResults" style="display:none">
             <span class="status">Loading...</span>
         </div>
-
     </div>
 
     <!-- import icons -->

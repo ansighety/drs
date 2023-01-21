@@ -1,12 +1,12 @@
 # 𝐓𝐇𝐄 𝐃𝐈𝐕𝐈𝐍𝐄 𝐑𝐄𝐐𝐔𝐈𝐄𝐌 𝐒𝐄𝐑𝐈𝐄𝐒.
 
 # Tasks
-- Recreate "Government" page to a simple sidebar and container tab system
+- Clean up "Locations" page
 - Look for another simpler theme for the "Courts" page
 - Look for another more fitting page theme for "Societies and Organisations"
 - Look for another more fitting page theme for "Religions"
 - Look for another more fitting page theme for "Languages"
-- Look for another more fitting page theme for "Culture"
+
 - Make pages width vw and height vh
     - Home
     - Government
@@ -36,6 +36,9 @@
 # RESOURCES
 ## Themes
 - Home: https://aureacor.tumblr.com/post/682155608048369664/no-exit-synopsis-page-preview-code-features (formerly https://stardusthms.tumblr.com/post/650728960617005056/poison-love-about-page-by-stardusthms-preview)
+- Government: https://bluedevilsrpg.tumblr.com/universe
+- Culture: https://bluedevilsrpg.tumblr.com/vocab or https://bluedevilsrpg.tumblr.com/gameplay
+
 - Social Hierarchy & Government: https://xuethms.tumblr.com/post/672737280534986752/quartz-about-page-links-preview-install (https://raw.githubusercontent.com/xuethms/xuecodes/main/pages/quartz.html)
 - Courts: https://taezs.tumblr.com/post/657299576177442816/talia-character-page-by-taezs (https://raw.githubusercontent.com/creatreth/themes/main/talia)
 - Locations: https://undeadmagikarp.tumblr.com/post/660475090478219264/iv-queendom-by-undeadmagikarp-preview-code (https://pastebin.com/mwbkdXNF)
