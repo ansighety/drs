@@ -61,22 +61,39 @@ u {
   border-bottom: 1.5px solid var(--big-heading-background-color);
 }
 
-#lang_header{
-  margin:20px;
+/*#lang_header{
+  height:auto;
+  padding:5px;
+  font-weight: 700;
+  text-align: center;
   word-break: break-word;
+  border-radius: 5px;
+}*/
+
+#lang_header{
+  width:150px;
+  margin:30px;
+  padding:5px;
+  font-weight:1000;
+  text-transform: uppercase;
+  border: 1px solid var(--big-heading-background-color);
+  border-radius: 5px;
 }
 
 #lang_nav a{
-  padding: 0 10px;
+  display:block;
+  padding:15px 10px;
   font-family: var(--tabs-nav-link-font);
   font-style: italic;
-  letter-spacing: 1px;
-  color:var(--text-color);
+  letter-spacing: 0.25em;
+  text-align:center;
+  border-radius: 5px;
+  transition: 0.5s ease all;
 }
 
 #lang_nav a:hover{
-  color: var(--header-links-hover);
-  letter-spacing:2.5px;
+  letter-spacing:0.5em;
+  background-color: var(--big-heading-background-color);
 }
 
 #page_languages{
