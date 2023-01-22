@@ -3,21 +3,19 @@
 # Tasks
 - Recode up "Locations" page
 - Look for another simpler theme for the "Courts" page
-- Standardise colour scheme
 
 *   Synopsis
 *   History
 *   World
-    - Social Hierarchy & Government
+    - Government
     - Courts
     - Locations
     - Species
     - Organisations & Societies
     - Religions
         - Almechting (The Church of the Almighty)
-    - Languages
-        - Verstein Andetier (High)
-        - Alegvan Andetier (Common)
+    - [D] Languages
+    - Culture
 
 # RESOURCES
 ## Themes
