@@ -10,6 +10,7 @@
     - Government
     - Courts
     - Locations
+    - History
     - Species
     - Organisations & Societies
     - Religions
@@ -23,6 +24,7 @@
 - Government: https://bluedevilsrpg.tumblr.com/universe
 - Locations: https://undeadmagikarp.tumblr.com/post/660475090478219264/iv-queendom-by-undeadmagikarp-preview-code (https://pastebin.com/mwbkdXNF)
 - Histories: https://jungjnsoul.tumblr.com/post/183878738778/%F0%9D%90%8C%F0%9D%90%84%F0%9D%90%8C%F0%9D%90%8E%F0%9D%90%91%F0%9D%90%88%F0%9D%90%84%F0%9D%90%92-jungjnsouls-theme-pack-for-admins
+    - Press a "Spoiler" button and display the True historical timeline beside the Textbook historical timeline
 - Species: https://glenthemes.tumblr.com/post/664493846094315520/hades-fish-page
 - Societies & Organisations, Religions, Languages: https://glenthpvs.tumblr.com/faq02
 - Culture: https://bluedevilsrpg.tumblr.com/vocab or https://bluedevilsrpg.tumblr.com/gameplay
