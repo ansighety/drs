@@ -23,7 +23,7 @@
 - Home: https://aureacor.tumblr.com/post/682155608048369664/no-exit-synopsis-page-preview-code-features (formerly https://stardusthms.tumblr.com/post/650728960617005056/poison-love-about-page-by-stardusthms-preview)
 - Government: https://bluedevilsrpg.tumblr.com/universe
 - Locations: https://undeadmagikarp.tumblr.com/post/660475090478219264/iv-queendom-by-undeadmagikarp-preview-code (https://pastebin.com/mwbkdXNF)
-- Histories: https://jungjnsoul.tumblr.com/post/183878738778/%F0%9D%90%8C%F0%9D%90%84%F0%9D%90%8C%F0%9D%90%8E%F0%9D%90%91%F0%9D%90%88%F0%9D%90%84%F0%9D%90%92-jungjnsouls-theme-pack-for-admins
+- Histories: https://jungjnsoul.tumblr.com/post/183878738778/%F0%9D%90%8C%F0%9D%90%84%F0%9D%90%8C%F0%9D%90%8E%F0%9D%90%91%F0%9D%90%88%F0%9D%90%84%F0%9D%90%92-jungjnsouls-theme-pack-for-admins / https://bluedevilsrpg.tumblr.com/timeline
     - Press a "Spoiler" button and display the True historical timeline alongside the Textbook historical timeline
         - On Desktop, put on the Right
         - On Mobile, put on Top
