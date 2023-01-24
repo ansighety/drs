@@ -1,4 +1,7 @@
 :root{
+  --wrapper-width: 95vw;
+  --wrapper-height: 95vh;
+
   --mono-01: #ffffff;
   --mono-02: #f6f6f6;
   --mono-03: #cccccc;
@@ -11,15 +14,16 @@
 }
 
 #page_wrapper{
-  /*position: absolute;
-  top: 50%;
-  left: 50%;
+  /*
   max-width:1350px;
   max-height:650px;
-  transform: translate(-50%, -50%);
   overflow:auto;*/
-  width:95vw;
-  height:95vh;
+  position: absolute;
+  width: var(--wrapper-width);
+  height:var(--wrapper-height);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 *{

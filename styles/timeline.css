@@ -1,0 +1,213 @@
+:root{
+  --background-color:var(--brown-01);
+  --text-size: 12px;
+  --text-font: "Karla";
+  --text-spacing: 1px;
+  --text-color: var(--mono-05);
+  --first-letter-text-size: 400%;
+
+  --nav-links-font: times;
+  
+  --accent-color: var(--brown-03);
+
+  --light-sky: var(--mono-02);
+  --dark-sky: var(--brown-02);
+  --star-color: var(--brown-03);
+  --star-dark-color: var(--brown-01);
+  --crescent-color: var(--mono-02);
+}
+
+body{
+  font-size:var(--text-size);
+  font-family: var(--text-font);
+  letter-spacing: var(--text-spacing);
+  color:var(--text-color);
+  background-color:var(--background-color);
+}
+
+#history_header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100vw;
+  height:9.3vh;
+  padding:20px 40px;
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  font-family: var(--nav-links-font);
+  background-color:var(--accent-color);
+}
+
+#home_nav{
+  width:100px;
+  padding:5px;
+  font-weight:1000;
+  text-transform: uppercase;
+  border: 1px solid var(--background-color);
+  border-radius: 5px;
+  z-index:9;
+}
+
+#home_nav a{
+  display:block;
+  padding:10px 5px;
+  font-style: italic;
+  letter-spacing: 0.25em;
+  text-align:center;
+  border-radius: 5px;
+  transition: 0.5s ease all;
+}
+
+#home_nav a:hover{
+  letter-spacing:0.5em;
+  background-color: var(--background-color);
+}
+
+#history_toggle{
+  width:125px;
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  font-size:0.9em;
+  font-style:italic;
+}
+
+#history_toggle_checkbox{ display: none; }
+
+#history_toggle label{
+  position:relative;
+  display: block;
+  width: 70px;
+  height: 30px;
+  margin: 0 auto;
+  background-color: var(--light-sky);
+  border-radius: 56px;
+  cursor: pointer;
+  transition: 0.3s ease all;
+  overflow: hidden;
+}
+
+#toggle_star
+{
+  position: absolute;
+  top: 10px;
+  left: 13px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--star-color);
+  transform: scale(1);
+  border-radius: 50%;
+  transition: 0.3s ease top, 0.3s ease left, 0.3s ease transform, 0.3s ease all;
+  z-index: 1;
+}
+
+#star-1 { position: relative; }
+
+#star-2
+{
+  position: absolute;
+  transform: rotateZ(36deg);
+}
+
+.star
+{
+  top: 5px;
+  left: -6px;
+  font-size: 25px;
+  font-style:normal;
+  line-height: 0;
+  color: var(--star-color);
+  transition: 0.3s ease color;
+}
+
+#toggle_moon
+{
+  position: absolute;
+  bottom: -52px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  font-style:normal;
+  background-color: var(--crescent-color);
+  border-radius: 50%;
+  transition: 0.3s ease bottom;
+}
+
+#toggle_moon:before
+{
+  content: "";
+  position: absolute;
+  top: -13px;
+  left: -14px;
+  width: 30px;
+  height: 30px;
+  background-color: var(--light-sky);
+  border-radius: 50%;
+  transition: 0.3s ease all;
+}
+
+#history_toggle_checkbox:checked + label { background-color: var(--dark-sky); }
+
+#history_toggle_checkbox:checked + label #toggle_star
+{
+  top: 7px;
+  left: 40px;
+  transform: scale(0.3);
+  background-color: var(--star-color);
+}
+
+#history_toggle_checkbox:checked + label .star { color: var(--star-dark-color); }
+
+#history_toggle_checkbox:checked + label #toggle_moon { bottom: 5px; }
+
+#history_toggle_checkbox:checked + label #toggle_moon:before { background-color: var(--dark-sky); }
+
+#page_wrapper{
+  position:fixed;
+  top: calc(9.3vh + 20px);
+  transform: translate(-50%, 0%);
+  height: calc(var(--wrapper-height) - 40px - 40px);
+}
+
+#page_history{
+  display:flex;
+  flex-flow:row wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: flex-start;
+  gap:10px;
+}
+
+.history_cont{
+  width:100%;
+  height: calc(var(--wrapper-height) - 40px - 40px);
+  /*background-color:green;*/
+  overflow-y:auto;
+}
+
+#history_s { display:none; }
+
+.spoilers_on .history_cont{
+  width:49%;
+}
+
+@media screen and (max-width: 1000px) {
+
+  #page_wrapper{
+    overflow-y:auto;
+  }
+
+  #page_history{
+    flex-flow:row wrap-reverse;
+  }
+
+  .spoilers_on .history_cont{
+    width:100%;
+  }
+
+}
