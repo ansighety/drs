@@ -7,15 +7,15 @@
 *   Synopsis
 *   History
 *   World
-    - Government
+    - [dne] Government
     - Courts
     - Locations
-    - History
+    - [wip] History
     - Species
     - Organisations & Societies
     - Religions
         - Almechting (The Church of the Almighty)
-    - Languages
+    - [dne] Languages
     - Culture
 
 # RESOURCES
