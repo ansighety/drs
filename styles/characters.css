@@ -1,0 +1,45 @@
+:root{
+  --background-color:var(--brown-01);
+  --text-font: "Karla";
+  --text-color: var(--mono-05);
+  --text-size: 12px;
+  --text-spacing: 1px;
+  --first-letter-text-size: 400%;
+
+  --header-background-color:var(--mono-04);
+  
+  --bold-size: 0.9em;
+  --bold-color: var(--brown-04);
+
+  --special-color: var(--mono-01);  
+  --special-bg: var(--brown-03);
+
+  --header-links-font:times;
+  --header-links-hover:times;
+
+  --big-heading-font: "Playfair Display";
+  --big-heading-text-size: 1.5em;
+  --big-heading-border-size: 2px;
+  --big-heading-spacing: 5px;
+  --big-heading-background-color: var(--brown-03);
+  --big-heading-padding: 10px;
+
+  --tabs-nav-link-font: times;
+}
+
+body{
+  font-size:var(--text-size);
+  font-family: var(--text-font);
+  letter-spacing: var(--text-spacing);
+  color:var(--text-color);
+  background-color:var(--background-color);
+}
+
+#c_header{
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  background-color:var(--header-background-color);
+}

@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<!------------------------------------------------------
+
+ nausea @ aureacor
+
+- do not remove credit
+- do not use as a base
+
+- magnusthemes istotope combination filtering
+- metafizzy istotope
+- fontawesome icons
+- inspired by index47
+
+-------------------------------------------------------->
+
+    <link rel="icon" type="image/png" href="{Favicon}">
+    <title>{title}</title>
+    
+    <style type="text/css">
+
+/*------------------ GENERAL SETTINGS  ------------------*/
+
+:root {
+--fontone: times; /* main title, muse desc, muse title top */
+--fontthree: arial; /* flter, side description,  muse title bottom  */
+
+--fontsize-one: 9.5px;  /* muse description  */
+--fontsize-two: 11px;  /* filter  */
+--fontsize-three: 13px;  /* muse title */
+--fontsize-four: 15px;  /* main title */
+
+/* change image dimensions */
+--height: 375px;
+--width: 255px;
+--marbot: 50px; /* space beneath each muse */ 
+
+/* general color settings */
+--bg: #fffefb;
+--text: #fff;
+--text-two: #000;
+--accent-one: #a6841c;
+--accent-two: #a1997d;
+--border: #d1d1d1;
+
+--rightsize: 83%;
+--leftsize: 17%;
+
+--gs: grayscale(100%); /* change to 0% if you don't want your image to be gray scale ater clicking on a character*/
+}
+
+/*------------------  HEADER   -----------------*/
+
+header { width: 100%; height: 100%; }
+
+.right {
+    width: var(--rightsize);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 25px 15px 25px 15px;
+    border-bottom: 1px solid var(--border);
+    border-left: 1px solid var(--border);
+}
+
+.left {
+    width: var(--leftsize);
+    height: 100%;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left a {
+    font: 4px var(--fontthree);
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.stay {
+    background: var(--bg);
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    top: 0;
+    height: 100px;
+    display: flex;
+}
+
+.filter {
+    margin-right: 25px;
+    color: var(--text-two);
+    font-family: var(--fontthree);
+    letter-spacing: 1px;
+    text-align: center;
+    }
+
+.filter li, .filter li a {
+    display: inline-block;
+    margin-right: 3px;
+    color: var(--text-two);
+    font-size: var(--fontsize-two);
+}
+
+.filter li a:hover {color: var(--accent-one);}
+
+#gname {
+    display: inline-block;
+    font-size: var(--fontsize-one);
+    text-transform: uppercase;
+    letter-spacing: 1.25px;
+    font-family: var(--fontthree);
+    font-weight: 600;
+}
+
+
+#gname::after {
+    content: "✶";
+    font-size: 8px;
+    position: relative;
+    top: -1px;
+    margin: 0px 8px;
+    color: var(--border);
+}
+
+
+/*--------------------- PAGE TITLE ---------------------*/
+
+.title {
+    position: absolute;
+    left: 0px;
+    width: var(--leftsize);
+    height: 100%;
+    min-width: 100px;
+    padding-right: 20px;
+}
+
+.title h1 {  
+    top: 1000px;
+    position: relative;
+    top: 190px;
+    color: var(--text-two);
+    font-size: var(--fontsize-four);
+    font-family: var(--fontone);
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    word-break: break-word;
+    margin-bottom: 0px;
+    margin-left: 40px;
+}
+
+.title p {
+    position: relative;
+    text-transform: uppercase;
+    top: 200px;
+    font-family: arial;
+    font-size: 8px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    line-height: 18px;
+    color: var(--text-two);
+    margin-top: 0px;
+    margin-left: 40px;
+}
+
+
+/*---------------- MUSE SECTION  ----------------*/
+
+.container { 
+    width: var(--rightsize);
+    right: 0;
+    position: absolute;
+    padding: 100px 75px 25px 10px;
+}
+
+.grid { margin:50px auto 0px; }
+
+.muse { 
+    background:  #0a0a0a;
+    height: var(--height); 
+    width: var(--width);
+    margin-bottom: var(--marbot);
+    transition: .5s ease;
+}
+
+img {
+    height: var(--height); 
+    width: var(--width);
+    opacity:0.9;
+    transition: .5s ease;
+    object-fit: cover;
+}
+/*-------------------- MUSE NAME  ---------------------*/
+
+.bottomtext {
+    color: var(--text);
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0px;
+    transition: .5s ease;
+    width: 100%;
+    height: 65px;
+}
+
+.mtitle {
+    margin: auto;
+    text-align: center;
+    width: 75%;
+}
+
+.mtitle h1 {
+    font-family: var(--fontthree);
+    font-size: var(--fontsize-three);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    line-height: 135%;
+    margin-top: 3px;
+}
+
+.mtitle h2 {
+    font-family: var(--fontone);
+    text-transform: lowercase;
+    font-style: italic;
+    font-size: 7px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+/*--------------- MUSE DESCRIPTION ---------------*/
+
+.overlay {
+    background-color: rgb(43 43 43 / 66%); 
+            /* image effect, must be rbg, the % is how
+            transparent the overlay will be */
+    position: absolute;
+    height: 100%;
+    top: 0; bottom: 0; left: 0; right: 0;
+    opacity: 0;
+    transition: .5s ease;
+    mix-blend-mode: difference;
+            /* delete this if you don't wont the image
+            effect after clicking on an image */
+}
+
+.text {
+    font-size: 20px;
+    text-align: center;
+    position: absolute;
+    top: 50%; left: 50%;
+    opacity: 0;
+    width: 70%;
+    overflow: scroll;
+    max-height: 50%;
+    transition: .5s ease;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);  
+    transform: translate(-50%, -50%);
+}
+
+
+.text p, .bio a {
+    font-family: var(--fontone);
+    font-size: var(--fontsize-one);
+    color: var(--text);
+    letter-spacing: 1.2px;
+    text-transform: lowercase;
+    line-height: 17px;
+    transition: .5s ease;
+}
+
+.bio {
+    width: var(--width);
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.bio a:hover {color: var(--accent-one);}
+.bio a:not(:last-child):after {
+    content: "/";
+    margin: 0px 9px 0px 10px; 
+    color: white;
+}
+
+/*-------------------  DO NOT TOUCH  -------------------*/
+
+* {  margin: 0 ;  padding: 0 ;  box-sizing: border-box; }
+* a { color: var(--text-two); text-decoration: none; transition: 0.5s ease;}
+* a:hover { color: var(--accent-one); }
+body { background: var(--bg); }
+body > iframe:first-child { display: none !important; }
+::-webkit-scrollbar {display: none; }
+.c { position: fixed;     bottom: 0.7em;    right: 1em; color: red; }
+.c a {font-size: 10px; text-decoration: none; transition: 0.3s ease all; color: var(--text-two);}
+b {color: var(--accent-two); text-transform: uppercase; font-size: calc(var(--fontsize-one) - 2px);}
+u { text-decoration: none; border-bottom: 1px solid var(--accent-two); }
+
+.muse:hover { cursor: crosshair;}
+.muse.selected img{ opacity: 0.3; transition: .5s ease; filter: var(--gs); }
+.muse.selected .bottomtext{ opacity: 0; transition: .5s ease; }
+.muse.selected .overlay { opacity: 1; }
+.muse.selected .text{ opacity: 1; }
+.muse.selected .bio {opacity: 1;}
+.filter li a.selected{color:var(--accent-one);}
+</style>	
+
+
+<!---------------- START ACTUAL PAGE  ------------------->
+
+<body><div class="stay"> <div class="left"><a href="/">
+        <h1> BACK </h1>
+ </a></div><div class="right">
+
+<!--------------------- FILTERS ------------------------
+
+⭐️ ADD FILTER GROUPS
+- Add filter groups by copying  all text from <ul... [to] </ul>
+    - Change name of "data-filter-group"
+        - It doesn't have to follow any sort of scheme so long
+          as it does not have the same name as another group
+          
+
+⭐️ ADD FILTER ITEMS TO GROUP
+- Add filters within a group by copying text from <li> to </li>
+    - Change "data-filter-value" to your filter name
+        - e.g. .open OR .o
+        
+           <li><a href="#" data-filter-value=".OPEN"> open </a></li>
+           <li><a href="#" data-filter-value=".O"> open </a></li>
+           
+- Try not to add too many filter groups, otherwise it'll look a bit wonky
+     
+     
+     
+     ⭐️ ADD FILTER ITEMS TO MUSE
+- Add filter tag to a muse by adding it to the div class
+- Do NOT delete the "muse" name
+
+        - <div class="muse open romantic four aa">
+        - <div class="muse closed enemy one bb">
+
+
+     
+-------------------------------------------------------->
+
+<ul class="filter option-set exclusive" data-filter-group="group-one">
+<p id="gname"> AVAILABILITY </p>
+    <li><a href="#" data-filter-value="" class="selected"> all </a></li>
+    <li><a href="#" data-filter-value=".open"> open </a></li>
+    <li><a href="#" data-filter-value=".closed"> closed </a></li>
+</ul>
+
+<ul class="filter option-set exclusive" data-filter-group="group-two">
+<p id="gname"> RELATIONSHIP </p>
+    <li><a href="#" data-filter-value="" class="selected">all</a></li>
+    <li><a href="#" data-filter-value=".enemy"> enemy </a></li>
+    <li><a href="#" data-filter-value=".friend"> friend </a></li>
+    <li><a href="#" data-filter-value=".romantic"> romantic </a></li>
+</ul>
+
+<ul class="filter option-set exclusive" data-filter-group="group-three">
+<p id="gname"> FILTER THREE  </p>
+    <li><a href="#" data-filter-value="" class="selected">all</a></li>
+    <li><a href="#" data-filter-value=".one"> one </a></li>
+    <li><a href="#" data-filter-value=".two"> two </a></li>
+    <li><a href="#" data-filter-value=".three"> three </a></li>
+    <li><a href="#" data-filter-value=".four"> four </a></li>
+</ul>
+
+<ul class="filter option-set exclusive" data-filter-group="group-four">
+<p id="gname"> FILTER FOUR </p>
+    <li><a href="#" data-filter-value="" class="selected">all</a></li>
+    <li><a href="#" data-filter-value=".aa"> one </a></li>
+    <li><a href="#" data-filter-value=".bb"> two </a></li>
+    <li><a href="#" data-filter-value=".cc"> three </a></li>
+    <li><a href="#" data-filter-value=".dd"> four </a></li>
+</ul>
+
+
+
+</div></div>
+<!---------------  TITLE --------------->
+
+<div class="title">
+
+        <h1> main title  </h1>
+        <p> I have been caused to know the value and the beauty of things that live longer than I do. </p>
+        
+</div><div class="container"><div class="grid">
+
+<!------------  ADD MUSES --------------->
+
+<div class="muse open romantic four aa">
+    <img src="https://i.imgur.com/xDUIk1v.png">
+<div class="bottomtext"><div class="mtitle">
+        <h2>   subtitle  </h1>
+        <h1>  character name  </h1>
+</div></div><div class="overlay"></div><div class="text"> 
+        <p> quote here </p>
+</div><div class="bio">
+        <a href="/"> link one </a>
+        <a href="/"> link two  </a>
+</div></div>
+
+
+<div class="muse closed enemy one bb">
+    <img src="https://i.imgur.com/xDUIk1v.png">
+<div class="bottomtext"><div class="mtitle">
+        <h2>   subtitle  </h1>
+        <h1>  character name  </h1>
+</div></div><div class="overlay"></div><div class="text"> 
+        <p> quote here </p>
+</div><div class="bio">
+        <a href="/"> link one </a>
+        <a href="/"> link two  </a>
+</div></div>
+
+
+<div class="muse open friend three cc">
+    <img src="https://i.imgur.com/xDUIk1v.png">
+<div class="bottomtext"><div class="mtitle">
+        <h2>   subtitle  </h1>
+        <h1>  character name  </h1>
+</div></div><div class="overlay"></div><div class="text"> 
+        <p> quote here </p>
+</div><div class="bio">
+        <a href="/"> link one </a>
+        <a href="/"> link two  </a>
+</div></div>
+
+
+<div class="muse closed romantic four dd">
+    <img src="https://i.imgur.com/xDUIk1v.png">
+<div class="bottomtext"><div class="mtitle">
+        <h2>   subtitle  </h1>
+        <h1>  character name  </h1>
+</div></div><div class="overlay"></div><div class="text"> 
+        <p> quote here </p>
+</div><div class="bio">
+        <a href="/"> link one </a>
+        <a href="/"> link two  </a>
+</div></div>
+
+
+
+<!----------------- DO NOT DELETE ------------------>
+
+</div></div><div class="c"><script src="https://kit.fontawesome.com/7a02f4ca01.js" crossorigin="anonymous"></script>
+<a href="https://aureacor.tumblr.com" title="aureacor"><i class="fa-solid fa-heart"></i></a></div><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script><script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script><script src="https://static.tumblr.com/p0knose/FpAp5c11c/magnusthemes.combofilters.js"></script><script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script><script src="/path/to/masonry.pkgd.min.js"></script>
+
+<script type="text/javascript">
+$(".muse").click(function(){
+$('.muse').not(this).removeClass('selected');
+$(this).toggleClass('selected')
+});
+</script>
+<script>
+$(document).ready(function() {
+var $container = $(".grid"); 
+var filters = {};
+var $grid = $container.isotope({
+itemSelector: ".muse",
+transitionDuration: '0s',
+masonry: {
+gutter: 60,
+horizontalOrder: true,
+fitWidth: true,
+percentPosition: false,
+}
+});
+$(".option-set a").mousedown(function(e) {
+var $this = $(this);
+var filterAttr = "data-filter-value";
+var filterValue = $this.attr(filterAttr); 
+var $optionSet = $this.parents(".option-set"); 
+var group = $optionSet.attr("data-filter-group"); 
+var filterGroup = filters[group];
+if (!filterGroup) {
+filterGroup = filters[group] = [];
+}
+var $selectAll = $optionSet.find('a['+filterAttr+'=""]'); 
+var activeClass = "selected", 
+exclClass = "exclusive"; 
+comboFiltering($this,filters,filterAttr,filterValue,$optionSet,group,$selectAll,activeClass,exclClass);
+var comboFilter = getComboFilter(filters);
+$grid.isotope({
+filter: comboFilter
+});
+$this.toggleClass(activeClass);
+e.preventDefault();
+});
+});
+</script> </body> </html>
