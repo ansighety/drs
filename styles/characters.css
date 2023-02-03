@@ -1,45 +1,399 @@
-:root{
-  --background-color:var(--brown-01);
-  --text-font: "Karla";
-  --text-color: var(--mono-05);
-  --text-size: 12px;
-  --text-spacing: 1px;
-  --first-letter-text-size: 400%;
+/*------------------ GENERAL SETTINGS  ------------------*/
 
-  --header-background-color:var(--mono-04);
-  
-  --bold-size: 0.9em;
-  --bold-color: var(--brown-04);
+:root {
+  --fontone: times;
+  /* main title, muse desc, muse title top */
+  --fontthree: arial;
+  /* flter, side description,  muse title bottom  */
 
-  --special-color: var(--mono-01);  
-  --special-bg: var(--brown-03);
+  --fontsize-one: 9.5px;
+  /* muse description  */
+  --fontsize-two: 11px;
+  /* filter  */
+  --fontsize-three: 13px;
+  /* muse title */
+  --fontsize-four: 15px;
+  /* main title */
 
-  --header-links-font:times;
-  --header-links-hover:times;
+  /* change image dimensions */
+  --height: 375px;
+  --width: 255px;
+  --marbot: 50px;
+  /* space beneath each muse */
 
-  --big-heading-font: "Playfair Display";
-  --big-heading-text-size: 1.5em;
-  --big-heading-border-size: 2px;
-  --big-heading-spacing: 5px;
-  --big-heading-background-color: var(--brown-03);
-  --big-heading-padding: 10px;
+  /* general color settings */
+  --bg: #fffefb;
+  --bg: var(--brown-03);
+  --text: #fff;
+  --text-two: #000;
+  --accent-one: #a6841c;
+  --accent-two: #a1997d;
+  --border: #d1d1d1;
 
-  --tabs-nav-link-font: times;
+  --rightsize: 83%;
+  --leftsize: 17%;
+
+  --gs: grayscale(100%);
+  /* change to 0% if you don't want your image to be gray scale ater clicking on a character*/
 }
 
-body{
-  font-size:var(--text-size);
-  font-family: var(--text-font);
-  letter-spacing: var(--text-spacing);
-  color:var(--text-color);
-  background-color:var(--background-color);
+/*------------------  HEADER   -----------------*/
+
+header {
+  width: 100%;
+  height: 100%;
 }
 
 #c_header{
-  display:flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
+  display: flex;
+  top: 0;
+  width: 100%;
+  height:auto;
+  background: var(--bg);
+  z-index: 999;
+}
+
+#c_nav_filters {
+  width: var(--rightsize);
+  display: flex;
+  justify-content: center;
   align-items: center;
-  align-content: center;
-  background-color:var(--header-background-color);
+  flex-wrap: wrap;
+  padding: 25px 15px 25px 15px;
+  border-bottom: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+}
+
+#c_nav_home {
+  width: var(--leftsize);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#c_nav_home a {
+  font: 4px var(--fontthree);
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.filter {
+  margin-right: 25px;
+  color: var(--text-two);
+  font-family: var(--fontthree);
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.filter li,
+.filter li a {
+  display: inline-block;
+  margin-right: 3px;
+  color: var(--text-two);
+  font-size: var(--fontsize-two);
+}
+
+.filter li a:hover {
+  color: var(--accent-one);
+}
+
+#gname {
+  display: inline-block;
+  font-size: var(--fontsize-one);
+  text-transform: uppercase;
+  letter-spacing: 1.25px;
+  font-family: var(--fontthree);
+  font-weight: 600;
+}
+
+
+#gname::after {
+  content: "✶";
+  font-size: 8px;
+  position: relative;
+  top: -1px;
+  margin: 0px 8px;
+  color: var(--border);
+}
+
+
+/*--------------------- PAGE TITLE ---------------------*/
+#c_cont{
+  display:flex;
+  flex-flow:row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+  /*padding: 100px 75px 25px 10px;*/
+}
+
+#sidebar {
+  padding:100px 30px;
+  width: var(--leftsize);
+  /*
+  position: absolute;
+  left: 0px;
+  height: 100%;
+  min-width: 100px;
+  padding-right: 20px;
+  */
+}
+
+#sidebar h1 {
+  position: relative;
+  color: var(--text-two);
+  font-size: var(--fontsize-four);
+  font-family: var(--fontone);
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  word-break: break-word;
+}
+
+#sidebar p {
+  position: relative;
+  text-transform: uppercase;
+  font-family: arial;
+  font-size: 8px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  line-height: 18px;
+  color: var(--text-two);
+}
+
+
+/*---------------- MUSE SECTION  ----------------*/
+
+#container {
+  width: var(--rightsize);
+  /*right: 0;
+  position: absolute;
+  padding: 100px 75px 25px 10px;*/
+}
+
+.grid {
+  margin: 50px auto 0px;
+}
+
+.muse {
+  background: #0a0a0a;
+  height: var(--height);
+  width: var(--width);
+  margin-bottom: var(--marbot);
+  transition: .5s ease;
+}
+
+img {
+  height: var(--height);
+  width: var(--width);
+  opacity: 0.9;
+  transition: .5s ease;
+  object-fit: cover;
+}
+
+/*-------------------- MUSE NAME  ---------------------*/
+
+.bottomtext {
+  color: var(--text);
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0px;
+  transition: .5s ease;
+  width: 100%;
+  height: 65px;
+}
+
+.mtitle {
+  margin: auto;
+  text-align: center;
+  width: 75%;
+}
+
+.mtitle h1 {
+  font-family: var(--fontthree);
+  font-size: var(--fontsize-three);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  line-height: 135%;
+  margin-top: 3px;
+}
+
+.mtitle h2 {
+  font-family: var(--fontone);
+  text-transform: lowercase;
+  font-style: italic;
+  font-size: 7px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+/*--------------- MUSE DESCRIPTION ---------------*/
+
+.overlay {
+  background-color: rgb(43 43 43 / 66%);
+  /* image effect, must be rbg, the % is how
+          transparent the overlay will be */
+  position: absolute;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: .5s ease;
+  mix-blend-mode: difference;
+  /* delete this if you don't wont the image
+          effect after clicking on an image */
+}
+
+.text {
+  font-size: 20px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  width: 70%;
+  overflow: scroll;
+  max-height: 50%;
+  transition: .5s ease;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+
+.text p,
+.bio a {
+  font-family: var(--fontone);
+  font-size: var(--fontsize-one);
+  color: var(--text);
+  letter-spacing: 1.2px;
+  text-transform: lowercase;
+  line-height: 17px;
+  transition: .5s ease;
+}
+
+.bio {
+  width: var(--width);
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.bio a:hover {
+  color: var(--accent-one);
+}
+
+.bio a:not(:last-child):after {
+  content: "/";
+  margin: 0px 9px 0px 10px;
+  color: white;
+}
+
+/*-------------------  DO NOT TOUCH  -------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* a {
+  color: var(--text-two);
+  text-decoration: none;
+  transition: 0.5s ease;
+}
+
+* a:hover {
+  color: var(--accent-one);
+}
+
+body {
+  background: var(--bg);
+}
+
+body>iframe:first-child {
+  display: none !important;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+#credit {
+  position: fixed;
+  bottom: 0.7em;
+  right: 1em;
+  color: red;
+}
+
+#credit a {
+  font-size: 1.25em;
+  text-decoration: none;
+  transition: 0.3s ease all;
+  color: var(--text-two);
+}
+
+b {
+  color: var(--accent-two);
+  text-transform: uppercase;
+  font-size: calc(var(--fontsize-one) - 2px);
+}
+
+u {
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent-two);
+}
+
+.muse:hover {
+  cursor: crosshair;
+}
+
+.muse.selected img {
+  opacity: 0.3;
+  transition: .5s ease;
+  filter: var(--gs);
+}
+
+.muse.selected .bottomtext {
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.muse.selected .overlay {
+  opacity: 1;
+}
+
+.muse.selected .text {
+  opacity: 1;
+}
+
+.muse.selected .bio {
+  opacity: 1;
+}
+
+.filter li a.selected {
+  color: var(--accent-one);
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 1000px) {
+  #c_cont{
+    flex-flow:column wrap;
+  }
+
+  #sidebar, #container{
+    width:100%;
+  }
+
+  #sidebar {
+    padding:50px 30px;
+    padding-bottom:0;
+  }
 }

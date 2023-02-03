@@ -7,6 +7,7 @@
 *   Synopsis
 *   History
 *   World
+    - [dne] Characters
     - [dne] Government
     - Courts
     - Locations
