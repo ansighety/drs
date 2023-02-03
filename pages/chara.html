@@ -22,7 +22,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Characters - 𝐃𝐈𝐕𝐈𝐍𝐄 𝐑𝐄𝐐𝐔𝐈𝐄𝐌.</title>
 	<link rel="stylesheet" href="../styles/main.css">
-	<link rel="stylesheet" href="../styles/characters.css">
+	<link rel="stylesheet" href="../styles/chara.css">
 </head>
 
 
@@ -30,7 +30,21 @@
 
 <body>
 <div id="c_header">
-	<div id="c_nav_home"><a href="../index.html"><h1> home </h1></a></div>
+	<div id="c_nav_home">
+		<div id="c_nav_home_link"><a href="../index.html"><h1> home </h1></a></div>
+
+		<div id="chara_toggle">
+			<div id="chara_toggle_text">Spoilers</div>
+			<input type="checkbox" id="chara_toggle_checkbox">
+			<label for="chara_toggle_checkbox">
+				<div id="toggle_star">
+					<div class="star" id="star-1">★</div>
+					<div class="star" id="star-2">★</div>
+				</div>
+				<div id="toggle_moon"></div>
+			</label>
+		</div>
+	</div>
 
 	<div id="c_nav_filters">
 		<ul class="filter option-set exclusive" data-filter-group="court">
@@ -58,7 +72,7 @@
 			<li><a href="#" data-filter-value=".human"> Human </a></li>
 		</ul>
 
-		<ul class="filter option-set exclusive" data-filter-group="association">
+		<ul class="filter option-set exclusive spoilers_on" data-filter-group="association">
 			<p id="gname"> ASSOCIATIONS </p>
 			<li><a href="#" data-filter-value="" class="selected"> ALL </a></li>
 			<li><a href="#" data-filter-value=".virtue"> Virtues </a></li>
@@ -112,6 +126,22 @@
 	</div>
 	
 	<div id="container"><div class="grid">
+
+		<div class="muse sacraaliag angel virtue">
+			<img src="../assets/images/characters/anis/Ex4vqmNVgAUNI8V.jpg">
+			<div class="bottomtext"><div class="mtitle">
+				<h2>the promised saviour</h1>
+				<h1>anael salovichne</h1>
+			</div></div>
+			<div class="overlay"></div>
+			<div class="text">
+				<p>“Body, I drag you like a shipwreck.”</p>
+			</div>
+			<div class="bio">
+				<a href="/">link one</a>
+				<a href="/">link two</a>
+			</div>
+		</div>
 	
 		<!------------  ADD MUSES --------------->
 		<div class="muse open enemy one aa">
@@ -305,7 +335,6 @@
 				<a href="/">link two</a>
 			</div>
 		</div>
-		<!----------------- DO NOT DELETE ------------------>
 	
 		<div class="muse open romantic four aa">
 			<img src="https://i.imgur.com/xDUIk1v.png">
@@ -370,6 +399,7 @@
 				<a href="/">link two</a>
 			</div>
 		</div>
+		<!----------------- DO NOT DELETE ------------------>
 	
 	</div></div>
 
@@ -378,11 +408,10 @@
 <div id="credit">
 	<a href="https://aureacor.tumblr.com/post/701002348313673728/nausea-network-character-page-preview-code" title="aureacor">♥</a>
 </div>
-
+chara_toggle_text
 <script src="../vendor/jquery-3.6.3.min.js"></script>
 <script src="../vendor/isotope.pkgd.min.js"></script>
 <script src="../vendor/masonry.pkgd.min.js"></script>
-<script src="/path/to/masonry.pkgd.min.js"></script>
 <script src="../vendor/magnusthemes.combofilters.js"></script>
 <script src="../scripts/characters.js"></script>
 </body>
