@@ -35,6 +35,13 @@
 
   --gs: grayscale(100%);
   /* change to 0% if you don't want your image to be gray scale ater clicking on a character*/
+
+  --light-sky: var(--mono-02);
+  --dark-sky: var(--brown-02);
+  --star-color: var(--brown-03);
+  --star-dark-color: var(--brown-01);
+  --crescent-color: var(--mono-02);
+
 }
 
 /*------------------  HEADER   -----------------*/
@@ -68,8 +75,10 @@ header {
   width: var(--leftsize);
   border-bottom: 1px solid var(--border);
   display: flex;
+  flex-flow:column wrap;
   justify-content: center;
   align-items: center;
+  gap: 10px;
 }
 
 #c_nav_home a {
@@ -383,6 +392,111 @@ u {
   text-transform: uppercase;
 }
 
+.spoilers_on{
+  display:none;
+}
+
+#chara_toggle{
+  width:95px;
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  font-size:0.7em;
+  font-style:italic;
+}
+
+#chara_toggle_checkbox{ display: none; }
+
+#chara_toggle label{
+  position:relative;
+  display: block;
+  width: 50px;
+  height: 15px;
+  margin: 0 auto;
+  background-color: var(--light-sky);
+  border-radius: 56px;
+  cursor: pointer;
+  transition: 0.3s ease all;
+  overflow: hidden;
+}
+
+#toggle_star
+{
+  position: absolute;
+  top: 3px;
+  left: 8px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--star-color);
+  transform: scale(1);
+  border-radius: 50%;
+  transition: 0.3s ease top, 0.3s ease left, 0.3s ease transform, 0.3s ease all;
+  z-index: 1;
+}
+
+#star-1 { position: relative; }
+
+#star-2
+{
+  position: absolute;
+  transform: rotateZ(36deg);
+}
+
+.star
+{
+  top: 5px;
+  left: -4px;
+  font-size: 20px;
+  font-style:normal;
+  line-height: 0;
+  color: var(--star-color);
+  transition: 0.3s ease color;
+}
+
+#toggle_moon
+{
+  position: absolute;
+  bottom: -52px;
+  right: 8px;
+  width: 15px;
+  height: 15px;
+  font-style:normal;
+  background-color: var(--crescent-color);
+  border-radius: 50%;
+  transition: 0.3s ease bottom;
+}
+
+#toggle_moon:before
+{
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  width: 25px;
+  height: 25px;
+  background-color: var(--light-sky);
+  border-radius: 50%;
+  transition: 0.3s ease all;
+}
+
+#chara_toggle_checkbox:checked + label { background-color: var(--dark-sky); }
+
+#chara_toggle_checkbox:checked + label #toggle_star
+{
+  top: 0px;
+  left: 28px;
+  transform: scale(0.3);
+  background-color: var(--star-color);
+}
+
+#chara_toggle_checkbox:checked + label .star { color: var(--star-dark-color); }
+
+#chara_toggle_checkbox:checked + label #toggle_moon { bottom: 1px; }
+
+#chara_toggle_checkbox:checked + label #toggle_moon:before { background-color: var(--dark-sky); }
+
 @media screen and (max-width: 1000px) {
   #c_cont{
     flex-flow:column wrap;
@@ -395,5 +509,9 @@ u {
   #sidebar {
     padding:50px 30px;
     padding-bottom:0;
+  }
+  
+  #chara_toggle_text{
+    display:none;
   }
 }

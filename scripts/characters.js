@@ -1,4 +1,8 @@
+//ELEMENT IDs
+var spoilers_toggle_checkbox = "chara_toggle_checkbox";
+
 $(document).ready(function () {
+  page_load();
 
   var $container = $(".grid");
   var filters = {};
@@ -39,4 +43,37 @@ $(document).ready(function () {
     $('.muse').not(this).removeClass('selected');
     $(this).toggleClass('selected')
   });
+
+  checkBox = document.getElementById(spoilers_toggle_checkbox).addEventListener('click', event => {
+    if(event.target.checked) {
+      var spoilerConfirmationBox = confirm("By clicking on this button, you are turning on spoilers that are revealed only in the middle of Book 3. If you still would like to proceed, press OK.");
+      if(spoilerConfirmationBox){
+        spoilers(true);
+      }
+      else{
+        document.getElementById(spoilers_toggle_checkbox).checked = false;
+      }
+    }
+    else{ spoilers(false); }
+  });
+
 });
+
+function page_load(){
+  var checkBox = document.getElementById(spoilers_toggle_checkbox);
+  if(checkBox.checked) { spoilers(true); }
+  else{ spoilers(false); }
+}
+
+function spoilers(spoilers_on){
+  if(spoilers_on){
+    console.log("Checkbox checked!");
+    $('body .spoilers_on').addClass("spoilers_off");
+    $('body .spoilers_on').removeClass("spoilers_on");
+  }
+  else{
+    console.log("Checkbox unchecked.");
+    $('body .spoilers_off').addClass("spoilers_on");
+    $('body .spoilers_off').removeClass("spoilers_off");
+  }
+}
