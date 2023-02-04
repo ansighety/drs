@@ -228,6 +228,7 @@ img {
   letter-spacing: 1.5px;
   line-height: 135%;
   margin-top: 3px;
+  text-shadow: 2px 2px 1px var(--text-two);
 }
 
 .mtitle h2 {

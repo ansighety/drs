@@ -46,7 +46,7 @@ $(document).ready(function () {
 
   checkBox = document.getElementById(spoilers_toggle_checkbox).addEventListener('click', event => {
     if(event.target.checked) {
-      var spoilerConfirmationBox = confirm("By clicking on this button, you are turning on spoilers that are revealed only in the middle of Book 3. If you still would like to proceed, press OK.");
+      var spoilerConfirmationBox = confirm("By clicking on this button, you are turning on spoilers that are revealed only at the end of Book 2 or in the middle of Book 3. If you still would like to proceed, press OK.");
       if(spoilerConfirmationBox){
         spoilers(true);
       }
