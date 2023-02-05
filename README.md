@@ -11,7 +11,7 @@
     - [dne] Government
     - Courts
     - Locations
-    - [wip] History
+    - [dne] History
     - Species
     - Organisations & Societies
     - Religions
