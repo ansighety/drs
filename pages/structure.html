@@ -16,18 +16,94 @@
 
 <html lang="en">
 
-<title>𝐓𝐇𝐄 𝐃𝐈𝐕𝐈𝐍𝐄 𝐑𝐄𝐐𝐔𝐈𝐄𝐌 𝐒𝐄𝐑𝐈𝐄𝐒.</title>
+<title>Structure - 𝐓𝐇𝐄 𝐃𝐈𝐕𝐈𝐍𝐄 𝐑𝐄𝐐𝐔𝐈𝐄𝐌 𝐒𝐄𝐑𝐈𝐄𝐒.</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
-<link rel="stylesheet" href="./vendor/vanilla.css">
-<link rel="stylesheet" href="./styles/main.css">
-<link rel="stylesheet" href="./styles/index.css">
+<link rel="stylesheet" href="../vendor/vanilla.css">
+<link rel="stylesheet" href="../styles/main.css">
+<link rel="stylesheet" href="../styles/structure.css">
 
 <link href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
 
 <body>
 
 <div id="page_wrapper">
+
+  <div id="page_structure">
+
+    <div id="structure_sidebar">
+      <h1>filters</h1>
+
+      <div id="filters_volume">
+        <p>Volume</p>
+        <ul id="filters_volume_tags"><li data-id="all" class="active">All</li></ul>
+      </div>
+
+      <div id="filters_plot">
+        <p>Plot</p>
+        <ul id="filters_plot_tags"><li data-id="all" class="active">All</li></ul>
+
+      </div>
+      <div id="filters_tags">
+        <p>Tags</p>
+        <ul id="filters_tags_tags"><li data-id="all" class="active">All</li></ul>
+      </div>
+    </div>
+
+    <div id="structure_cont">
+
+      <div class="point">
+        <div class="point_cont">
+          <div class="point_header">Heading</div>
+          <div class="point_subtitle">Subtitle</div>
+          <div class="point_content">
+  
+            <p> <span>T</span> is some normal text. <i> This is italic text. </i> <b>This is bold text.</b> <u> This is underlinelined text.</u> This is <special>special</special> text.  Aliquam erat volutpat. Vestibulum eget nunc semper dolor ullamcorper elementum et sit amet nulla. Nullam convallis et odio at iaculis. Suspendisse ac rhoncus nisl. Morbi eu mollis erat. Mauris in mauris sit amet sem pellentesque facilisis. Praesent id rutrum neque. Aliquam placerat posuere massa, sed vehicula lectus dignissim eu. Integer vitae tortor nisl. Suspendisse eget nibh ac quam molestie bibendum et sed turpis. Suspendisse ac magna nec nibh dapibus pretium.</p>
+            
+          </div>
+        </div>
+        <div class="point_info">
+          <div class="point_volume">
+            Volume: <span class="tag" data-id="vol-1">Volume 1</span>
+          </div>
+          <div class="point_plot">
+            Plot: <span class="tag" data-id="main-plot-1">Main Plot 1</span>
+          </div>
+          <div class="point_tags">
+            Tags: <span class="tag" data-id="tag-3">Tag 3</span> <span class="tag" data-id="tag-1">Tag 1</span> <span class="tag" data-id="tag-2">Tag 2</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="point">
+        <div class="point_cont">
+          <div class="point_header">Heading</div>
+          <div class="point_subtitle">Subtitle</div>
+          <div class="point_content">
+            
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <b>Etiam mollis euismod lectus, id vulputate quam tincidunt at.</b> Aliquam erat volutpat. Vestibulum eget nunc semper dolor ullamcorper elementum et sit amet nulla. Nullam convallis et odio at iaculis. Suspendisse ac rhoncus nisl. Morbi eu mollis erat. Mauris in mauris sit amet sem pellentesque facilisis. Praesent id rutrum neque. Aliquam placerat posuere massa, sed vehicula lectus dignissim eu. Integer vitae tortor nisl. Suspendisse eget nibh ac quam molestie bibendum et sed turpis. Suspendisse ac magna nec nibh dapibus pretium.</p>
+            <img src="https://via.placeholder.com/560x200"></img>
+        
+          </div>
+        </div>
+        <div class="point_info">
+          <div class="point_volume">
+            Volume: <span class="tag" data-id="vol-2">Volume 2</span>
+          </div>
+          <div class="point_plot">
+            Plot: <span class="tag" data-id="main-plot-2">Main Plot 2</span>
+          </div>
+          <div class="point_tags">
+            Tags: <span class="tag" data-id="tag-3">Tag 3</span> <span class="tag" data-id="tag-4">Tag 4</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!--
 
   <div id="page_index"><div id="index_cont">
 
@@ -67,7 +143,6 @@
       <a href="./index.html"> culture </a>
     </div>
 
-    <!--
     <p> <span>T</span> is some normal text. <i> This is italic text. </i> <b>This is bold text.</b> <u> This is underlinelined text.</u> This is <special>special</special> text.  Aliquam erat volutpat. Vestibulum eget nunc semper dolor ullamcorper elementum et sit amet nulla. Nullam convallis et odio at iaculis. Suspendisse ac rhoncus nisl. Morbi eu mollis erat. Mauris in mauris sit amet sem pellentesque facilisis. Praesent id rutrum neque. Aliquam placerat posuere massa, sed vehicula lectus dignissim eu. Integer vitae tortor nisl. Suspendisse eget nibh ac quam molestie bibendum et sed turpis. Suspendisse ac magna nec nibh dapibus pretium.</p>
     
     <img src="https://via.placeholder.com/560x200"></img>
@@ -89,18 +164,15 @@
     
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis euismod lectus, id vulputate quam tincidunt at. Aliquam erat volutpat. Vestibulum eget nunc semper dolor ullamcorper elementum et sit amet nulla. Nullam convallis et odio at iaculis. Suspendisse ac rhoncus nisl. Morbi eu mollis erat. Mauris in mauris sit amet sem pellentesque facilisis. Praesent id rutrum neque. Aliquam placerat posuere massa, sed vehicula lectus dignissim eu. Integer vitae tortor nisl. Suspendisse eget nibh ac quam molestie bibendum et sed turpis. Suspendisse ac magna nec nibh dapibus pretium.</p>
 
-    -->
 
   </div></div>
 
+  -->
+
 </div>
 
-
-
-<!-- DO NOT TOUCH BELOW THIS LINE -->
-<div class="credit">
-    <a href="https://aureacor.tumblr.com" title="AUREACOR">♥</i></i></a>
-</div>
+<script src="../vendor/jquery-3.6.3.min.js"></script>
+<script src="../scripts/structure.js"></script>
 
 </body>
 
