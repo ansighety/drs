@@ -71,3 +71,16 @@ From: https://buffer.com/library/free-images/
 
 ## Icons
 https://cappuccicons.com/
+
+# Culture
+## Iliari
+
+Iliari are spirts that usually take an animal form but can take the shape of anything they desire. They form intense and deep relationships with their chosen angel, similar to that of angels with their bonded one, though less permanent and concrete. Iliari may choose to abandon their chosen angel at any given moment, although this is rare as they tend to only commit when they are absolutely certain of their angel. This is the reason why only few angels have iliari, to the point that it's almost rare. Anyone with angelic blood can come to 'obtain' a iliari and at any given time, regardless of noble hierarchy or the lack thereof, as iliari look to an angel's spirit to determine if they will be a good match or not. Iliari tend to choose angels of a similar temperament or disposition as them, although that is not a given. Iliari are not simply familiars or servants to their chosen angel; while it is not uncommon for an iliari to be of service to their chosen angel, a companion could also simply just be within the vicinity of their chosen angel and do as they please. The current empress has an iliari whereas the current Sacred Emperor does not. The current crown heir Anael's companion is Azarias, a black panther, and their consort intended Prince Noaziel's companion is Arieh, a katanga lion.
+
+## Bonded Ones
+
+In an angel's lifetime, they may encounter another angel who they share a deep and intense connection with. Through this shared bond, they are able to experience each other's emotions and sync with one another on a spiritual level that can be hard to describe to others who do not have a bonded one. It is commonly believed that bonds are predestined and predetermined long before birth, and that bonds are formed between spirits that are most compatible or in complete sync with one another.
+
+Although there are times when an angel's bonded one is also their romantic soulmate, that is not always the case. Bonds can also be platonic, and there are many instances in which bonded angels become lifelong best friends. Rarely are there bonded angels who detest one another or come to dislike one another, but there have been some instances in history when that was the case.
+
+Bonded angels are, although not
